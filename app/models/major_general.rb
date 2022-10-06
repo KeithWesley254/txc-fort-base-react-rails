@@ -1,0 +1,2 @@
+class MajorGeneral < ApplicationRecord
+end
