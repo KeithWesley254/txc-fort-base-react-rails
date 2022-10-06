@@ -1,0 +1,2 @@
+class LoginPageSlide < ApplicationRecord
+end
