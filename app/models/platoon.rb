@@ -1,0 +1,2 @@
+class Platoon < ApplicationRecord
+end
