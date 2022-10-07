@@ -10,4 +10,10 @@ class Api::UserProfilesController < ApplicationController
         render json: slide
     end
 
+    def update
+    end
+
+    def destroy
+    end
+
 end

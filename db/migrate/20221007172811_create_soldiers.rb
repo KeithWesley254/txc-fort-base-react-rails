@@ -7,6 +7,8 @@ class CreateSoldiers < ActiveRecord::Migration[7.0]
       t.string :gender
       t.belongs_to :military_specialization
       t.belongs_to :platoon
+      t.belongs_to :major_general
+
 
       t.timestamps
     end
