@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :community_impacts
   namespace :api do
     resources :login_page_slides, only: [:index, :show]
     resources :about_us, only: [:index, :show]
@@ -16,6 +15,7 @@ Rails.application.routes.draw do
     resources :user_comments
     resources :fan_messages
     resources :soldier_trainings
+    resources :community_impacts
   end
   
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
