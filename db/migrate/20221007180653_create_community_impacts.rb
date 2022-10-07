@@ -1,6 +1,6 @@
-class CreateLoginPageSlides < ActiveRecord::Migration[7.0]
+class CreateCommunityImpacts < ActiveRecord::Migration[7.0]
   def change
-    create_table :login_page_slides do |t|
+    create_table :community_impacts do |t|
       t.string :title
       t.string :description
       t.string :image_url

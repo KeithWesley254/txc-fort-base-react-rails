@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :community_impacts
   namespace :api do
     resources :login_page_slides, only: [:index, :show]
     resources :about_us, only: [:index, :show]

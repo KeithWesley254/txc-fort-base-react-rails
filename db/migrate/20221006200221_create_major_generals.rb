@@ -3,7 +3,7 @@ class CreateMajorGenerals < ActiveRecord::Migration[7.0]
     create_table :major_generals do |t|
       t.string :name
       t.string :image_url
-      t.text :bio
+      t.string :bio
       t.string :gender
       t.string :interests
       t.string :favourite_foot

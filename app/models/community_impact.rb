@@ -1,0 +1,2 @@
+class CommunityImpact < ApplicationRecord
+end
