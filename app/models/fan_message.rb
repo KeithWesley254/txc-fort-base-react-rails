@@ -1,0 +1,2 @@
+class FanMessage < ApplicationRecord
+end

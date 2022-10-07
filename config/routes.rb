@@ -8,8 +8,15 @@ Rails.application.routes.draw do
     resources :memorials, only: [:index, :show]
     resources :technologies, only: [:index, :show]
     resources :trainings, only: [:index, :show]
+    resources :soldiers, only: [:index, :show]
+    resources :soldier_profiles, only: [:index, :show]
+    resources :users
+    resources :user_profiles
+    resources :user_comments
+    resources :fan_messages
+    resources :soldier_trainings
   end
   
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
-  
+
 end

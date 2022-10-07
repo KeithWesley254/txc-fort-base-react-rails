@@ -1,0 +1,2 @@
+class SoldierTraining < ApplicationRecord
+end
