@@ -1,3 +1,3 @@
 class UserCommentSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :user_comment
 end

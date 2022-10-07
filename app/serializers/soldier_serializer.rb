@@ -1,3 +1,4 @@
 class SoldierSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :image_url, :age, :gender
+
 end

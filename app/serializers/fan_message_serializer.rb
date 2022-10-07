@@ -1,3 +1,3 @@
 class FanMessageSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :message
 end

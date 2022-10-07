@@ -1,3 +1,3 @@
 class MemorialSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :title, :image_url, :age, :description
 end
