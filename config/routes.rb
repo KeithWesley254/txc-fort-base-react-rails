@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
+    post '/login', to: 'sessions#create'
+    delete '/logout', to: 'sessions#destroy'
+
     resources :login_page_slides, only: [:index, :show]
     resources :about_us, only: [:index, :show]
     resources :military_specializations, only: [:index, :show]
