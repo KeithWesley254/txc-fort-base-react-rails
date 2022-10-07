@@ -1,0 +1,2 @@
+class Memorial < ApplicationRecord
+end

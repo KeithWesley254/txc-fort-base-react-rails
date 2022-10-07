@@ -5,7 +5,11 @@ Rails.application.routes.draw do
     resources :military_specializations, only: [:index, :show]
     resources :major_generals, only: [:index, :show]
     resources :platoons, only: [:index, :show]
+    resources :memorials, only: [:index, :show]
+    resources :technologies, only: [:index, :show]
+    resources :trainings, only: [:index, :show]
   end
   
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
+  
 end
