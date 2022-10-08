@@ -1,6 +1,6 @@
 class Api::LoginPageSlidesController < ApplicationController
 
-    # skip_before_action :authorize, only: [:index, :show]
+    skip_before_action :authorize, only: [:index, :show]
 
     def index
         slides = LoginPageSlide.all

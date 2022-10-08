@@ -5,8 +5,7 @@ import Login from '../pages/Login';
 function App() {
 
   const [user, setUser] = useState(null);
-  const [loginSlides, setLoginSlides] = useState([]);
-
+  
   useEffect(() => {
     fetch("/api/me").then((r) => {
       if (r.ok) {
@@ -15,15 +14,7 @@ function App() {
     });
   }, []);
 
-  useEffect(() => {
-    fetch("/api/login_page_slides")
-    .then(r => r.json())
-    .then(data => setLoginSlides(data))
-  }, []);
-
-  console.log(loginSlides)
-
-  if (!user) return <Login onLogin={setUser} onShowCase={setLoginSlides}/>;
+  if (!user) return <Login onLogin={setUser} />;
 
   return (
     <div className="App">

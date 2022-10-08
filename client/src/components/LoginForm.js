@@ -1,5 +1,4 @@
-import { Box, Button, FormControl, FormHelperText, Input, InputLabel } from '@mui/material';
-import { color } from '@mui/system';
+import { Box, FormControl, FormHelperText, TextField } from '@mui/material';
 import React, { useState } from 'react'
 
 const LoginForm = ({ onLogin }) => {
@@ -20,7 +19,9 @@ const LoginForm = ({ onLogin }) => {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
+        r.json().then((user) => {
+          onLogin(user)
+        });
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -32,32 +33,36 @@ const LoginForm = ({ onLogin }) => {
       <Box>
         <main>
           <p style={{fontWeight: "bolder", fontSize: 60}}>Login</p>
-          <p style={{fontWeight: "bold", fontSize: 14}}>Sign in with the data you entered during your registration</p>
-          <div>
-          <FormControl>
-            <InputLabel htmlFor="email">Email</InputLabel>
-            <Input 
-            type="email"
-            id="email"
-            autoComplete="on"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} 
-            />
-            <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-          </FormControl>
-          <br />
-          <FormControl>
-            <InputLabel htmlFor="password">Password</InputLabel>
-            <Input 
-            type="password"
-            id="password"
-            autoComplete="current-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            />
-            <FormHelperText id="my-helper-text">Passwords are strongly encrypted.</FormHelperText>
-          </FormControl>
-          </div>
+          <p style={{fontWeight: "bold", color: "#565765", fontSize: 14}}>Sign in with the data you entered during your registration</p>
+          <Box sx={{'& .MuiTextField-root': { m: 1, width: '25ch' },}}>
+            <div>
+              <FormControl>
+                <TextField 
+                type="email"
+                variant="outlined"
+                label="Email"
+                id="email"
+                autoComplete="on"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} 
+                />
+                <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
+              </FormControl>
+              <br />
+              <FormControl>
+                <TextField 
+                type="password"
+                label="Password"
+                id="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                />
+                <FormHelperText id="my-helper-text">Passwords are strongly encrypted.</FormHelperText>
+              </FormControl>
+            </div>
+          </Box>
+          
           <br />
           <br />
           <div>
@@ -65,13 +70,37 @@ const LoginForm = ({ onLogin }) => {
               <button style={{
                 fontSize: 14,
                 backgroundColor: "#4e60ff",
-                width: 240,
+                width: 255,
                 height: 40,
                 color: "#fff",
                 borderRadius: 10,
-              }}>
+                cursor: "pointer",
+                border: "none"
+              }}
+              onClick = {handleSubmit}
+              >
                 Login
               </button>
+            </FormControl>
+          </div>
+          <div>
+            <FormControl>
+              {errors.map((err) => (
+                <>
+                <div key={err} style={{
+                  color: "red",
+                  backgroundColor: "mistyrose",
+                  borderRadius: 6,
+                  padding: 6,
+                  alignItems: "center",
+                  gap: 8,
+                  margin: 8
+                }}>
+                  <span>!</span>
+                  <p>{err}</p>
+                </div>
+                </>
+              ))}
             </FormControl>
           </div>
         </main>

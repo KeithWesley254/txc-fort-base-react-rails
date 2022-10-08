@@ -53,3 +53,930 @@ Started GET "/favicon.ico" for 127.0.0.1 at 2022-10-08 18:35:17 +0300
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 20:13:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 404 Not Found in 99ms (Views: 3.6ms | ActiveRecord: 70.1ms | Allocations: 7030)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 20:13:23 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 404 Not Found in 18ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 833)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 20:28:40 +0300
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 20:28:40 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (31.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 137ms (Views: 0.5ms | ActiveRecord: 48.7ms | Allocations: 25207)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 20:28:40 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 16ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 1171)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.75ms)
+Completed 200 OK in 300ms (Views: 255.9ms | ActiveRecord: 91.6ms | Allocations: 43084)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 20:28:40 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.75ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.5ms | Allocations: 2135)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 20:29:12 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 20:29:12 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (49.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.19ms)
+Completed 200 OK in 60ms (Views: 10.6ms | ActiveRecord: 49.4ms | Allocations: 3011)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 74ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 3037)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 20:43:37 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 20:43:37 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (0.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.85ms)
+Completed 200 OK in 117ms (Views: 94.3ms | ActiveRecord: 38.6ms | Allocations: 7477)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 20:43:38 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (2.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.38ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 2.3ms | Allocations: 2699)
+
+
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 404 Not Found in 163ms (Views: 0.8ms | ActiveRecord: 98.4ms | Allocations: 12539)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 20:43:38 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 404 Not Found in 9ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 815)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 20:54:05 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 20:54:05 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.1ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.17ms)
+Completed 200 OK in 210ms (Views: 209.5ms | ActiveRecord: 83.2ms | Allocations: 5948)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 20:54:05 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.9ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.1ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.9ms | Allocations: 2453)
+
+
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.33ms)
+Completed 404 Not Found in 334ms (Views: 3.4ms | ActiveRecord: 257.1ms | Allocations: 13415)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 20:54:06 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 404 Not Found in 13ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 816)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 21:04:36 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 21:04:36 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 69ms (Views: 0.7ms | ActiveRecord: 14.8ms | Allocations: 7274)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 21:04:36 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (28.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.7ms)
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 99ms (Views: 95.9ms | ActiveRecord: 41.3ms | Allocations: 9725)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 404 Not Found in 17ms (Views: 0.7ms | ActiveRecord: 8.2ms | Allocations: 3110)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 21:04:36 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.9ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.44ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 1.9ms | Allocations: 2115)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 21:09:49 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 21:09:49 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.85ms)
+Completed 200 OK in 104ms (Views: 103.0ms | ActiveRecord: 0.4ms | Allocations: 2164)
+
+
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 404 Not Found in 121ms (Views: 2.2ms | ActiveRecord: 11.2ms | Allocations: 3833)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 21:09:49 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 21:09:49 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (2.1ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.88ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 2.1ms | Allocations: 3426)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 59ms (Views: 0.6ms | ActiveRecord: 48.2ms | Allocations: 3121)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 21:25:42 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 21:25:42 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.0ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.29ms)
+Completed 200 OK in 147ms (Views: 147.1ms | ActiveRecord: 43.7ms | Allocations: 6287)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 21:25:42 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.65ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.4ms | Allocations: 2774)
+
+
+  [1m[36mUser Load (21.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 404 Not Found in 230ms (Views: 1.4ms | ActiveRecord: 117.0ms | Allocations: 13426)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 21:25:42 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 404 Not Found in 23ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 815)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 22:57:12 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 22:57:12 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.9ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.02ms)
+Completed 200 OK in 179ms (Views: 173.8ms | ActiveRecord: 77.7ms | Allocations: 6918)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 22:57:13 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.99ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 2127)
+
+
+  [1m[36mUser Load (28.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 404 Not Found in 275ms (Views: 0.7ms | ActiveRecord: 99.8ms | Allocations: 13079)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 22:57:13 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 404 Not Found in 22ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 815)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:26:20 +0300
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:26:20 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 404 Not Found in 110ms (Views: 0.6ms | ActiveRecord: 22.9ms | Allocations: 7880)
+
+
+  [1m[36mLoginPageSlide Load (5.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.53ms)
+Completed 200 OK in 97ms (Views: 97.0ms | ActiveRecord: 24.4ms | Allocations: 7954)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:26:20 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 7ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 865)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:26:20 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.39ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.5ms | Allocations: 2118)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:28:02 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 11ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 815)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:28:02 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.36ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 2115)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:28:02 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 404 Not Found in 6ms (Views: 0.8ms | ActiveRecord: 1.1ms | Allocations: 815)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:28:02 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.2ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.96ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 1.2ms | Allocations: 2116)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:28:14 +0300
+  
+ActionController::RoutingError (uninitialized constant Api::SessionsController
+Did you mean?  Api::SessionController):
+  
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:29:59 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:29:59 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 404 Not Found in 105ms (Views: 4.3ms | ActiveRecord: 67.3ms | Allocations: 26055)
+
+
+  [1m[36mLoginPageSlide Load (5.6ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:29:59 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 12ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 831)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.48ms)
+Completed 200 OK in 281ms (Views: 63.2ms | ActiveRecord: 180.4ms | Allocations: 47535)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:29:59 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (7.0ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.32ms)
+Completed 200 OK in 55ms (Views: 47.6ms | ActiveRecord: 7.0ms | Allocations: 2167)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:30:11 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"popol@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"popol@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (26.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "popol@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 404 Not Found in 37ms (Views: 1.5ms | ActiveRecord: 26.4ms | Allocations: 879)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:41:26 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:41:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (14.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (1.2ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.72ms)
+Completed 200 OK in 143ms (Views: 56.8ms | ActiveRecord: 47.6ms | Allocations: 42481)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:41:27 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (37.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.62ms)
+Completed 200 OK in 78ms (Views: 39.8ms | ActiveRecord: 37.8ms | Allocations: 3395)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 404 Not Found in 285ms (Views: 2.5ms | ActiveRecord: 235.4ms | Allocations: 48880)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:41:27 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 404 Not Found in 10ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 833)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:41:43 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"popol@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"popol@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "popol@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 6ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 792)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:44:10 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:44:10 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 35ms (Views: 0.9ms | ActiveRecord: 3.9ms | Allocations: 3553)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:44:10 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.9ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 43ms (Views: 3.5ms | ActiveRecord: 10.6ms | Allocations: 6955)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.48ms)
+Completed 200 OK in 47ms (Views: 27.3ms | ActiveRecord: 14.5ms | Allocations: 7541)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:44:10 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.1ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.62ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.1ms | Allocations: 2115)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:44:23 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"opas@gma", "password"=>"[FILTERED]", "session"=>{"email"=>"opas@gma", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "opas@gma"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 5ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 745)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:45:21 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"opas@gmail", "password"=>"[FILTERED]", "session"=>{"email"=>"opas@gmail", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "opas@gmail"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 30ms (Views: 0.5ms | ActiveRecord: 4.5ms | Allocations: 621)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:45:25 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:45:25 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (22.9ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.29ms)
+Completed 200 OK in 40ms (Views: 17.2ms | ActiveRecord: 22.9ms | Allocations: 2167)
+
+
+  [1m[36mUser Load (48.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 74ms (Views: 0.6ms | ActiveRecord: 48.5ms | Allocations: 3979)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:45:25 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.1ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:45:25 +0300
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.9ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 1.1ms | Allocations: 2461)
+
+
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 754)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:45:32 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"ausoad", "password"=>"[FILTERED]", "session"=>{"email"=>"ausoad", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ausoad"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 9ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 618)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:46:08 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"ausoad@fkmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ausoad@fkmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ausoad@fkmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 23ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 618)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:46:11 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:46:11 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.58ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 2115)
+
+
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:46:11 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 27ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 2163)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:46:11 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 755)
+
+
+  [1m[36mLoginPageSlide Load (48.6ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.29ms)
+Completed 200 OK in 63ms (Views: 13.8ms | ActiveRecord: 48.6ms | Allocations: 5173)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:46:21 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"askapdas@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"askapdas@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "askapdas@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 19ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 623)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:48:08 +0300
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:48:08 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (4.0ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.9ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 4.0ms | Allocations: 2164)
+
+
+  [1m[36mUser Load (20.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:48:08 +0300
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 70ms (Views: 2.0ms | ActiveRecord: 20.3ms | Allocations: 4669)
+
+
+Processing by Api::LoginPageSlidesController#index as */*
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:48:08 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (18.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.33ms)
+Completed 200 OK in 36ms (Views: 16.7ms | ActiveRecord: 18.8ms | Allocations: 3357)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 35ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 2976)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:48:51 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"kaslai@gmaikl", "password"=>"[FILTERED]", "session"=>{"email"=>"kaslai@gmaikl", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kaslai@gmaikl"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 7ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 618)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:49:08 +0300
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:49:08 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 34ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 2119)
+
+
+  [1m[36mLoginPageSlide Load (10.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.36ms)
+Completed 200 OK in 36ms (Views: 25.3ms | ActiveRecord: 10.5ms | Allocations: 3023)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:49:08 +0300
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:49:08 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 22ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 2067)
+
+
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.15ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.4ms | Allocations: 3023)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-08 23:50:11 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"paoso@gmail.c", "password"=>"[FILTERED]", "session"=>{"email"=>"paoso@gmail.c", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paoso@gmail.c"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 24ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 618)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:56:44 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:56:44 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 112ms (Views: 3.1ms | ActiveRecord: 53.1ms | Allocations: 4975)
+
+
+  [1m[36mLoginPageSlide Load (8.1ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+Started GET "/api/me" for 127.0.0.1 at 2022-10-08 23:56:44 +0300
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.36ms)
+Processing by Api::UsersController#show as */*
+Completed 200 OK in 174ms (Views: 173.9ms | ActiveRecord: 90.1ms | Allocations: 10923)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-08 23:56:44 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mLoginPageSlide Load (4.9ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.96ms)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 4.9ms | Allocations: 2648)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 39ms (Views: 9.3ms | ActiveRecord: 0.8ms | Allocations: 4553)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 00:03:24 +0300
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 00:03:24 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.2ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.83ms)
+Completed 200 OK in 86ms (Views: 85.8ms | ActiveRecord: 42.6ms | Allocations: 6947)
+
+
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 115ms (Views: 0.6ms | ActiveRecord: 50.3ms | Allocations: 10118)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 00:03:24 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 00:03:24 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (2.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.07ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 2.5ms | Allocations: 3434)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 18ms (Views: 1.4ms | ActiveRecord: 4.2ms | Allocations: 3059)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 00:21:46 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 00:21:46 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.88ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 133ms (Views: 5.1ms | ActiveRecord: 47.2ms | Allocations: 5590)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 00:21:46 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 754)
+
+
+  [1m[36mLoginPageSlide Load (32.7ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.38ms)
+Completed 200 OK in 213ms (Views: 205.3ms | ActiveRecord: 90.0ms | Allocations: 11789)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 00:21:46 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.7ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.23ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.7ms | Allocations: 2115)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 01:25:12 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:25:12 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.1ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.78ms)
+Completed 200 OK in 68ms (Views: 66.9ms | ActiveRecord: 39.5ms | Allocations: 6287)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:25:12 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.86ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 2676)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 216ms (Views: 1.6ms | ActiveRecord: 107.0ms | Allocations: 13366)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 01:25:12 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 28ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 754)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:41:20 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 01:41:20 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (6.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.92ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 188ms (Views: 2.0ms | ActiveRecord: 64.3ms | Allocations: 7667)
+
+
+Completed 200 OK in 217ms (Views: 211.5ms | ActiveRecord: 105.7ms | Allocations: 9235)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:41:21 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 01:41:21 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (14.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.78ms)
+Completed 200 OK in 23ms (Views: 8.2ms | ActiveRecord: 14.5ms | Allocations: 4299)
+
+
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.89ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 91ms (Views: 1.4ms | ActiveRecord: 50.3ms | Allocations: 5933)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:41:29 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 01:41:29 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (2.0ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.64ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 2.0ms | Allocations: 2133)
+
+
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:41:29 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLoginPageSlide Load (1.6ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 87ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 2768)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.61ms)
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 1.6ms | Allocations: 2873)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 01:41:29 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 16ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 754)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:42:11 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.0ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.78ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 1.0ms | Allocations: 2115)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:42:59 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.82ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.5ms | Allocations: 2115)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:44:02 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.38ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.8ms | Allocations: 2115)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:44:18 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.24ms)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 1.5ms | Allocations: 2115)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:44:39 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.27ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.4ms | Allocations: 2115)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 01:45:06 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.41ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 2115)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 02:00:16 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.2ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.27ms)
+Completed 200 OK in 117ms (Views: 111.9ms | ActiveRecord: 45.1ms | Allocations: 4990)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 02:00:58 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.6ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.4ms | Allocations: 2115)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 02:01:49 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.89ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.4ms | Allocations: 2115)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 02:04:58 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.57ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 1.5ms | Allocations: 2115)
+
+
