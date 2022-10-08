@@ -9,7 +9,6 @@ class CreateSoldiers < ActiveRecord::Migration[7.0]
       t.belongs_to :platoon
       t.belongs_to :major_general
 
-
       t.timestamps
     end
   end
