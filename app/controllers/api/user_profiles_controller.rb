@@ -5,13 +5,18 @@ class Api::UserProfilesController < ApplicationController
         render json: slide
     end
 
+    def create
+        slide = @current_user.user_profile.create!(up_params)
+        render json: slide, status: :created
+    end
+
     def update
         slide = @current_user.user_profile.update!(up_params)
         render json: slide, status: :created
     end
 
     def destroy
-        @current_user.destroy
+        @current_user.destroy!
         session.delete :user_id
         head :no_content
     end
@@ -19,7 +24,7 @@ class Api::UserProfilesController < ApplicationController
     private
 
     def up_params
-        params.permit(:full_name, :age, :gender, :bio, :interests, :image_upload, :favourite_military_branch)
+        params.permit(:full_name, :email, :age, :gender, :bio, :interests, :image_upload, :favourite_military_branch)
     end
 
 end

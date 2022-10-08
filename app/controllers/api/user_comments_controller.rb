@@ -17,7 +17,7 @@ class Api::UserCommentsController < ApplicationController
 
     def destroy
         slide = find_comment
-        find_comment.destroy
+        find_comment.destroy!
         render json: {"comment deleted!"}, status: :ok
     end
 
