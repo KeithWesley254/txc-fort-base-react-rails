@@ -7,7 +7,7 @@ class Api::PlatoonsController < ApplicationController
 
     def show
         slide = Platoon.find_by!(id: params[:id])
-        render json: slide
+        render json: slide, serializer: ShowPlatoonSoldiersSerializer, status: :ok
     end
 
 end

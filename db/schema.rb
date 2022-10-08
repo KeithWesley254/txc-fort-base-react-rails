@@ -97,6 +97,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_07_180653) do
     t.string "interests"
     t.string "image_url"
     t.string "image_url_2"
+    t.string "image_url_3"
     t.string "favourite_foot"
     t.string "skills"
     t.bigint "soldier_id"
@@ -169,14 +170,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_07_180653) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_profiles_on_user_id", unique: true
+    t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "full_name"
     t.string "email"
     t.string "password_digest"
-    t.string "password_confirmation"
     t.boolean "is_admin?"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -187,5 +187,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_07_180653) do
   add_foreign_key "soldier_trainings", "soldiers"
   add_foreign_key "soldier_trainings", "trainings"
   add_foreign_key "user_comments", "users"
-  add_foreign_key "user_profiles", "users"
 end

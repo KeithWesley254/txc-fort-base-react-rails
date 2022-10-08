@@ -9,7 +9,7 @@ puts "🎖️ Seeding..."
 10.times do
     LoginPageSlide.create!(
         title: Faker::Lorem.sentence,
-        description: Faker::Lorem.sentences,
+        description: Faker::Lorem.paragraphs * 2,
         image_url: military_images.sample
     )
 end
@@ -17,9 +17,7 @@ end
 5.times do
     AboutU.create!(
         title: Faker::Lorem.sentence,
-        description: 3.times do
-            Faker::Lorem.paragraphs
-        end,
+        description: Faker::Lorem.paragraphs * 3,
         image_url: nature_images.sample
     )
 end
@@ -27,75 +25,30 @@ end
 5.times do
     CommunityImpact.create!(
         title: Faker::Lorem.sentence,
-        description: 3.times do
-            Faker::Lorem.paragraphs
-        end,
+        description: Faker::Lorem.paragraphs * 4,
         image_url: nature_images.sample
     )
 end
 
-army_careers =  [
-    "Immaterial & Personnel Special Reporting Codes",
-    "Infantry Branch (IN)",
-    "Corps of Engineers Branch (EN)",
-    "Field Artillery Branch (FA)",
-    "Air Defense Artillery Branch (ADA)",
-    "Aviation Branch (AV)",
-    "Cyber Branch (CY)",
-    "Special Forces (SF)",
-    "Armor Branch (AR)",
-    "Signal Corps Branch (SC)",
-    "Information Network Engineering Functional Area (FA 26)",
-    "Judge Advocate General Branch (JA)",
-    "Information Operations Functional Area (FA 30)",
-    "Military Police Branch (MP)",
-    "Strategic Intelligence Functional Area (FA 34)",
-    "Military Intelligence Branch (MI)",
-    "Finance & Comptroller Branch (FC)",
-    "Psychological Operations Branch (PO)",
-    "Civil Affairs Branch (CA)",
-    "Space Operations Functional Area (FA 40)",
-    "Adjutant General Corps (AG)",
-    "Public Affairs Functional Area (FA and CMF 46)",
-    "Academy Professor Functional Area (FA 47)",
-    "Foreign Area Officer Functional Area (FA 48)",
-    "Operations Research/Systems Analysis (ORSA) Functional Area (FA 49)",
-    "Force Management Functional Area (FA 50)",
-    "Army Acquisition Corps (FA and CMF 51)",
-    "Nuclear and Counter WMD Functional Area (FA 52)",
-    "Chaplain Branch (CH)",
-    "Simulation Operations Functional Area (FA 57)",
-    "Army Marketing Functional Area (FA 58)",
-    "Strategic Plans and Policy Functional Area (FA 59)",
-    "Medical Department Branches",
-    "Chemical Corps (CM)",
-    "Logistics Corps"
-]
-
 army_careers.map do |career|
-
-    35.times do
-
-        MilitarySpecialization.create!(
-            title: career,
-            description: Faker::Lorem.sentences,
-            sphere: ["lithosphere", "hydrosphere", "atmosphere"].sample,
-            financial_investment: rand(130000000..190000000),
-            commander_in_charge: Faker::Name.unique.name,
-            commander_image_url: Faker::Avatar.image,
-            image_url: personal_images.sample
-        )
-    
-    end
+    MilitarySpecialization.create!(
+        title: career,
+        description: Faker::Lorem.paragraphs,
+        sphere: ["lithosphere", "hydrosphere", "atmosphere"].sample,
+        financial_investment: rand(130000000..190000000),
+        commander_in_charge: Faker::Name.unique.name,
+        commander_image_url: Faker::Avatar.image,
+        image_url: personal_images.sample
+    )
 end
 
 50.times do
     MajorGeneral.create!(
         name: Faker::Name.unique.name,
         image_url: Faker::Avatar.image,
-        bio: Faker::Lorem.sentences,
+        bio: Faker::Lorem.paragraphs,
         gender: ["Male", "Female"].sample,
-        interests: hobbies.sample,
+        interests: hobbies.sample + hobbies.sample + hobbies.sample,
         favourite_foot: ["Left", "Right"].sample,
         age: rand(35..50)
     )
@@ -116,7 +69,7 @@ end
         title: [Faker::Military.army_rank, Faker::Military.marines_rank, Faker::Military.navy_rank, Faker::Military.air_force_rank, Faker::Military.space_force_rank, Faker::Military.coast_guard_rank].sample,
         image_url: Faker::Avatar.image,
         age: rand(20..60),
-        description: Faker::Lorem.paragraphs
+        description: Faker::Lorem.paragraphs * 2
     )
 end
 
@@ -125,9 +78,7 @@ end
         title: Faker::Lorem.sentence,
         author: Faker::Name.unique.name,
         image_url: images_mods.sample,
-        description: 3.times do
-            Faker::Lorem.paragraphs
-        end,
+        description: Faker::Lorem.paragraphs * 7,
         date_written: Faker::Date.between(from: '2020-09-23', to: '2022-09-25')
     )
 end
@@ -146,7 +97,7 @@ end
             "https://p4.wallpaperbetter.com/wallpaper/964/1021/316/jet-fighter-airplane-contrails-f-22-raptor-wallpaper-preview.jpg",
             "https://p4.wallpaperbetter.com/wallpaper/1011/87/593/33rd-acrobatics-armored-btr-80-wallpaper-preview.jpg"
         ].sample,
-        description: Faker::Lorem.paragraphs,
+        description: Faker::Lorem.paragraphs * 3,
         duration_in_hours: rand(2..7),
         instructor_name: Faker::Name.unique.name
     )
@@ -166,10 +117,11 @@ end
         name: soldier.name,
         platoon_id: soldier.platoon_id,
         gender: soldier.gender,
-        bio: Faker::Lorem.sentences,
-        interests: hobbies.sample,
-        image_url: personal_images.sample,
+        bio: Faker::Lorem.paragraphs * 3,
+        interests: hobbies.sample + hobbies.sample + hobbies.sample + hobbies.sample,
+        image_url: soldier.image_url,
         image_url_2: personal_images.sample,
+        image_url_3: personal_images.sample,
         favourite_foot: ["Left", "Right"].sample,
         skills: ["Bronze", "Silver", "Masters", "GrandMasters", "Epics", "Legends", "Mythics", "Mythical Glories"].sample,
         soldier_id: soldier.id

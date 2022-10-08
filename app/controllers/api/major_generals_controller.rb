@@ -7,7 +7,7 @@ class Api::MajorGeneralsController < ApplicationController
 
     def show
         slide = MajorGeneral.find_by!(id: params[:id])
-        render json: slide
+        render json: slide, serializer: ShowGeneralSoldierSerializer, status: :ok
     end
 
 end

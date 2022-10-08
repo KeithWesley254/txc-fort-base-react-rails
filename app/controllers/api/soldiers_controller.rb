@@ -7,7 +7,7 @@ class Api::SoldiersController < ApplicationController
 
     def show
         slide = Soldier.find_by!(id: params[:id])
-        render json: slide
+        render json: slide, serializer: AddProfileSoldierSerializer, status: :ok
     end
 
 end

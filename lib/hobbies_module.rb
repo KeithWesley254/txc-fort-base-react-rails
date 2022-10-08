@@ -28,6 +28,47 @@ module HobbiesModule
         "Army Nurse Corps"
         ]
     end
+
+    def army_careers
+        [
+            "Immaterial & Personnel Special Reporting Codes",
+            "Infantry Branch (IN)",
+            "Corps of Engineers Branch (EN)",
+            "Field Artillery Branch (FA)",
+            "Air Defense Artillery Branch (ADA)",
+            "Aviation Branch (AV)",
+            "Cyber Branch (CY)",
+            "Special Forces (SF)",
+            "Armor Branch (AR)",
+            "Signal Corps Branch (SC)",
+            "Information Network Engineering Functional Area (FA 26)",
+            "Judge Advocate General Branch (JA)",
+            "Information Operations Functional Area (FA 30)",
+            "Military Police Branch (MP)",
+            "Strategic Intelligence Functional Area (FA 34)",
+            "Military Intelligence Branch (MI)",
+            "Finance & Comptroller Branch (FC)",
+            "Psychological Operations Branch (PO)",
+            "Civil Affairs Branch (CA)",
+            "Space Operations Functional Area (FA 40)",
+            "Adjutant General Corps (AG)",
+            "Public Affairs Functional Area (FA and CMF 46)",
+            "Academy Professor Functional Area (FA 47)",
+            "Foreign Area Officer Functional Area (FA 48)",
+            "Operations Research/Systems Analysis (ORSA) Functional Area (FA 49)",
+            "Force Management Functional Area (FA 50)",
+            "Army Acquisition Corps (FA and CMF 51)",
+            "Nuclear and Counter WMD Functional Area (FA 52)",
+            "Chaplain Branch (CH)",
+            "Simulation Operations Functional Area (FA 57)",
+            "Army Marketing Functional Area (FA 58)",
+            "Strategic Plans and Policy Functional Area (FA 59)",
+            "Medical Department Branches",
+            "Chemical Corps (CM)",
+            "Logistics Corps"
+        ]
+        
+    end
     
     def hobbies
         [
