@@ -1,8 +1,8 @@
 require_relative '../lib/hobbies_module'
 require_relative '../lib/images_module'
 
-extend HobbiesModule
-extend ImagesModule
+include HobbiesModule
+include ImagesModule
 
 puts "🎖️ Seeding..."
 
@@ -10,23 +10,27 @@ puts "🎖️ Seeding..."
     LoginPageSlide.create!(
         title: Faker::Lorem.sentence,
         description: Faker::Lorem.sentences,
-        image_url: Faker::Image.unique.nature
+        image_url: military_images.sample
     )
 end
 
 5.times do
     AboutU.create!(
         title: Faker::Lorem.sentence,
-        description: Faker::Lorem.sentences,
-        image_url: Faker::Image.unique.people
+        description: 3.times do
+            Faker::Lorem.paragraphs
+        end,
+        image_url: nature_images.sample
     )
 end
 
 5.times do
     CommunityImpact.create!(
         title: Faker::Lorem.sentence,
-        description: Faker::Lorem.sentences,
-        image_url: Faker::Image.unique.animals
+        description: 3.times do
+            Faker::Lorem.paragraphs
+        end,
+        image_url: nature_images.sample
     )
 end
 
@@ -79,7 +83,7 @@ army_careers.map do |career|
             financial_investment: rand(130000000..190000000),
             commander_in_charge: Faker::Name.unique.name,
             commander_image_url: Faker::Avatar.image,
-            image_url: Faker::Image.unique.animals
+            image_url: personal_images.sample
         )
     
     end
@@ -91,7 +95,7 @@ end
         image_url: Faker::Avatar.image,
         bio: Faker::Lorem.sentences,
         gender: ["Male", "Female"].sample,
-        interests: HOBBIES.sample,
+        interests: hobbies.sample,
         favourite_foot: ["Left", "Right"].sample,
         age: rand(35..50)
     )
@@ -99,7 +103,7 @@ end
 
 300.times do
     Platoon.create!(
-        name: [Faker::Ancient.unique.god, Faker::Ancient.unique.primordial, Faker::Ancient.unique.titan, Faker::Ancient.unique.hero].sample,
+        name: Faker::Book.title + Faker::Ancient.god,
         sphere_assigned: ["lithosphere", "hydrosphere", "atmosphere"].sample,
         skill_lvl: ["Bronze", "Silver", "Masters", "GrandMasters", "Epics", "Legends", "Mythics", "Mythical Glories"].sample,
         ranking: rand(1..300)
@@ -112,7 +116,7 @@ end
         title: [Faker::Military.army_rank, Faker::Military.marines_rank, Faker::Military.navy_rank, Faker::Military.air_force_rank, Faker::Military.space_force_rank, Faker::Military.coast_guard_rank].sample,
         image_url: Faker::Avatar.image,
         age: rand(20..60),
-        description: Faker::Lorem.sentences
+        description: Faker::Lorem.paragraphs
     )
 end
 
@@ -120,8 +124,10 @@ end
     Technology.create!(
         title: Faker::Lorem.sentence,
         author: Faker::Name.unique.name,
-        image_url: IMAGES_MODS.sample,
-        description: Faker::Lorem.sentences Faker::Lorem.sentences Faker::Lorem.sentences,
+        image_url: images_mods.sample,
+        description: 3.times do
+            Faker::Lorem.paragraphs
+        end,
         date_written: Faker::Date.between(from: '2020-09-23', to: '2022-09-25')
     )
 end
@@ -140,7 +146,7 @@ end
             "https://p4.wallpaperbetter.com/wallpaper/964/1021/316/jet-fighter-airplane-contrails-f-22-raptor-wallpaper-preview.jpg",
             "https://p4.wallpaperbetter.com/wallpaper/1011/87/593/33rd-acrobatics-armored-btr-80-wallpaper-preview.jpg"
         ].sample,
-        description: Faker::Lorem.sentences Faker::Lorem.sentences,
+        description: Faker::Lorem.paragraphs,
         duration_in_hours: rand(2..7),
         instructor_name: Faker::Name.unique.name
     )
@@ -149,7 +155,7 @@ end
 3000.times do
     soldier = Soldier.create!(
         name: Faker::Name.unique.name,
-        image_url: Faker::Image.unique.people,
+        image_url: Faker::Avatar.image,
         age: rand(18..60),
         gender: ["Male", "Female"].sample,
         military_specialization_id: rand(1..35),
@@ -161,9 +167,9 @@ end
         platoon_id: soldier.platoon_id,
         gender: soldier.gender,
         bio: Faker::Lorem.sentences,
-        interests: HOBBIES.sample,
-        image_url: PERSONAL_IMAGES.sample,
-        image_url_2: PERSONAL_IMAGES.sample,
+        interests: hobbies.sample,
+        image_url: personal_images.sample,
+        image_url_2: personal_images.sample,
         favourite_foot: ["Left", "Right"].sample,
         skills: ["Bronze", "Silver", "Masters", "GrandMasters", "Epics", "Legends", "Mythics", "Mythical Glories"].sample,
         soldier_id: soldier.id
@@ -178,48 +184,8 @@ end
     user = User.create!(
         full_name: Faker::Name.unique.name,
         email: Faker::Internet.unique.email,
-        password: Faker::Internet.password,
-        password_confirmation: user.password,
+        password_digest: "Vg5mSvY1UeRg724",
         is_admin?: false
-    )
-    UserProfile.create!(
-        full_name: user.full_name,
-        email: user.email,
-        age: rand(13..45),
-        gender: ["Male", "Female"].sample,
-        bio: Faker::Lorem.sentences Faker::Lorem.sentences,
-        interests: HOBBIES.sample,
-        image_upload: nil,
-        favourite_military_branch: [
-            "Infantry",
-            "Air Defense Artillery",
-            "Armor",
-            "Aviation",
-            "Corps of Engineers",
-            "Field Artillery",
-            "Special Forces",
-            "Chemical Corps",
-            "Signal Corps",
-            "Military Intelligence Corps",
-            "Military Police Corps",
-            "Adjutant General's Corps",
-            "Finance Corps",
-            "Ordnance Corps",
-            "Quartermaster Corps",
-            "Transportation Corps",
-            "Judge Advocate Generals Corps",
-            "Chaplain Corps",
-            "Medical Corps",
-            "Medical Service Corps",
-            "Dental Corps",
-            "Veterinary Corps",
-            "Army Medical Specialist Corps",
-            "Army Nurse Corps"
-        ].sample
-    )
-    UserComment.create!(
-        user_comment: Faker::Lorem.sentences,
-        user_id: user.id
     )
 end
 

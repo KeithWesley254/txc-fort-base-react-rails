@@ -7,9 +7,9 @@ class CreateUserProfiles < ActiveRecord::Migration[7.0]
       t.string :gender
       t.string :bio
       t.string :interests
-      t.image :image_upload
+      t.string :image_upload
       t.string :favourite_military_branch
-      t.belongs_to :user, index: { unique: true }, foreign_key: true
+      t.belongs_to :user
 
       t.timestamps
     end
