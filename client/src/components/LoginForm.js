@@ -91,22 +91,13 @@ const LoginForm = ({ onLogin }) => {
           
           <div>
             <FormControl>
-              {errors.map((err) => (
-                <>
-                <div key={err} style={{
-                  color: "red",
-                  backgroundColor: "mistyrose",
-                  borderRadius: 6,
-                  padding: 6,
-                  alignItems: "center",
-                  gap: 8,
-                  margin: 8
-                }}>
-                  <span>!</span>
-                  <p>{err}</p>
-                </div>
-                </>
-              ))}
+            {errors.map((err) => (
+            <>
+              <div key={err}>
+               {alert(err)}
+              </div>
+            </>
+            ))}
             </FormControl>
           </div>
           </form>

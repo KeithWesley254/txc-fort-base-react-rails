@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import {Grid, Box, CardMedia, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio} from '@mui/material';
+import {Grid, Box, CardMedia, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography} from '@mui/material';
 import Card from '@mui/material/Card';
-import placeholderImg from '../placeholder.jpg'
 
 
 const UserProfile = ({user}) => {
@@ -32,18 +31,32 @@ const UserProfile = ({user}) => {
     .then(data => {
         setUserData(data)
     })
+    alert("Profile Created!")
+  }
 
-    setFormData({
-      full_name: '',
-      email: '',
-      user_id: '',
-      gender: '',
-      age: '',
-      bio: '',
-      interests: '',
-      image_upload: '',
-      favourite_military_branch: ''
-    })
+  function handleUpdatePlayer() {
+    fetch(`/api/user_profiles/${user.id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      full_name: formData.full_name,
+      email: formData.email,
+      user_id: formData.user_id,
+      gender: formData.gender,
+      age: formData.age,
+      bio: formData.bio,
+      interests: formData.interests,
+      image_upload: formData.image_upload,
+      favourite_military_branch: formData.favourite_military_branch
+    }),
+  })
+    .then((r) => r.json())
+    .then((updatedItem) => {
+      setUserData(updatedItem)
+    });
+    alert("Profile Updated!")
   }
 
   function handleChange(e){
@@ -59,13 +72,103 @@ const UserProfile = ({user}) => {
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2} columns={12}>
           <Grid item xs={12} md={6} sx={{textAlign: "center"}}>
-              <h3>Details</h3>
+
+            {/* DETAILS SECTION */}
+
+            <br />
+          <Grid container spacing={2}>
+              <Grid item xs={6} md={6}>
+                <Box sx={{ml: 5}}>
+                  <Card sx={{ maxWidth: 345}}>
+                      <CardMedia
+                        component="img"
+                        height="230"
+                        image={user?.image_upload}
+                        alt={user?.full_name}
+                        sx={{width: "auto"}}
+                      />
+                  </Card>
+                </Box>
+              </Grid>
+              <Grid item xs={6} md={6}>
+                <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Typography variant="h5" component="h2">
+                    Full Name
+                  </Typography>
+                  <Typography variant="body2" component="h2">
+                    {userData?.full_name}
+                  </Typography>
+                </Box>
+                <br />
+                <br />
+                <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Typography variant="h5" component="h2">
+                    Email Address
+                  </Typography>
+                  <Typography variant="body2" component="h2">
+                    {userData?.email}
+                  </Typography>
+                </Box>
+                <br />
+                <br />
+                <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Typography variant="h5" component="h2">
+                    Gender
+                  </Typography>
+                  <Typography variant="body2" component="h2">
+                    {userData?.gender}
+                  </Typography>
+                </Box>                        
+              </Grid>
+            </Grid>
+            <br />
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={12}>
+                <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Typography variant="h5" component="h2">
+                      Bio
+                    </Typography>
+                    <Typography variant="body2" component="h2">
+                      {userData?.bio}
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
+            <br />
+            <br />
+            <Grid container spacing={2}>
+              <Grid item xs={6} md={6}>
+                <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Typography variant="h5" component="h2">
+                    Age
+                  </Typography>
+                  <Typography variant="body2" component="h2">
+                    {userData?.age}
+                  </Typography>
+                </Box>      
+              </Grid>
+              <Grid item xs={6} md={6}>
+              <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Typography variant="h5" component="h2">
+                    Interests
+                  </Typography>
+                  <Typography variant="body2" component="h2">
+                    {userData?.interests}
+                  </Typography>
+                </Box>      
+              </Grid>
+            </Grid>
           </Grid>
+          <br />
+
+          {/* POSTING SECTION */}
+
           <Grid item xs={12} md={6} >
             <Box sx={{ textAlign: "center"}}>
               <Grid container spacing={2} columns={6}>
                 <Grid item xs={6} md={3}>
                   <br />
+                  <Box sx={{ml: 5}}>
                   <Card sx={{ maxWidth: 345}}>
                     <CardMedia
                       component="img"
@@ -75,6 +178,7 @@ const UserProfile = ({user}) => {
                       sx={{width: "auto"}}
                     />
                   </Card>
+                  </Box>
                 </Grid>
                 <Grid item xs={6} md={3}>
                   <br />
@@ -188,6 +292,17 @@ const UserProfile = ({user}) => {
                   />
                 </Box>
               </Grid>
+              <Grid item xs={6} md={6}>
+                <Box>
+                  <TextField
+                    id="age"
+                    label="age"
+                    defaultValue={user?.age}
+                    fullWidth
+                    onChange={handleChange}
+                  />
+                </Box>
+              </Grid>
             </Grid>
             <br />
             <Grid container spacing={2}>
@@ -204,6 +319,7 @@ const UserProfile = ({user}) => {
                     cursor: "pointer",
                     border: "none"
                   }}
+                  onClick={handleSubmit}
                   >
                     Submit
                   </button>

@@ -139,17 +139,17 @@ end
         password_digest: "Vg5mSvY1UeRg724",
         is_admin?: false
     )
-    UserProfile.create(
-        full_name: user.full_name,
-        email: user.email,
-        age: rand(15..70),
-        gender: ["Male", "Female"].sample,
-        bio: Faker::Lorem.paragraphs * 3,
-        interests: hobbies.sample + hobbies.sample +  hobbies.sample +  hobbies.sample,
-        image_upload: personal_images.sample,
-        favourite_military_branch: favourite_military_branch.sample,
-        user_id: user.id
-    )
+    # UserProfile.create(
+    #     full_name: user.full_name,
+    #     email: user.email,
+    #     age: rand(15..70),
+    #     gender: ["Male", "Female"].sample,
+    #     bio: Faker::Lorem.paragraphs * 3,
+    #     interests: hobbies.sample + hobbies.sample +  hobbies.sample +  hobbies.sample,
+    #     image_upload: personal_images.sample,
+    #     favourite_military_branch: favourite_military_branch.sample,
+    #     user_id: user.id
+    # )
 end
 
 puts "🪖 Done Seeding"

@@ -158,26 +158,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_07_180653) do
     t.index ["user_id"], name: "index_user_comments_on_user_id"
   end
 
-  create_table "user_profiles", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "full_name"
     t.string "email"
+    t.string "password_digest"
+    t.boolean "is_admin?"
     t.integer "age"
     t.string "gender"
     t.string "bio"
     t.string "interests"
     t.string "image_upload"
     t.string "favourite_military_branch"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_profiles_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "full_name"
-    t.string "email"
-    t.string "password_digest"
-    t.boolean "is_admin?"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -45,7 +45,7 @@ const Header = ({setUser, user}) => {
     <AppBar position="static" sx={{ bgcolor: "#fff"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-            <div className='headerLogo'>
+            <div className='headerLogo' onClick={() => navigate('/')}>
                 <p style={{fontWeight: "bolder", fontSize: 14, color: 'black', cursor: "pointer"}}>
                   TXC
                   <br />

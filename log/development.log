@@ -9838,3 +9838,872 @@ Processing by Api::UserProfilesController#show as */*
 Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 1336)
 
 
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 23:09:23 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 23:09:23 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.2ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.81ms)
+Completed 200 OK in 89ms (Views: 87.3ms | ActiveRecord: 20.6ms | Allocations: 6985)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 23:09:23 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.44ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.3ms | Allocations: 2249)
+
+
+  [1m[36mUser Load (24.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 351ms (Views: 9.1ms | ActiveRecord: 110.9ms | Allocations: 14124)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 23:09:23 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 81ms (Views: 1.3ms | ActiveRecord: 2.1ms | Allocations: 1223)
+
+
+Started GET "/api/user_profiles/14" for 127.0.0.1 at 2022-10-09 23:09:24 +0300
+Processing by Api::UserProfilesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUserProfile Load (0.8ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles" WHERE "user_profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/user_profiles_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 1356)
+
+
+Started GET "/api/user_profiles/14" for 127.0.0.1 at 2022-10-09 23:09:24 +0300
+Processing by Api::UserProfilesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUserProfile Load (0.4ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles" WHERE "user_profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/user_profiles_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 200 OK in 28ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 1332)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 23:16:55 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 23:16:55 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 73ms (Views: 1.5ms | ActiveRecord: 46.5ms | Allocations: 5998)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 23:16:55 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 13ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+  [1m[36mLoginPageSlide Load (31.9ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.42ms)
+Completed 200 OK in 134ms (Views: 133.5ms | ActiveRecord: 64.9ms | Allocations: 13573)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 23:16:55 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.7ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.38ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.7ms | Allocations: 2248)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 23:18:24 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 23:18:24 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (0.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.81ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.3ms | Allocations: 3268)
+
+
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 26ms (Views: 2.2ms | ActiveRecord: 17.2ms | Allocations: 3635)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 23:18:24 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.87ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.8ms | Allocations: 2248)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 23:18:24 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.96ms)
+Completed 200 OK in 16ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 1220)
+
+
+Started GET "/api/user_profiles/14" for 127.0.0.1 at 2022-10-09 23:18:24 +0300
+Processing by Api::UserProfilesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUserProfile Load (1.1ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles" WHERE "user_profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/user_profiles_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.4ms | Allocations: 1360)
+
+
+Started GET "/api/user_profiles/14" for 127.0.0.1 at 2022-10-09 23:18:24 +0300
+Processing by Api::UserProfilesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUserProfile Load (10.5ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles" WHERE "user_profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/user_profiles_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 10.9ms | Allocations: 1336)
+
+
+Started POST "/api/user_profiles" for 127.0.0.1 at 2022-10-09 23:35:42 +0300
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::UserProfilesController):
+  
+actionpack (7.0.4) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 23:35:48 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 23:35:48 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (3.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.11ms)
+Completed 200 OK in 62ms (Views: 61.9ms | ActiveRecord: 27.6ms | Allocations: 7270)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-09 23:35:48 +0300
+  [1m[36mUser Load (23.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 90ms (Views: 1.3ms | ActiveRecord: 61.8ms | Allocations: 11195)
+
+
+  [1m[36mLoginPageSlide Load (1.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.57ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 1.3ms | Allocations: 3221)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-09 23:35:48 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 19ms (Views: 1.1ms | ActiveRecord: 3.3ms | Allocations: 1280)
+
+
+Started GET "/api/user_profiles/14" for 127.0.0.1 at 2022-10-09 23:35:49 +0300
+Processing by Api::UserProfilesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUserProfile Load (2.4ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles" WHERE "user_profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/user_profiles_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 200 OK in 17ms (Views: 1.5ms | ActiveRecord: 2.8ms | Allocations: 1360)
+
+
+Started GET "/api/user_profiles/14" for 127.0.0.1 at 2022-10-09 23:35:49 +0300
+Processing by Api::UserProfilesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUserProfile Load (0.3ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles" WHERE "user_profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/user_profiles_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.21ms)
+Completed 200 OK in 21ms (Views: 2.7ms | ActiveRecord: 11.2ms | Allocations: 1336)
+
+
+Started GET "/api/user_profiles/14" for 127.0.0.1 at 2022-10-09 23:37:50 +0300
+Processing by Api::UserProfilesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUserProfile Load (0.4ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles" WHERE "user_profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/user_profiles_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 0.8ms | Allocations: 1348)
+
+
+Started POST "/api/user_profiles" for 127.0.0.1 at 2022-10-09 23:42:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UserProfilesController#create as */*
+  Parameters: {"full_name"=>"", "email"=>"", "user_id"=>"", "gender"=>"male", "age"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", ""=>"Infantry", "user_profile"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"male", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user_id"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUserProfile Load (0.8ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles" WHERE "user_profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/user_profiles_controller.rb:9:in `create'
+[31mUnpermitted parameters: :user_id, :, :user_profile. Context: { controller: Api::UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007ff2ada74750>, params: {"full_name"=>"", "email"=>"", "user_id"=>"", "gender"=>"male", "age"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", ""=>"Infantry", "controller"=>"api/user_profiles", "action"=>"create", "user_profile"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"male", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user_id"=>""}} }[0m
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 9.8ms | Allocations: 40225)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/api/user_profiles_controller.rb:9:in `create'
+Started POST "/api/user_profiles" for 127.0.0.1 at 2022-10-09 23:47:38 +0300
+Processing by Api::UserProfilesController#create as */*
+  Parameters: {"full_name"=>"", "email"=>"", "user_id"=>"", "gender"=>"male", "age"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", ""=>"Infantry", "user_profile"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"male", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user_id"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles" WHERE "user_profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/user_profiles_controller.rb:9:in `create'
+[31mUnpermitted parameters: :user_id, :, :user_profile. Context: { controller: Api::UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007ff2ae9fc2b8>, params: {"full_name"=>"", "email"=>"", "user_id"=>"", "gender"=>"male", "age"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", ""=>"Infantry", "controller"=>"api/user_profiles", "action"=>"create", "user_profile"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"male", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user_id"=>""}} }[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 7.3ms | Allocations: 6306)
+
+
+  
+NoMethodError (undefined method `create' for nil:NilClass):
+  
+app/controllers/api/user_profiles_controller.rb:9:in `create'
+Started POST "/api/user_profiles?full_name=Mali%20Yangu&email=maliyangu@gmail.com&age=22&gender=female&bio=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipisicing%20elit.%20Quos%20blanditiis%20tenetur%20unde%20suscipit,%20quam%20beatae%20rerum%20inventore%20consectetur,%20neque%20doloribus,%20cupiditate%20numquam%20dignissimos%20laborum%20fugiat%20deleniti?%20Eum%20quasi%20quidem%20quibusdam.&interests=Content%20Creation&image_upload=https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg&favourite_military_branch=Airforce&user_id" for ::1 at 2022-10-09 23:53:06 +0300
+Processing by Api::UserProfilesController#create as */*
+  Parameters: {"full_name"=>"Mali Yangu", "email"=>"maliyangu@gmail.com", "age"=>"22", "gender"=>"female", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.", "interests"=>"Content Creation", "image_upload"=>"https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg", "favourite_military_branch"=>"Airforce", "user_id"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 64ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 1263)
+
+
+Started POST "/api/user_profiles?full_name=Mali%20Yangu&email=maliyangu@gmail.com&age=22&gender=female&bio=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipisicing%20elit.%20Quos%20blanditiis%20tenetur%20unde%20suscipit,%20quam%20beatae%20rerum%20inventore%20consectetur,%20neque%20doloribus,%20cupiditate%20numquam%20dignissimos%20laborum%20fugiat%20deleniti?%20Eum%20quasi%20quidem%20quibusdam.&interests=Content%20Creation&image_upload=https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg&favourite_military_branch=Airforce&user_id" for ::1 at 2022-10-09 23:54:15 +0300
+Processing by Api::UserProfilesController#create as */*
+  Parameters: {"full_name"=>"Mali Yangu", "email"=>"maliyangu@gmail.com", "age"=>"22", "gender"=>"female", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.", "interests"=>"Content Creation", "image_upload"=>"https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg", "favourite_military_branch"=>"Airforce", "user_id"=>nil}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 604)
+
+
+  
+NoMethodError (undefined method `user_profile' for nil:NilClass):
+  
+app/controllers/api/user_profiles_controller.rb:9:in `create'
+Started POST "/api/user_profiles?full_name=Mali%20Yangu&email=maliyangu@gmail.com&age=22&gender=female&bio=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipisicing%20elit.%20Quos%20blanditiis%20tenetur%20unde%20suscipit,%20quam%20beatae%20rerum%20inventore%20consectetur,%20neque%20doloribus,%20cupiditate%20numquam%20dignissimos%20laborum%20fugiat%20deleniti?%20Eum%20quasi%20quidem%20quibusdam.&interests=Content%20Creation&image_upload=https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg&favourite_military_branch=Airforce&user_id" for ::1 at 2022-10-09 23:55:52 +0300
+Processing by Api::UserProfilesController#create as */*
+  Parameters: {"full_name"=>"Mali Yangu", "email"=>"maliyangu@gmail.com", "age"=>"22", "gender"=>"female", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.", "interests"=>"Content Creation", "image_upload"=>"https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg", "favourite_military_branch"=>"Airforce", "user_id"=>nil}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 58)
+
+
+Started POST "/api/user_profiles?full_name=Mali%20Yangu&email=maliyangu9@gmail.com&age=22&gender=female&bio=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipisicing%20elit.%20Quos%20blanditiis%20tenetur%20unde%20suscipit,%20quam%20beatae%20rerum%20inventore%20consectetur,%20neque%20doloribus,%20cupiditate%20numquam%20dignissimos%20laborum%20fugiat%20deleniti?%20Eum%20quasi%20quidem%20quibusdam.&interests=Content%20Creation&image_upload=https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg&favourite_military_branch=Airforce&user_id=20" for ::1 at 2022-10-09 23:57:29 +0300
+Processing by Api::UserProfilesController#create as */*
+  Parameters: {"full_name"=>"Mali Yangu", "email"=>"maliyangu9@gmail.com", "age"=>"22", "gender"=>"female", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.", "interests"=>"Content Creation", "image_upload"=>"https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg", "favourite_military_branch"=>"Airforce", "user_id"=>"20"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started POST "/api/user_profiles?full_name=Mali%20Yangu&email=maliyangu@gmail.com&age=22&gender=female&bio=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipisicing%20elit.%20Quos%20blanditiis%20tenetur%20unde%20suscipit,%20quam%20beatae%20rerum%20inventore%20consectetur,%20neque%20doloribus,%20cupiditate%20numquam%20dignissimos%20laborum%20fugiat%20deleniti?%20Eum%20quasi%20quidem%20quibusdam.&interests=Content%20Creation&image_upload=https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg&favourite_military_branch=Airforce&user_id=4" for ::1 at 2022-10-09 23:59:19 +0300
+Processing by Api::UserProfilesController#create as */*
+  Parameters: {"full_name"=>"Mali Yangu", "email"=>"maliyangu@gmail.com", "age"=>"22", "gender"=>"female", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.", "interests"=>"Content Creation", "image_upload"=>"https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg", "favourite_military_branch"=>"Airforce", "user_id"=>"4"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCommunityImpacts (20221007180653)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.6ms)[0m  [1m[35mDROP TABLE "community_impacts"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (5.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221007180653"]]
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSoldierTrainings (20221007174033)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "soldier_trainings"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221007174033"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFanMessages (20221007173700)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "fan_messages"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221007173700"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserComments (20221007173329)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "user_comments"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221007173329"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserProfiles (20221007173310)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "user_profiles"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221007173310"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20221007173259)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221007173259"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started DELETE "/api/logout" for 127.0.0.1 at 2022-10-10 01:19:06 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 5 pending migrations:
+
+20221007173259_create_users.rb
+20221007173329_create_user_comments.rb
+20221007173700_create_fan_messages.rb
+20221007174033_create_soldier_trainings.rb
+20221007180653_create_community_impacts.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20221007173259)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "full_name" character varying, "email" character varying, "password_digest" character varying, "is_admin?" boolean, "age" integer, "gender" character varying, "bio" character varying, "interests" character varying, "image_upload" character varying, "favourite_military_branch" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (20.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221007173259"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserComments (20221007173329)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "user_comments" ("id" bigserial primary key, "user_comment" character varying, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c4e95a001e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE INDEX "index_user_comments_on_user_id" ON "user_comments" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221007173329"]]
+  [1m[36mTRANSACTION (24.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFanMessages (20221007173700)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "fan_messages" ("id" bigserial primary key, "message" character varying, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_96815d72b5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_fan_messages_on_user_id" ON "fan_messages" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221007173700"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSoldierTrainings (20221007174033)
+  [1m[36mTRANSACTION (27.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "soldier_trainings" ("id" bigserial primary key, "soldier_id" bigint, "training_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_0fe2242983"
+FOREIGN KEY ("soldier_id")
+  REFERENCES "soldiers" ("id")
+, CONSTRAINT "fk_rails_5b38538bdf"
+FOREIGN KEY ("training_id")
+  REFERENCES "trainings" ("id")
+)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_soldier_trainings_on_soldier_id" ON "soldier_trainings" ("soldier_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_soldier_trainings_on_training_id" ON "soldier_trainings" ("training_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221007174033"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCommunityImpacts (20221007180653)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (33.9ms)[0m  [1m[35mCREATE TABLE "community_impacts" ("id" bigserial primary key, "title" character varying, "description" character varying, "image_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221007180653"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (26.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (1.0ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ipsum inventore in eius."], ["description", "[\"Incidunt rerum voluptatibus. Recusandae esse quia. Veritatis tenetur quisquam.\", \"Rerum dicta et. Deserunt iste et. Ducimus dolorem maiores.\", \"Voluptatem saepe numquam. Et possimus repudiandae. Suscipit maiores praesentium.\", \"Incidunt rerum voluptatibus. Recusandae esse quia. Veritatis tenetur quisquam.\", \"Rerum dicta et. Deserunt iste et. Ducimus dolorem maiores.\", \"Voluptatem saepe numquam. Et possimus repudiandae. Suscipit maiores praesentium.\", \"Incidunt rerum voluptatibus. Recusandae esse quia. Veritatis tenetur quisquam.\", \"Rerum dicta et. Deserunt iste et. Ducimus dolorem maiores.\", \"Voluptatem saepe numquam. Et possimus repudiandae. Suscipit maiores praesentium.\", \"Incidunt rerum voluptatibus. Recusandae esse quia. Veritatis tenetur quisquam.\", \"Rerum dicta et. Deserunt iste et. Ducimus dolorem maiores.\", \"Voluptatem saepe numquam. Et possimus repudiandae. Suscipit maiores praesentium.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/947/583/747/mountain-nature-hd-wallpapers-top-beautiful-desktop-nature-images-background-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:19:39.915240"], ["updated_at", "2022-10-09 22:19:39.915240"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (25.5ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Qui itaque voluptatibus aut."], ["description", "[\"Animi sunt laboriosam. Molestiae et et. Omnis maxime praesentium.\", \"Officia debitis molestias. Eum id et. Doloribus vero eveniet.\", \"Culpa rerum sed. Beatae consequatur cupiditate. Veniam dolores nulla.\", \"Animi sunt laboriosam. Molestiae et et. Omnis maxime praesentium.\", \"Officia debitis molestias. Eum id et. Doloribus vero eveniet.\", \"Culpa rerum sed. Beatae consequatur cupiditate. Veniam dolores nulla.\", \"Animi sunt laboriosam. Molestiae et et. Omnis maxime praesentium.\", \"Officia debitis molestias. Eum id et. Doloribus vero eveniet.\", \"Culpa rerum sed. Beatae consequatur cupiditate. Veniam dolores nulla.\", \"Animi sunt laboriosam. Molestiae et et. Omnis maxime praesentium.\", \"Officia debitis molestias. Eum id et. Doloribus vero eveniet.\", \"Culpa rerum sed. Beatae consequatur cupiditate. Veniam dolores nulla.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/608/245/253/desktop-nature-wallpaper-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:19:39.923069"], ["updated_at", "2022-10-09 22:19:39.923069"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (0.4ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Et officia sit dolorum."], ["description", "[\"Deserunt voluptate et. Et sed rerum. Dolorem provident et.\", \"Optio neque tempore. Reiciendis cupiditate sunt. Maxime quam ut.\", \"Dolores natus rerum. Quo sed cum. Cupiditate voluptatem est.\", \"Deserunt voluptate et. Et sed rerum. Dolorem provident et.\", \"Optio neque tempore. Reiciendis cupiditate sunt. Maxime quam ut.\", \"Dolores natus rerum. Quo sed cum. Cupiditate voluptatem est.\", \"Deserunt voluptate et. Et sed rerum. Dolorem provident et.\", \"Optio neque tempore. Reiciendis cupiditate sunt. Maxime quam ut.\", \"Dolores natus rerum. Quo sed cum. Cupiditate voluptatem est.\", \"Deserunt voluptate et. Et sed rerum. Dolorem provident et.\", \"Optio neque tempore. Reiciendis cupiditate sunt. Maxime quam ut.\", \"Dolores natus rerum. Quo sed cum. Cupiditate voluptatem est.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/947/583/747/mountain-nature-hd-wallpapers-top-beautiful-desktop-nature-images-background-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:19:39.957119"], ["updated_at", "2022-10-09 22:19:39.957119"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (0.3ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sequi temporibus et sed."], ["description", "[\"Qui ea tempore. Sit delectus ducimus. Ipsam unde nam.\", \"Est nam et. Quaerat doloribus sequi. Est commodi accusamus.\", \"Ut aut saepe. Consequuntur ipsam commodi. Optio quaerat voluptas.\", \"Qui ea tempore. Sit delectus ducimus. Ipsam unde nam.\", \"Est nam et. Quaerat doloribus sequi. Est commodi accusamus.\", \"Ut aut saepe. Consequuntur ipsam commodi. Optio quaerat voluptas.\", \"Qui ea tempore. Sit delectus ducimus. Ipsam unde nam.\", \"Est nam et. Quaerat doloribus sequi. Est commodi accusamus.\", \"Ut aut saepe. Consequuntur ipsam commodi. Optio quaerat voluptas.\", \"Qui ea tempore. Sit delectus ducimus. Ipsam unde nam.\", \"Est nam et. Quaerat doloribus sequi. Est commodi accusamus.\", \"Ut aut saepe. Consequuntur ipsam commodi. Optio quaerat voluptas.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/542/369/209/hi-def-nature-pictures-2560x1440-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:19:39.963436"], ["updated_at", "2022-10-09 22:19:39.963436"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (0.3ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eos maiores rerum laboriosam."], ["description", "[\"Repellat praesentium dignissimos. Cupiditate at omnis. Voluptate expedita debitis.\", \"Pariatur quis voluptatem. Aperiam iste magnam. Rerum error ipsa.\", \"Et asperiores molestiae. Voluptas velit laudantium. Excepturi sequi et.\", \"Repellat praesentium dignissimos. Cupiditate at omnis. Voluptate expedita debitis.\", \"Pariatur quis voluptatem. Aperiam iste magnam. Rerum error ipsa.\", \"Et asperiores molestiae. Voluptas velit laudantium. Excepturi sequi et.\", \"Repellat praesentium dignissimos. Cupiditate at omnis. Voluptate expedita debitis.\", \"Pariatur quis voluptatem. Aperiam iste magnam. Rerum error ipsa.\", \"Et asperiores molestiae. Voluptas velit laudantium. Excepturi sequi et.\", \"Repellat praesentium dignissimos. Cupiditate at omnis. Voluptate expedita debitis.\", \"Pariatur quis voluptatem. Aperiam iste magnam. Rerum error ipsa.\", \"Et asperiores molestiae. Voluptas velit laudantium. Excepturi sequi et.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/41/681/303/pc-hd-1080p-nature-1920x1080-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:19:39.969136"], ["updated_at", "2022-10-09 22:19:39.969136"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "magaret.sporer@stracke.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (24.6ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Danika Predovic DVM"], ["email", "magaret.sporer@stracke.name"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:19:40.025213"], ["updated_at", "2022-10-09 22:19:40.025213"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (15.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3136686445201850205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (0.7ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eum recusandae eaque adipisci."], ["description", "[\"Non aut quam. Rerum enim sed. Vel earum ut.\", \"Quo deleniti repudiandae. Minima tempore ea. Modi assumenda enim.\", \"Sed qui est. Velit maxime deserunt. Similique enim quas.\", \"Non aut quam. Rerum enim sed. Vel earum ut.\", \"Quo deleniti repudiandae. Minima tempore ea. Modi assumenda enim.\", \"Sed qui est. Velit maxime deserunt. Similique enim quas.\", \"Non aut quam. Rerum enim sed. Vel earum ut.\", \"Quo deleniti repudiandae. Minima tempore ea. Modi assumenda enim.\", \"Sed qui est. Velit maxime deserunt. Similique enim quas.\", \"Non aut quam. Rerum enim sed. Vel earum ut.\", \"Quo deleniti repudiandae. Minima tempore ea. Modi assumenda enim.\", \"Sed qui est. Velit maxime deserunt. Similique enim quas.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/947/583/747/mountain-nature-hd-wallpapers-top-beautiful-desktop-nature-images-background-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:20:02.566981"], ["updated_at", "2022-10-09 22:20:02.566981"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (24.8ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Voluptas hic et laudantium."], ["description", "[\"Hic vero consequatur. Et error vel. Placeat quia quo.\", \"Aut iste natus. Explicabo labore eius. Corrupti dolore amet.\", \"Incidunt ullam eaque. Beatae aliquid ullam. Placeat fuga deleniti.\", \"Hic vero consequatur. Et error vel. Placeat quia quo.\", \"Aut iste natus. Explicabo labore eius. Corrupti dolore amet.\", \"Incidunt ullam eaque. Beatae aliquid ullam. Placeat fuga deleniti.\", \"Hic vero consequatur. Et error vel. Placeat quia quo.\", \"Aut iste natus. Explicabo labore eius. Corrupti dolore amet.\", \"Incidunt ullam eaque. Beatae aliquid ullam. Placeat fuga deleniti.\", \"Hic vero consequatur. Et error vel. Placeat quia quo.\", \"Aut iste natus. Explicabo labore eius. Corrupti dolore amet.\", \"Incidunt ullam eaque. Beatae aliquid ullam. Placeat fuga deleniti.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/388/726/456/laptop-backgrounds-nature-images-1920x1200-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:20:02.574354"], ["updated_at", "2022-10-09 22:20:02.574354"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (0.4ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Quaerat eos nesciunt illum."], ["description", "[\"Soluta natus est. Similique facilis laboriosam. Velit laborum beatae.\", \"Enim sed pariatur. Et cumque voluptatem. Magni ut rerum.\", \"Ipsa vel facilis. Veniam et fuga. Tenetur qui officiis.\", \"Soluta natus est. Similique facilis laboriosam. Velit laborum beatae.\", \"Enim sed pariatur. Et cumque voluptatem. Magni ut rerum.\", \"Ipsa vel facilis. Veniam et fuga. Tenetur qui officiis.\", \"Soluta natus est. Similique facilis laboriosam. Velit laborum beatae.\", \"Enim sed pariatur. Et cumque voluptatem. Magni ut rerum.\", \"Ipsa vel facilis. Veniam et fuga. Tenetur qui officiis.\", \"Soluta natus est. Similique facilis laboriosam. Velit laborum beatae.\", \"Enim sed pariatur. Et cumque voluptatem. Magni ut rerum.\", \"Ipsa vel facilis. Veniam et fuga. Tenetur qui officiis.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/849/138/463/nature-high-resolution-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:20:02.607711"], ["updated_at", "2022-10-09 22:20:02.607711"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (0.8ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ducimus nostrum odit tenetur."], ["description", "[\"Ullam esse similique. Rerum qui fugit. Et omnis ducimus.\", \"Eius libero quisquam. Repudiandae ducimus omnis. Praesentium consequatur non.\", \"Sapiente harum provident. Dignissimos quos molestiae. Ut et laboriosam.\", \"Ullam esse similique. Rerum qui fugit. Et omnis ducimus.\", \"Eius libero quisquam. Repudiandae ducimus omnis. Praesentium consequatur non.\", \"Sapiente harum provident. Dignissimos quos molestiae. Ut et laboriosam.\", \"Ullam esse similique. Rerum qui fugit. Et omnis ducimus.\", \"Eius libero quisquam. Repudiandae ducimus omnis. Praesentium consequatur non.\", \"Sapiente harum provident. Dignissimos quos molestiae. Ut et laboriosam.\", \"Ullam esse similique. Rerum qui fugit. Et omnis ducimus.\", \"Eius libero quisquam. Repudiandae ducimus omnis. Praesentium consequatur non.\", \"Sapiente harum provident. Dignissimos quos molestiae. Ut et laboriosam.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/367/398/511/hd-images-nature-pc-1920x1080-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:20:02.616773"], ["updated_at", "2022-10-09 22:20:02.616773"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunityImpact Create (25.7ms)[0m  [1m[32mINSERT INTO "community_impacts" ("title", "description", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Quia in quos ea."], ["description", "[\"Dolore blanditiis sed. Pariatur in quos. Error qui neque.\", \"Est veniam libero. Error sed id. Mollitia sit ullam.\", \"Beatae explicabo in. Suscipit atque molestias. Maiores architecto facere.\", \"Dolore blanditiis sed. Pariatur in quos. Error qui neque.\", \"Est veniam libero. Error sed id. Mollitia sit ullam.\", \"Beatae explicabo in. Suscipit atque molestias. Maiores architecto facere.\", \"Dolore blanditiis sed. Pariatur in quos. Error qui neque.\", \"Est veniam libero. Error sed id. Mollitia sit ullam.\", \"Beatae explicabo in. Suscipit atque molestias. Maiores architecto facere.\", \"Dolore blanditiis sed. Pariatur in quos. Error qui neque.\", \"Est veniam libero. Error sed id. Mollitia sit ullam.\", \"Beatae explicabo in. Suscipit atque molestias. Maiores architecto facere.\"]"], ["image_url", "https://p4.wallpaperbetter.com/wallpaper/388/726/456/laptop-backgrounds-nature-images-1920x1200-wallpaper-preview.jpg"], ["created_at", "2022-10-09 22:20:02.623513"], ["updated_at", "2022-10-09 22:20:02.623513"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "haywood@luettgen-leuschke.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Belen Treutel"], ["email", "haywood@luettgen-leuschke.com"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.705664"], ["updated_at", "2022-10-09 22:20:02.705664"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "janyce@mclaughlin.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Amb. Young Hackett"], ["email", "janyce@mclaughlin.org"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.714992"], ["updated_at", "2022-10-09 22:20:02.714992"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "carl@rodriguez.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Jefferson Kerluke"], ["email", "carl@rodriguez.info"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.721390"], ["updated_at", "2022-10-09 22:20:02.721390"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (24.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "trenton@bartell.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Avery Balistreri"], ["email", "trenton@bartell.io"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.754622"], ["updated_at", "2022-10-09 22:20:02.754622"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mariela@bogisich-schroeder.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Terence Wehner"], ["email", "mariela@bogisich-schroeder.org"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.763174"], ["updated_at", "2022-10-09 22:20:02.763174"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "terence@kertzmann.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Kim Lind"], ["email", "terence@kertzmann.org"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.770701"], ["updated_at", "2022-10-09 22:20:02.770701"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (25.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zackary@donnelly-kessler.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Novella Dach"], ["email", "zackary@donnelly-kessler.org"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.804583"], ["updated_at", "2022-10-09 22:20:02.804583"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dallas@trantow-quitzon.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Venus O'Keefe"], ["email", "dallas@trantow-quitzon.biz"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.812596"], ["updated_at", "2022-10-09 22:20:02.812596"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "erin_damore@marvin-witting.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Ronny Walter"], ["email", "erin_damore@marvin-witting.com"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.819769"], ["updated_at", "2022-10-09 22:20:02.819769"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (25.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cesar@volkman.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "is_admin?", "age", "gender", "bio", "interests", "image_upload", "favourite_military_branch", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["full_name", "Rolando Lemke"], ["email", "cesar@volkman.io"], ["password_digest", "[FILTERED]"], ["is_admin?", false], ["age", nil], ["gender", nil], ["bio", nil], ["interests", nil], ["image_upload", nil], ["favourite_military_branch", nil], ["created_at", "2022-10-09 22:20:02.853589"], ["updated_at", "2022-10-09 22:20:02.853589"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Started DELETE "/api/logout" for 127.0.0.1 at 2022-10-10 01:20:33 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#destroy as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 58ms (Views: 6.4ms | ActiveRecord: 24.9ms | Allocations: 6479)
+
+
+Started DELETE "/api/logout" for 127.0.0.1 at 2022-10-10 01:20:53 +0300
+Processing by Api::SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 45ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 797)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 01:21:03 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 01:21:03 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1016)
+
+
+Processing by Api::LoginPageSlidesController#index as */*
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 01:21:03 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 34ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 2104)
+
+
+  [1m[36mLoginPageSlide Load (0.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.22ms)
+Completed 200 OK in 286ms (Views: 137.4ms | ActiveRecord: 96.9ms | Allocations: 38494)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 01:21:04 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.71ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 2255)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 01:32:29 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.7ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.52ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 11.8ms | Allocations: 5130)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 01:34:14 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.7ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.22ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 1.7ms | Allocations: 2255)
+
+
+Started POST "/api/signup" for 127.0.0.1 at 2022-10-10 01:48:55 +0300
+Processing by Api::UsersController#create as */*
+  Parameters: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}}
+[31mUnpermitted parameter: :user. Context: { controller: Api::UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7e46e93088>, params: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "controller"=>"api/users", "action"=>"create", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 1801ms (Views: 0.6ms | ActiveRecord: 24.7ms | Allocations: 718320)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-10 01:49:30 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"gigachad@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gigachad@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gigachad@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 7ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 863)
+
+
+Started POST "/api/signup" for 127.0.0.1 at 2022-10-10 01:53:08 +0300
+Processing by Api::UsersController#create as */*
+  Parameters: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}}
+[31mUnpermitted parameter: :user. Context: { controller: Api::UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7e4b9a0620>, params: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "controller"=>"api/users", "action"=>"create", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}} }[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 422 Unprocessable Entity in 65ms (Views: 1.1ms | ActiveRecord: 14.8ms | Allocations: 5695)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 01:55:50 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 01:55:50 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 57ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 2470)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 01:55:50 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 1.0ms | ActiveRecord: 6.3ms | Allocations: 783)
+
+
+  [1m[36mLoginPageSlide Load (1.9ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.24ms)
+Completed 200 OK in 160ms (Views: 112.2ms | ActiveRecord: 46.3ms | Allocations: 8632)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 01:55:51 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.08ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 1.3ms | Allocations: 2251)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-10 01:55:54 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 9ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 709)
+
+
+Started POST "/api/signup" for 127.0.0.1 at 2022-10-10 01:56:00 +0300
+Processing by Api::UsersController#create as */*
+  Parameters: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}}
+[31mUnpermitted parameter: :user. Context: { controller: Api::UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7e4b4041a8>, params: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "controller"=>"api/users", "action"=>"create", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}} }[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (3.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 55ms (Views: 0.6ms | ActiveRecord: 7.9ms | Allocations: 5690)
+
+
+Started POST "/api/signup" for 127.0.0.1 at 2022-10-10 02:02:58 +0300
+Processing by Api::UsersController#create as */*
+  Parameters: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}}
+[31mUnpermitted parameter: :user. Context: { controller: Api::UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7e4b455558>, params: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "controller"=>"api/users", "action"=>"create", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 422 Unprocessable Entity in 93ms (Views: 0.6ms | ActiveRecord: 40.2ms | Allocations: 8519)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 02:03:13 +0300
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 02:03:13 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 34ms (Views: 0.6ms | ActiveRecord: 2.5ms | Allocations: 3287)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 02:03:13 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.42ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 18ms (Views: 1.6ms | ActiveRecord: 0.7ms | Allocations: 789)
+
+
+  [1m[36mLoginPageSlide Load (1.1ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.35ms)
+Completed 200 OK in 176ms (Views: 99.0ms | ActiveRecord: 77.1ms | Allocations: 8620)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 02:03:13 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.38ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.5ms | Allocations: 2254)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-10 02:03:52 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 9ms (Views: 0.7ms | ActiveRecord: 2.5ms | Allocations: 709)
+
+
+Started POST "/api/signup" for 127.0.0.1 at 2022-10-10 02:03:58 +0300
+Processing by Api::UsersController#create as */*
+  Parameters: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}}
+[31mUnpermitted parameter: :user. Context: { controller: Api::UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7e49417cc8>, params: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "controller"=>"api/users", "action"=>"create", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 51ms (Views: 0.6ms | ActiveRecord: 2.0ms | Allocations: 5690)
+
+
+Started POST "/api/signup" for 127.0.0.1 at 2022-10-10 02:04:08 +0300
+Processing by Api::UsersController#create as */*
+  Parameters: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}}
+[31mUnpermitted parameter: :user. Context: { controller: Api::UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7e4939c578>, params: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "controller"=>"api/users", "action"=>"create", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 64ms (Views: 0.6ms | ActiveRecord: 5.5ms | Allocations: 5690)
+
+
+Started POST "/api/signup" for 127.0.0.1 at 2022-10-10 02:10:39 +0300
+Processing by Api::UsersController#create as */*
+  Parameters: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}}
+[31mUnpermitted parameter: :user. Context: { controller: Api::UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7e4b5b4c78>, params: {"full_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>"", "controller"=>"api/users", "action"=>"create", "user"=>{"full_name"=>"", "email"=>"", "age"=>"", "gender"=>"", "bio"=>"", "interests"=>"", "image_upload"=>"", "favourite_military_branch"=>""}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 70ms (Views: 0.6ms | ActiveRecord: 39.1ms | Allocations: 8518)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-10 02:11:57 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 8ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 759)
+
+
