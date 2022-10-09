@@ -5,11 +5,6 @@ class Api::UserProfilesController < ApplicationController
         render json: slide
     end
 
-    def create
-        slide = @current_user.user_profile.create!(up_params)
-        render json: slide, status: :created
-    end
-
     def update
         slide = @current_user.user_profile.update!(up_params)
         render json: slide, status: :created

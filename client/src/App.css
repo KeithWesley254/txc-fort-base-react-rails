@@ -2,6 +2,8 @@
 
 * {
   font-family: Nunito;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .loginForm {
@@ -10,4 +12,11 @@
 
 .logoLogin {
   margin-left: 20%;
+}
+
+
+@media only screen and (min-width: 720px) {
+  .headerLogo{
+    margin-left: 15%;
+  }
 }

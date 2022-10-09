@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../App.css';
 import Login from '../pages/Login';
+import Header from './Header';
+import Hero from '../pages/Hero';
+import UserProfile from '../pages/UserProfile';
+
 
 function App() {
 
@@ -18,7 +23,17 @@ function App() {
 
   return (
     <>
-      
+      <BrowserRouter>
+      <div className="overallTop">
+        <Header setUser={setUser} user={user}/>
+        <main>
+          <Routes>
+            <Route exact='true' path='/' element={<Hero />}/>
+            <Route path='/user-profiles/:id' element={<UserProfile user={user}/>}/>
+          </Routes>
+        </main>
+      </div>
+      </BrowserRouter>
     </>
   );
 }

@@ -3,7 +3,7 @@ import { Box, FormControl, FormHelperText, TextField } from '@mui/material';
 
 const SignUpForm = ({ onLogin }) => {
 
-  const [fullName, setFullName] = useState("");
+  const [full_name, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -20,7 +20,7 @@ const SignUpForm = ({ onLogin }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        fullName,
+        full_name,
         email,
         password,
         password_confirmation: passwordConfirmation 
@@ -47,9 +47,9 @@ const SignUpForm = ({ onLogin }) => {
                 type="text"
                 variant="outlined"
                 label="Full Name"
-                id="fullName"
+                id="full_name"
                 autoComplete="off"
-                value={fullName}
+                value={full_name}
                 onChange={(e) => setFullName(e.target.value)} 
                 />
                 <FormHelperText id="my-helper-text">Please Enter Your Full Name</FormHelperText>
