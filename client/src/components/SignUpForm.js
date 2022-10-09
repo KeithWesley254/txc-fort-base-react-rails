@@ -41,6 +41,7 @@ const SignUpForm = ({ onLogin }) => {
         <div>
           <p style={{fontWeight: "bolder", fontSize: 60}}>Sign Up</p>
         </div>
+        <form  onSubmit={handleSubmit}>
             <div>
             <FormControl>
                 <TextField 
@@ -103,9 +104,9 @@ const SignUpForm = ({ onLogin }) => {
                     color: "#fff",
                     borderRadius: 10,
                     cursor: "pointer",
-                    border: "none"
+                    border: "none",
                   }}
-                  onClick = {handleSubmit}
+                  type='submit'
                   >
                     {isLoading ? "Loading..." : "Sign Up"}
                   </button>
@@ -132,6 +133,7 @@ const SignUpForm = ({ onLogin }) => {
                 </FormControl>
               </div>
             </div>
+            </form>
       </Box>
    </>
   )

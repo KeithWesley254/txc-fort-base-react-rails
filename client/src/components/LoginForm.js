@@ -1,5 +1,6 @@
 import { Box, FormControl, FormHelperText, TextField } from '@mui/material';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = ({ onLogin }) => {
   const [email, setEmail] = useState("");
@@ -32,10 +33,13 @@ const LoginForm = ({ onLogin }) => {
     <>
       <Box>
         <main>
+        <form onSubmit = {handleSubmit}>
           <p style={{fontWeight: "bolder", fontSize: 60}}>Login</p>
           <p style={{fontWeight: "bold", color: "#545563", fontSize: 14}}>Sign in with the data you entered during your registration</p>
           <Box sx={{'& .MuiTextField-root': { m: 1, width: '25ch' },}}>
+          
             <div>
+              
               <FormControl>
                 <TextField 
                 type="email"
@@ -77,12 +81,14 @@ const LoginForm = ({ onLogin }) => {
                 cursor: "pointer",
                 border: "none"
               }}
-              onClick = {handleSubmit}
+              type="submit"
               >
                 Login
               </button>
             </FormControl>
+            
           </div>
+          
           <div>
             <FormControl>
               {errors.map((err) => (
@@ -103,6 +109,7 @@ const LoginForm = ({ onLogin }) => {
               ))}
             </FormControl>
           </div>
+          </form>
         </main>
       </Box>
     </>
