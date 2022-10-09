@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Grid, Box, Divider, Button, Card, CardContent, Typography, CardActions } from '@mui/material';
+import {  CardActionArea, Grid, Box, Divider, Button, Card, CardContent, Typography, CardActions, CardMedia } from '@mui/material';
 import LoginForm from '../components/LoginForm';
 import SignUpForm from '../components/SignUpForm';
 import { Container } from '@mui/system';
@@ -12,21 +12,38 @@ const Login = ({ onLogin }) => {
   useEffect(() => {
     fetch("/api/login_page_slides")
     .then(r => r.json())
-    .then(data => setLoginSlides(data))
+    .then(data => {
+        setLoginSlides(data)
+    })
   }, []);
+
+ 
 
   const myCards = loginSlides.map((slide) => {
     return (
-        <>
-        <Card sx={{ minWidth: 275, alignItems: "center", textAlign: "center"}}>
+      <>
+      <Card sx={{ minWidth: 620, alignItems: "center", textAlign: "center", borderRadius: 5}}>
+        <CardActionArea>
+          <CardMedia 
+          component="img"
+          height="500"
+          image={slide.image_url}
+          alt="green iguana"
+          sx={{borderRadius: 5}}
+          />
           <CardContent>
-            <img style={{height: 300, maxWidth: "auto"}} src={slide.image_url} alt="slideImage" />
-            <h4>{slide.title}</h4>
-            <p>{slide.description}</p>
+            <Typography sx={{textAlign: "start"}} gutterBottom variant="h5" component="div">
+              {slide.title}
+            </Typography>
+            <Typography sx={{textAlign: "start"}} variant="body2" color="#545563">
+              {slide.summary}
+            </Typography>
             </CardContent>
-          </Card>
-        </>
-    )})
+        </CardActionArea>
+        </Card>
+      </>
+      )
+    })
 
   return (
     <>
@@ -78,9 +95,14 @@ const Login = ({ onLogin }) => {
               <>
                 <div style={{backgroundColor: "#4e60ff", position: "relative", width: "100%", height: "100vh" }}>
                   <Container>
-                  <Box sx={{ p: 2, display: "flex", overflowX: "auto" }}>
+                  <Box sx={{ p: 2, display: "flex", overflowX: "auto", flexDirection: 'row' }}>
                     {myCards}
                   </Box>
+                  <div style={{ flexWrap: "wrap", fontSize: 30, color: "#fff", textAlign: "center"}}>
+                    <p>
+                      Come connect with the Heroes that defend our Beautiful Nation
+                    </p>
+                  </div>
                   </Container>
                 </div>
               </>

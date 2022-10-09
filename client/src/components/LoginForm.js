@@ -33,7 +33,7 @@ const LoginForm = ({ onLogin }) => {
       <Box>
         <main>
           <p style={{fontWeight: "bolder", fontSize: 60}}>Login</p>
-          <p style={{fontWeight: "bold", color: "#565765", fontSize: 14}}>Sign in with the data you entered during your registration</p>
+          <p style={{fontWeight: "bold", color: "#545563", fontSize: 14}}>Sign in with the data you entered during your registration</p>
           <Box sx={{'& .MuiTextField-root': { m: 1, width: '25ch' },}}>
             <div>
               <FormControl>
@@ -46,7 +46,7 @@ const LoginForm = ({ onLogin }) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)} 
                 />
-                <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
+                <FormHelperText id="my-helper-text">name@example.com</FormHelperText>
               </FormControl>
               <br />
               <FormControl>
@@ -58,7 +58,7 @@ const LoginForm = ({ onLogin }) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 />
-                <FormHelperText id="my-helper-text">Passwords are strongly encrypted.</FormHelperText>
+                <FormHelperText id="my-helper-text">min. 8 characters</FormHelperText>
               </FormControl>
             </div>
           </Box>
