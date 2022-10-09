@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {  CardActionArea, Grid, Box, Divider, Button, Card, CardContent, Typography, CardActions, CardMedia } from '@mui/material';
+import {  CardActionArea, Grid, Box, Button, Card, CardContent, Typography, CardMedia } from '@mui/material';
 import LoginForm from '../components/LoginForm';
 import SignUpForm from '../components/SignUpForm';
 import { Container } from '@mui/system';
@@ -22,14 +22,14 @@ const Login = ({ onLogin }) => {
   const myCards = loginSlides.map((slide) => {
     return (
       <>
-      <Card sx={{ minWidth: 620, alignItems: "center", textAlign: "center", borderRadius: 5}}>
+      <Card key={slide.id} sx={{ minWidth: 640, alignItems: "center", textAlign: "center", borderRadius: 5}}>
         <CardActionArea>
           <CardMedia 
           component="img"
-          height="500"
+          height="400"
           image={slide.image_url}
           alt="green iguana"
-          sx={{borderRadius: 5}}
+          sx={{borderRadius: 10, p: 3}}
           />
           <CardContent>
             <Typography sx={{textAlign: "start"}} gutterBottom variant="h5" component="div">
@@ -41,6 +41,9 @@ const Login = ({ onLogin }) => {
             </CardContent>
         </CardActionArea>
         </Card>
+        &nbsp;
+        &nbsp;
+        &nbsp;
       </>
       )
     })
@@ -48,9 +51,9 @@ const Login = ({ onLogin }) => {
   return (
     <>
       <main>
-        <Box sx={{ width: '100%' }}>
-          <Grid container spacing={2} columns={16}>
-            <Grid item xs={8}>
+        <Box >
+          <Grid container spacing={{ xs: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            <Grid item xs={4} sm={8} md={6}>
 
               <div className='logoLogin'>
                 <p style={{fontWeight: "bolder", fontSize: 14}}>
@@ -79,23 +82,27 @@ const Login = ({ onLogin }) => {
                 </>
               ): (
                 <>
+                <div className='loginForm'>
                   <SignUpForm onLogin={onLogin} />
-                  <Divider />
+                </div>
+               
+                <div className='loginForm'>
                   <p>
                     Already have an account? &nbsp;
                     <Button sx={{bgcolor: "transparent", color: "#4e60ff", fontFamily: "Nunito", fontWeight: "bold", fontSize: 14, textTransform: "none" }} onClick={() => setShowLogin(true)}>
                       Log In
                     </Button>
                   </p>
+                </div>
                 </>
               )}
 
             </Grid>
-            <Grid item xs={8} >
+            <Grid item xs={4} sm={8} md={6} >
               <>
                 <div style={{backgroundColor: "#4e60ff", position: "relative", width: "100%", height: "100vh" }}>
                   <Container>
-                  <Box sx={{ p: 2, display: "flex", overflowX: "auto", flexDirection: 'row' }}>
+                  <Box sx={{p: 2, display: "flex", overflowX: "auto", flexDirection: 'row' }}>
                     {myCards}
                   </Box>
                   <div style={{ flexWrap: "wrap", fontSize: 30, color: "#fff", textAlign: "center"}}>

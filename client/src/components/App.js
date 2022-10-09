@@ -17,9 +17,9 @@ function App() {
   if (!user) return <Login onLogin={setUser} />;
 
   return (
-    <div className="App">
-      <h3>TXC FortBase</h3>
-    </div>
+    <>
+      
+    </>
   );
 }
 
