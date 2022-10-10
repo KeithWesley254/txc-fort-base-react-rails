@@ -16189,3 +16189,1327 @@ Processing by Api::AboutUsController#index as */*
 Completed 200 OK in 33ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 2040)
 
 
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 19:59:41 +0300
+Started GET "/api/community_impacts/7" for 127.0.0.1 at 2022-10-10 19:59:41 +0300
+Processing by Api::TechnologiesController#index as */*
+Processing by Api::CommunityImpactsController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (81.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (3.0ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts" WHERE "community_impacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/community_impacts_controller.rb:9:in `show'
+[active_model_serializers] Rendered CommunityImpactSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 103ms (Views: 2.8ms | ActiveRecord: 84.7ms | Allocations: 2032)
+
+
+Started GET "/api/community_impacts/7" for 127.0.0.1 at 2022-10-10 19:59:41 +0300
+Processing by Api::CommunityImpactsController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (0.9ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts" WHERE "community_impacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/community_impacts_controller.rb:9:in `show'
+[active_model_serializers] Rendered CommunityImpactSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 25ms (Views: 2.1ms | ActiveRecord: 1.5ms | Allocations: 1338)
+
+
+  [1m[36mTechnology Load (44.0ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.35ms)
+Completed 200 OK in 229ms (Views: 40.4ms | ActiveRecord: 79.6ms | Allocations: 29058)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 19:59:41 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (2.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.87ms)
+Completed 200 OK in 30ms (Views: 18.9ms | ActiveRecord: 2.8ms | Allocations: 9277)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 19:59:52 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (1.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.75ms)
+Completed 200 OK in 47ms (Views: 29.3ms | ActiveRecord: 1.6ms | Allocations: 9271)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 19:59:52 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (11.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.3ms)
+Completed 200 OK in 78ms (Views: 20.5ms | ActiveRecord: 38.3ms | Allocations: 9270)
+
+
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-10 20:00:27 +0300
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-10 20:00:27 +0300
+Processing by Api::CommunityImpactsController#index as */*
+Processing by Api::AboutUsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mAboutU Load (3.0ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.65ms)
+Completed 200 OK in 28ms (Views: 4.8ms | ActiveRecord: 3.6ms | Allocations: 2630)
+
+
+  [1m[36mCommunityImpact Load (8.5ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.6ms)
+Completed 200 OK in 39ms (Views: 5.5ms | ActiveRecord: 10.5ms | Allocations: 5613)
+
+
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-10 20:00:27 +0300
+Processing by Api::AboutUsController#index as */*
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-10 20:00:27 +0300
+Processing by Api::CommunityImpactsController#index as */*
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mAboutU Load (28.7ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.03ms)
+Completed 200 OK in 54ms (Views: 6.0ms | ActiveRecord: 38.3ms | Allocations: 3701)
+
+
+  [1m[36mCommunityImpact Load (39.0ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.26ms)
+Completed 200 OK in 55ms (Views: 7.3ms | ActiveRecord: 42.5ms | Allocations: 4922)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 20:34:58 +0300
+Started GET "/api/community_impacts/7" for 127.0.0.1 at 2022-10-10 20:34:58 +0300
+Processing by Api::TechnologiesController#index as */*
+Processing by Api::CommunityImpactsController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (0.6ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts" WHERE "community_impacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/community_impacts_controller.rb:9:in `show'
+[active_model_serializers] Rendered CommunityImpactSerializer with ActiveModelSerializers::Adapter::Attributes (1.9ms)
+Completed 200 OK in 48ms (Views: 2.7ms | ActiveRecord: 25.5ms | Allocations: 6892)
+
+
+Started GET "/api/community_impacts/7" for 127.0.0.1 at 2022-10-10 20:34:59 +0300
+Processing by Api::CommunityImpactsController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mTechnology Load (34.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.68ms)
+Completed 200 OK in 113ms (Views: 26.0ms | ActiveRecord: 64.3ms | Allocations: 19738)
+
+
+  [1m[36mCommunityImpact Load (1.7ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts" WHERE "community_impacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/community_impacts_controller.rb:9:in `show'
+[active_model_serializers] Rendered CommunityImpactSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 20:34:59 +0300
+Completed 200 OK in 52ms (Views: 4.7ms | ActiveRecord: 5.2ms | Allocations: 10664)
+
+
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (10.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.72ms)
+Completed 200 OK in 40ms (Views: 20.2ms | ActiveRecord: 17.2ms | Allocations: 9296)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 20:35:25 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (0.9ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.75ms)
+Completed 200 OK in 29ms (Views: 21.1ms | ActiveRecord: 1.4ms | Allocations: 9281)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 20:35:25 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (3.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.83ms)
+Completed 200 OK in 31ms (Views: 20.8ms | ActiveRecord: 4.0ms | Allocations: 9277)
+
+
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-10 20:36:16 +0300
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-10 20:36:16 +0300
+Processing by Api::CommunityImpactsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (0.5ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.21ms)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.8ms | Allocations: 2718)
+
+
+Processing by Api::AboutUsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-10 20:36:16 +0300
+  [1m[36mAboutU Load (7.4ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.27ms)
+Completed 200 OK in 17ms (Views: 3.9ms | ActiveRecord: 7.9ms | Allocations: 2456)
+
+
+Processing by Api::CommunityImpactsController#index as */*
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-10 20:36:16 +0300
+Processing by Api::AboutUsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (1.6ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.54ms)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 17.3ms | ActiveRecord: 2.8ms | Allocations: 4133)
+
+
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mAboutU Load (8.8ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.2ms)
+Completed 200 OK in 43ms (Views: 3.5ms | ActiveRecord: 12.6ms | Allocations: 4963)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 20:57:44 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 20:57:44 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (4.6ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.41ms)
+Completed 200 OK in 252ms (Views: 246.3ms | ActiveRecord: 66.1ms | Allocations: 5466)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 20:57:44 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.84ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.8ms | Allocations: 2279)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 200 OK in 392ms (Views: 1.9ms | ActiveRecord: 79.7ms | Allocations: 14404)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 20:57:44 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 26ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 1314)
+
+
+Started GET "/" for ::1 at 2022-10-10 21:29:49 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/exhale/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/exhale/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 27.9ms | Allocations: 611)
+Completed 200 OK in 154ms (Views: 58.3ms | Allocations: 3295)
+
+
+Started GET "/memorials" for ::1 at 2022-10-10 21:29:57 +0300
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"memorials"}
+Completed 500 Internal Server Error in 8ms (Allocations: 587)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:5:in `index'
+Started GET "/favicon.ico" for ::1 at 2022-10-10 21:29:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/memorials" for ::1 at 2022-10-10 21:30:07 +0300
+Processing by Api::MemorialsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (48.4ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (323.79ms)
+Completed 200 OK in 648ms (Views: 433.9ms | ActiveRecord: 138.5ms | Allocations: 166026)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-10-10 21:30:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 21:46:39 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 21:46:39 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.46ms)
+Completed 200 OK in 157ms (Views: 151.9ms | ActiveRecord: 73.8ms | Allocations: 5445)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 21:46:39 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.27ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.5ms | Allocations: 2273)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 200 OK in 316ms (Views: 5.0ms | ActiveRecord: 129.7ms | Allocations: 14538)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 21:46:40 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.05ms)
+Completed 200 OK in 124ms (Views: 4.5ms | ActiveRecord: 1.6ms | Allocations: 1320)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 21:46:55 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 21:46:55 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (6.8ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.29ms)
+Completed 200 OK in 55ms (Views: 47.6ms | ActiveRecord: 6.8ms | Allocations: 3319)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.6ms)
+Completed 200 OK in 89ms (Views: 2.2ms | ActiveRecord: 45.7ms | Allocations: 3775)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 21:46:55 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 21:46:55 +0300
+  [1m[36mLoginPageSlide Load (0.7ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.79ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.7ms | Allocations: 2707)
+
+
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (34.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 81ms (Views: 1.2ms | ActiveRecord: 34.5ms | Allocations: 1308)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:46:55 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (3.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (71.7ms)
+Completed 200 OK in 265ms (Views: 199.9ms | ActiveRecord: 4.7ms | Allocations: 9294)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:46:56 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (0.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.4ms)
+Completed 200 OK in 51ms (Views: 29.6ms | ActiveRecord: 1.1ms | Allocations: 9271)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:47:51 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (23.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.38ms)
+Completed 200 OK in 58ms (Views: 29.5ms | ActiveRecord: 23.4ms | Allocations: 9270)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:48:23 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (66.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (105.39ms)
+Completed 200 OK in 218ms (Views: 123.3ms | ActiveRecord: 69.7ms | Allocations: 9280)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:49:14 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (1.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.91ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 1.6ms | Allocations: 9274)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:49:50 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (29.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.88ms)
+Completed 200 OK in 68ms (Views: 35.1ms | ActiveRecord: 30.0ms | Allocations: 9263)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 21:58:48 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 21:58:48 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (3.9ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+  [1m[36mUser Load (37.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.96ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.26ms)
+Completed 200 OK in 257ms (Views: 254.2ms | ActiveRecord: 90.8ms | Allocations: 8309)
+
+
+Completed 200 OK in 286ms (Views: 26.9ms | ActiveRecord: 121.2ms | Allocations: 10299)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 21:58:48 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.32ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 2251)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 21:58:48 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.76ms)
+Completed 200 OK in 20ms (Views: 2.9ms | ActiveRecord: 1.8ms | Allocations: 1409)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:58:48 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (2.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (52.26ms)
+Completed 200 OK in 79ms (Views: 68.7ms | ActiveRecord: 3.2ms | Allocations: 9289)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:58:49 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (28.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.67ms)
+Completed 200 OK in 85ms (Views: 43.0ms | ActiveRecord: 34.4ms | Allocations: 9268)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:59:08 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (3.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.62ms)
+Completed 200 OK in 38ms (Views: 30.8ms | ActiveRecord: 3.6ms | Allocations: 9271)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 21:59:14 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 21:59:14 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.89ms)
+  [1m[36mLoginPageSlide Load (21.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+Completed 200 OK in 56ms (Views: 15.8ms | ActiveRecord: 0.6ms | Allocations: 4160)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.33ms)
+Completed 200 OK in 54ms (Views: 31.0ms | ActiveRecord: 21.5ms | Allocations: 3769)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 21:59:14 +0300
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 21:59:14 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 41ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 3786)
+
+
+  [1m[36mLoginPageSlide Load (4.0ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.17ms)
+Completed 200 OK in 141ms (Views: 61.4ms | ActiveRecord: 79.5ms | Allocations: 6705)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:59:15 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (17.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.62ms)
+Completed 200 OK in 69ms (Views: 24.7ms | ActiveRecord: 19.5ms | Allocations: 9372)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 21:59:15 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (46.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.9ms)
+Completed 200 OK in 84ms (Views: 31.6ms | ActiveRecord: 46.9ms | Allocations: 9279)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:01:47 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (1.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.68ms)
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 1.6ms | Allocations: 9273)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:01:59 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (39.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (70.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.81ms)
+Completed 200 OK in 219ms (Views: 34.8ms | ActiveRecord: 110.0ms | Allocations: 9269)
+
+
+Started GET "/api/technologies" for ::1 at 2022-10-10 22:07:49 +0300
+Processing by Api::TechnologiesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (5.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.92ms)
+Completed 200 OK in 102ms (Views: 24.2ms | ActiveRecord: 37.7ms | Allocations: 12259)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-10-10 22:07:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/memorials" for ::1 at 2022-10-10 22:08:35 +0300
+Processing by Api::MemorialsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (22.3ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (256.8ms)
+Completed 200 OK in 544ms (Views: 500.9ms | ActiveRecord: 23.1ms | Allocations: 148570)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-10-10 22:08:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:12:20 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (27.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (184.31ms)
+Completed 200 OK in 563ms (Views: 467.3ms | ActiveRecord: 28.2ms | Allocations: 9275)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:12:52 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (1.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.25ms)
+Completed 200 OK in 53ms (Views: 25.6ms | ActiveRecord: 1.8ms | Allocations: 9282)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:14:04 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (3.0ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.77ms)
+Completed 200 OK in 54ms (Views: 36.1ms | ActiveRecord: 3.4ms | Allocations: 9267)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:14:27 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (4.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.22ms)
+Completed 200 OK in 66ms (Views: 25.4ms | ActiveRecord: 5.6ms | Allocations: 9275)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:15:50 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (1.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.02ms)
+Completed 200 OK in 33ms (Views: 22.8ms | ActiveRecord: 3.0ms | Allocations: 9275)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:16:13 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (1.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.44ms)
+Completed 200 OK in 46ms (Views: 25.4ms | ActiveRecord: 1.8ms | Allocations: 9271)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:16:46 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (2.0ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.73ms)
+Completed 200 OK in 43ms (Views: 31.9ms | ActiveRecord: 2.4ms | Allocations: 9277)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:27:26 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:27:26 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (1.6ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.44ms)
+Completed 200 OK in 102ms (Views: 89.4ms | ActiveRecord: 45.0ms | Allocations: 12226)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:27:26 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (96.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 197ms (Views: 6.6ms | ActiveRecord: 140.8ms | Allocations: 17856)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:27:26 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (1.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.75ms)
+Completed 200 OK in 153ms (Views: 151.2ms | ActiveRecord: 1.5ms | Allocations: 8146)
+
+
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 54ms (Views: 1.3ms | ActiveRecord: 19.8ms | Allocations: 3708)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:27:26 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (9.6ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 10.9ms | Allocations: 16460)
+
+
+  
+SyntaxError (/Users/exhale/my-projects/txc-fort-base-react-rails/app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+...image_url, :age, :description :summary
+...                              ^
+):
+  
+app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/api/memorials_controller.rb:5:in `index'
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:27:27 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (96.5ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 97.0ms | Allocations: 14492)
+
+
+  
+SyntaxError (/Users/exhale/my-projects/txc-fort-base-react-rails/app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+...image_url, :age, :description :summary
+...                              ^
+):
+  
+app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/api/memorials_controller.rb:5:in `index'
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:28:56 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (5.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.4ms)
+Completed 200 OK in 90ms (Views: 84.2ms | ActiveRecord: 5.4ms | Allocations: 2272)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:28:56 +0300
+Processing by Api::UsersController#show as */*
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:28:56 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 82ms (Views: 1.0ms | ActiveRecord: 1.2ms | Allocations: 2843)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:28:56 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (52.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.96ms)
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 132ms (Views: 79.0ms | ActiveRecord: 52.5ms | Allocations: 5647)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 31ms (Views: 4.1ms | ActiveRecord: 2.2ms | Allocations: 3672)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:28:57 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (7.4ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 442ms (ActiveRecord: 8.0ms | Allocations: 14490)
+
+
+  
+SyntaxError (/Users/exhale/my-projects/txc-fort-base-react-rails/app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+...image_url, :age, :description :summary
+...                              ^
+):
+  
+app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/api/memorials_controller.rb:5:in `index'
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:28:58 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (9.5ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 294ms (ActiveRecord: 12.5ms | Allocations: 14592)
+
+
+  
+SyntaxError (/Users/exhale/my-projects/txc-fort-base-react-rails/app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+...image_url, :age, :description :summary
+...                              ^
+):
+  
+app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+app/serializers/memorial_serializer.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/api/memorials_controller.rb:5:in `index'
+Started GET "/api/memorials" for ::1 at 2022-10-10 22:30:00 +0300
+Processing by Api::MemorialsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (3.4ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (203.58ms)
+Completed 200 OK in 380ms (Views: 280.9ms | ActiveRecord: 62.4ms | Allocations: 168213)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-10-10 22:30:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:32:27 +0300
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:32:27 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mLoginPageSlide Load (7.1ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.01ms)
+Completed 200 OK in 85ms (Views: 12.3ms | ActiveRecord: 6.4ms | Allocations: 2621)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:32:27 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 9ms (Views: 1.1ms | ActiveRecord: 1.2ms | Allocations: 1310)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.74ms)
+Completed 200 OK in 205ms (Views: 65.1ms | ActiveRecord: 98.1ms | Allocations: 10178)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:32:28 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.7ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.99ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.7ms | Allocations: 2251)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:32:28 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (5.6ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (525.18ms)
+Completed 200 OK in 653ms (Views: 639.5ms | ActiveRecord: 6.7ms | Allocations: 160583)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:32:29 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (4.9ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (293.21ms)
+Completed 200 OK in 424ms (Views: 393.0ms | ActiveRecord: 12.3ms | Allocations: 160584)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:35:24 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (10.6ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (224.12ms)
+Completed 200 OK in 327ms (Views: 301.4ms | ActiveRecord: 10.9ms | Allocations: 160591)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:35:50 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (4.7ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (313.83ms)
+Completed 200 OK in 413ms (Views: 400.7ms | ActiveRecord: 4.9ms | Allocations: 160600)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:36:16 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (12.3ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (618.79ms)
+Completed 200 OK in 980ms (Views: 942.1ms | ActiveRecord: 13.9ms | Allocations: 160585)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:37:03 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (7.9ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (280.36ms)
+Completed 200 OK in 399ms (Views: 378.2ms | ActiveRecord: 8.3ms | Allocations: 160594)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:37:40 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (48.6ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (260.24ms)
+Completed 200 OK in 415ms (Views: 363.1ms | ActiveRecord: 48.9ms | Allocations: 160586)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:38:28 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (6.0ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (260.12ms)
+Completed 200 OK in 369ms (Views: 358.3ms | ActiveRecord: 6.3ms | Allocations: 160580)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:39:07 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (11.4ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (292.2ms)
+Completed 200 OK in 449ms (Views: 431.6ms | ActiveRecord: 11.8ms | Allocations: 160591)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:39:38 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:39:38 +0300
+Processing by Api::UsersController#show as */*
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.61ms)
+Completed 200 OK in 24ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 3088)
+
+
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:39:38 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 16ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1304)
+
+
+  [1m[36mLoginPageSlide Load (2.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.74ms)
+Completed 200 OK in 226ms (Views: 131.8ms | ActiveRecord: 93.7ms | Allocations: 9743)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:39:38 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.5ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.24ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.5ms | Allocations: 2251)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:39:39 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (11.9ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (447.07ms)
+Completed 200 OK in 559ms (Views: 525.7ms | ActiveRecord: 13.3ms | Allocations: 160661)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:39:40 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (54.0ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (747.1ms)
+Completed 200 OK in 921ms (Views: 836.6ms | ActiveRecord: 54.3ms | Allocations: 160587)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:40:22 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (14.9ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (224.07ms)
+Completed 200 OK in 377ms (Views: 332.9ms | ActiveRecord: 16.4ms | Allocations: 160579)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:40:44 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (61.2ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1067.44ms)
+Completed 200 OK in 1241ms (Views: 1174.4ms | ActiveRecord: 61.5ms | Allocations: 160596)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:41:45 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (5.5ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (370.2ms)
+Completed 200 OK in 520ms (Views: 508.3ms | ActiveRecord: 7.0ms | Allocations: 160586)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:44:14 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (12.3ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (319.92ms)
+Completed 200 OK in 463ms (Views: 420.4ms | ActiveRecord: 14.3ms | Allocations: 160587)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:44:43 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (19.6ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (291.59ms)
+Completed 200 OK in 428ms (Views: 398.5ms | ActiveRecord: 20.2ms | Allocations: 160582)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:47:07 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (5.5ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (343.72ms)
+Completed 200 OK in 444ms (Views: 431.6ms | ActiveRecord: 5.8ms | Allocations: 160579)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:48:42 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (106.8ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (512.46ms)
+Completed 200 OK in 767ms (Views: 650.6ms | ActiveRecord: 107.8ms | Allocations: 160584)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:48:44 +0300
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:48:44 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 1316)
+
+
+Processing by Api::LoginPageSlidesController#index as */*
+Started GET "/api/me" for 127.0.0.1 at 2022-10-10 22:48:44 +0300
+Processing by Api::UsersController#show as */*
+  [1m[36mLoginPageSlide Load (18.2ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.72ms)
+Completed 200 OK in 33ms (Views: 14.8ms | ActiveRecord: 18.2ms | Allocations: 4772)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:48:44 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.85ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.4ms | Allocations: 2251)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.74ms)
+Completed 200 OK in 166ms (Views: 2.3ms | ActiveRecord: 32.7ms | Allocations: 10600)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:48:45 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (42.8ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (693.05ms)
+Completed 200 OK in 956ms (Views: 884.4ms | ActiveRecord: 46.3ms | Allocations: 160586)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:48:46 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (5.8ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (984.79ms)
+Completed 200 OK in 1199ms (Views: 1161.3ms | ActiveRecord: 7.1ms | Allocations: 160589)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:49:07 +0300
+Started GET "/api/community_impacts/7" for 127.0.0.1 at 2022-10-10 22:49:07 +0300
+Processing by Api::TechnologiesController#index as */*
+Processing by Api::CommunityImpactsController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (12.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+  [1m[36mCommunityImpact Load (2.4ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts" WHERE "community_impacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/community_impacts_controller.rb:9:in `show'
+[active_model_serializers] Rendered CommunityImpactSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 93ms (Views: 8.6ms | ActiveRecord: 48.4ms | Allocations: 7947)
+
+
+Started GET "/api/community_impacts/7" for 127.0.0.1 at 2022-10-10 22:49:08 +0300
+Processing by Api::CommunityImpactsController#show as */*
+  Parameters: {"id"=>"7"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.12ms)
+Completed 200 OK in 159ms (Views: 74.5ms | ActiveRecord: 51.7ms | Allocations: 18781)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-10 22:49:08 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (35.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (2.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.81ms)
+Completed 200 OK in 45ms (Views: 27.7ms | ActiveRecord: 5.5ms | Allocations: 9766)
+
+
+  [1m[36mCommunityImpact Load (37.1ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts" WHERE "community_impacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/community_impacts_controller.rb:9:in `show'
+[active_model_serializers] Rendered CommunityImpactSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 117ms (Views: 1.3ms | ActiveRecord: 72.1ms | Allocations: 20147)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:49:10 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (14.8ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (207.75ms)
+Completed 200 OK in 302ms (Views: 282.5ms | ActiveRecord: 15.1ms | Allocations: 160589)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:49:10 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (50.4ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (328.23ms)
+Completed 200 OK in 519ms (Views: 447.0ms | ActiveRecord: 51.7ms | Allocations: 160589)
+
+
+Started GET "/" for ::1 at 2022-10-10 22:49:51 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/exhale/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/exhale/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 359)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 1016)
+
+
+Started DELETE "/api/logout" for 127.0.0.1 at 2022-10-10 22:51:16 +0300
+Processing by Api::SessionsController#destroy as */*
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 26ms (ActiveRecord: 2.2ms | Allocations: 678)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:51:16 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.6ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.93ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.6ms | Allocations: 2251)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-10 22:51:16 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.7ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.71ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.7ms | Allocations: 2251)
+
+
+Started POST "/api/login" for 127.0.0.1 at 2022-10-10 22:51:30 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"lunoxmlbb@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"lunoxmlbb@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lunoxmlbb@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:6:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 277ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1056)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:51:30 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (13.1ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (239.28ms)
+Completed 200 OK in 458ms (Views: 374.4ms | ActiveRecord: 27.4ms | Allocations: 160575)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:51:30 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (6.3ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (548.95ms)
+Completed 200 OK in 637ms (Views: 623.0ms | ActiveRecord: 6.9ms | Allocations: 160576)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:53:17 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (8.3ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (429.16ms)
+Completed 200 OK in 528ms (Views: 514.5ms | ActiveRecord: 8.7ms | Allocations: 160580)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:54:35 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (15.6ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (298.87ms)
+Completed 200 OK in 416ms (Views: 392.4ms | ActiveRecord: 17.3ms | Allocations: 160585)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:55:06 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (7.2ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (339.06ms)
+Completed 200 OK in 547ms (Views: 531.8ms | ActiveRecord: 8.0ms | Allocations: 160591)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:58:27 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (26.9ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (206.86ms)
+Completed 200 OK in 394ms (Views: 344.9ms | ActiveRecord: 27.7ms | Allocations: 160593)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:58:44 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (12.9ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (237.54ms)
+Completed 200 OK in 376ms (Views: 332.4ms | ActiveRecord: 14.1ms | Allocations: 160582)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:59:03 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (15.5ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (250.6ms)
+Completed 200 OK in 416ms (Views: 368.8ms | ActiveRecord: 16.2ms | Allocations: 160584)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:59:39 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (46.0ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (251.85ms)
+Completed 200 OK in 407ms (Views: 338.0ms | ActiveRecord: 46.8ms | Allocations: 160592)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 22:59:56 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (8.3ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (558.97ms)
+Completed 200 OK in 697ms (Views: 676.8ms | ActiveRecord: 8.5ms | Allocations: 160587)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-10 23:01:58 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (14.3ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (288.87ms)
+Completed 200 OK in 421ms (Views: 382.5ms | ActiveRecord: 14.5ms | Allocations: 160591)
+
+

@@ -68,7 +68,7 @@ const Footer = () => {
                         sx={{
                         mr: 2,
                         display: { xs: 'none', md: 'flex' },
-                        fontFamily: 'Montserrat',
+                        fontFamily: 'nunito',
                         fontSize: '18px',
                         fontWeight: 700,
                         color: '#fff',
@@ -88,7 +88,7 @@ const Footer = () => {
                             <Typography>
                                 TXC FortBase is a fandom page for people who want to connect
                                 with the heroes of the nation. You can get information about the
-                                latest technologies in the TXC military and additional information.
+                                latest technologies in the TXC military and public researches.
                                 Come and Connect
                             </Typography>
                             &nbsp;
