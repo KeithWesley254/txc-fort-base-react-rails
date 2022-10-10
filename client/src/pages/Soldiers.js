@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, TextField, Typography } from '@mui/material'
+import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Pagination, TextField, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 
 const Soldiers = () => {
@@ -6,7 +6,8 @@ const Soldiers = () => {
   const [searchSoldiers, setSearchSoldiers] = useState("");
   const [allGenerals, setAllGenerals] =useState([]);
   const [allSoldiers, setAllSoldiers] = useState([]);
-  const [page, setPage] = useState(1);
+  const [soldiersPage, setSoldierPage] = useState(1);
+  const [generalsPage, setGeneralsPage] = useState(1);
 
   function handleSearchGenerals(){
     return allGenerals.filter((general) => 
@@ -35,7 +36,7 @@ const Soldiers = () => {
 
   const myGeneralsCards =  
   handleSearchGenerals()
-  .slice((page - 1) * 10, (page - 1) * 10 + 10)
+  .slice((generalsPage - 1) * 10, (generalsPage - 1) * 10 + 10)
   .map((general) => {
     return(
       <>
@@ -65,7 +66,7 @@ const Soldiers = () => {
 
   const mySoldiersCards =  
   handleSearchSoldiers()
-  .slice((page - 1) * 10, (page - 1) * 10 + 10)
+  .slice((soldiersPage - 1) * 10, (soldiersPage - 1) * 10 + 10)
   .map((soldier) => {
     return(
       <>
@@ -115,7 +116,7 @@ const Soldiers = () => {
           <Grid item xs={12} md={12}>
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <TextField 
-                label="Search..."
+                label="Go back to the first page for a full search..."
                 variant='outlined'
                 style={{ marginBottom: 20, width: "70%", borderRadius: 20 }}
                 onChange={(e) => setSearchGenerals(e.target.value.toLocaleLowerCase())}
@@ -136,6 +137,25 @@ const Soldiers = () => {
         <br />
         <Grid container spacing={2} columns={12}>
           <Grid item xs={12} md={12}>
+            <Box>
+              <Pagination 
+              style={{
+                  padding: 20,
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center"
+              }}
+              count={(handleSearchGenerals().length/10).toFixed(0)}
+              onChange={(_, value) => {
+                  setGeneralsPage(value);
+              }}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+        <br />
+        <Grid container spacing={2} columns={12}>
+          <Grid item xs={12} md={12}>
               <Box sx={{pl: 5}}>
                 <p style={{fontSize: 30, fontWeight: "bold", fontFamily: "nunito"}}>
                   Soldiers
@@ -148,7 +168,7 @@ const Soldiers = () => {
             <Grid item xs={12} md={12}>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <TextField 
-                  label="Search..."
+                  label="Go back to the first page for a full search..."
                   variant='outlined'
                   style={{ marginBottom: 20, width: "70%", borderRadius: 20 }}
                   onChange={(e) => setSearchSoldiers(e.target.value.toLocaleLowerCase())}
@@ -158,12 +178,31 @@ const Soldiers = () => {
           </Grid>
           <br />
           <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, pr:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
-          <Grid item xs={12} md={12} >
-            <div className='heroScroll' style={{ position: "relative", width: "100%", overflowX: "auto",}}>
-              <Box sx={{ borderRadius: 20, display: "flex", display: "inline-flex", flexDirection: 'row'  }}>
-                {mySoldiersCards}
-              </Box>
-            </div>
+            <Grid item xs={12} md={12} >
+              <div className='heroScroll' style={{ position: "relative", width: "100%", overflowX: "auto",}}>
+                <Box sx={{ borderRadius: 20, display: "flex", display: "inline-flex", flexDirection: 'row'  }}>
+                  {mySoldiersCards}
+                </Box>
+              </div>
+            </Grid>
+          </Grid>
+          <br />
+          <Grid container spacing={2} columns={12}>
+          <Grid item xs={12} md={12}>
+            <Box>
+              <Pagination 
+              style={{
+                  padding: 20,
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center"
+              }}
+              count={(handleSearchSoldiers().length/10).toFixed(0)}
+              onChange={(_, value) => {
+                  setSoldierPage(value);
+              }}
+              />
+            </Box>
           </Grid>
         </Grid>
         <br />

@@ -18161,3 +18161,565 @@ Processing by Api::SoldiersController#index as */*
 Completed 200 OK in 927ms (Views: 875.9ms | ActiveRecord: 10.8ms | Allocations: 403421)
 
 
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:08:34 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (42.6ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (348.1ms)
+Completed 200 OK in 480ms (Views: 423.6ms | ActiveRecord: 43.3ms | Allocations: 160589)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:08:35 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (26.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (5.9ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (499.83ms)
+Completed 200 OK in 637ms (Views: 587.4ms | ActiveRecord: 32.9ms | Allocations: 160592)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:11:32 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (24.6ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (272.77ms)
+Completed 200 OK in 480ms (Views: 382.8ms | ActiveRecord: 47.1ms | Allocations: 160583)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:13:30 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (4.4ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (272.82ms)
+Completed 200 OK in 368ms (Views: 351.3ms | ActiveRecord: 6.5ms | Allocations: 160586)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:14:00 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (12.1ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (384.9ms)
+Completed 200 OK in 508ms (Views: 487.5ms | ActiveRecord: 13.7ms | Allocations: 160587)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:14:17 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (12.0ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (312.91ms)
+Completed 200 OK in 437ms (Views: 396.6ms | ActiveRecord: 13.4ms | Allocations: 160588)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:14:43 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (4.1ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (578.26ms)
+Completed 200 OK in 704ms (Views: 689.1ms | ActiveRecord: 5.0ms | Allocations: 160582)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:15:04 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (32.1ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (341.21ms)
+Completed 200 OK in 440ms (Views: 404.6ms | ActiveRecord: 32.5ms | Allocations: 160586)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:15:22 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (26.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (5.2ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (461.61ms)
+Completed 200 OK in 635ms (Views: 594.2ms | ActiveRecord: 31.7ms | Allocations: 160580)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:15:34 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (35.2ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (410.49ms)
+Completed 200 OK in 638ms (Views: 578.4ms | ActiveRecord: 39.1ms | Allocations: 160594)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:19:36 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (33.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (14.1ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (280.31ms)
+Completed 200 OK in 419ms (Views: 358.7ms | ActiveRecord: 47.4ms | Allocations: 160591)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:20:46 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (154.5ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (298.53ms)
+Completed 200 OK in 534ms (Views: 376.2ms | ActiveRecord: 154.8ms | Allocations: 160586)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:22:38 +0300
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:22:38 +0300
+Processing by Api::MajorGeneralsController#index as */*
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (31.9ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.31ms)
+Completed 200 OK in 65ms (Views: 22.0ms | ActiveRecord: 32.4ms | Allocations: 12068)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:22:38 +0300
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (7.3ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.7ms)
+Completed 200 OK in 50ms (Views: 36.3ms | ActiveRecord: 7.6ms | Allocations: 10342)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mSoldier Load (88.7ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (566.48ms)
+Completed 200 OK in 1046ms (Views: 756.4ms | ActiveRecord: 141.8ms | Allocations: 429082)
+
+
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:22:39 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mSoldier Load (21.8ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (498.77ms)
+Completed 200 OK in 859ms (Views: 771.3ms | ActiveRecord: 22.2ms | Allocations: 403421)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:29:30 +0300
+Processing by Api::MajorGeneralsController#index as */*
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:29:30 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (1.7ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.75ms)
+Completed 200 OK in 240ms (Views: 40.2ms | ActiveRecord: 73.1ms | Allocations: 18377)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:29:30 +0300
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (39.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (9.7ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.63ms)
+Completed 200 OK in 87ms (Views: 25.1ms | ActiveRecord: 49.0ms | Allocations: 10338)
+
+
+  [1m[36mSoldier Load (212.8ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1196.29ms)
+Completed 200 OK in 2411ms (Views: 2045.4ms | ActiveRecord: 234.7ms | Allocations: 431018)
+
+
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:29:33 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mSoldier Load (41.8ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (648.24ms)
+Completed 200 OK in 1017ms (Views: 957.1ms | ActiveRecord: 48.3ms | Allocations: 403414)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:30:05 +0300
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:30:05 +0300
+Processing by Api::SoldiersController#index as */*
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (0.7ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.83ms)
+Completed 200 OK in 50ms (Views: 38.2ms | ActiveRecord: 1.4ms | Allocations: 10922)
+
+
+  [1m[36mSoldier Load (54.8ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (952.23ms)
+Completed 200 OK in 1304ms (Views: 1229.5ms | ActiveRecord: 55.5ms | Allocations: 415019)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:30:35 +0300
+Processing by Api::MajorGeneralsController#index as */*
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:30:35 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (6.8ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.98ms)
+Completed 200 OK in 55ms (Views: 25.0ms | ActiveRecord: 10.1ms | Allocations: 12451)
+
+
+  [1m[36mSoldier Load (52.9ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2274.3ms)
+Completed 200 OK in 2615ms (Views: 2556.3ms | ActiveRecord: 53.3ms | Allocations: 413987)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:30:43 +0300
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:30:43 +0300
+Processing by Api::SoldiersController#index as */*
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (30.7ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (41.28ms)
+Completed 200 OK in 93ms (Views: 51.3ms | ActiveRecord: 34.9ms | Allocations: 10931)
+
+
+  [1m[36mSoldier Load (106.3ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (905.67ms)
+Completed 200 OK in 1356ms (Views: 1240.3ms | ActiveRecord: 108.2ms | Allocations: 414695)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:31:03 +0300
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (0.5ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (75.04ms)
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:31:03 +0300
+Completed 200 OK in 98ms (Views: 88.5ms | ActiveRecord: 5.4ms | Allocations: 10786)
+
+
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mSoldier Load (43.0ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (576.9ms)
+Completed 200 OK in 1590ms (Views: 1544.2ms | ActiveRecord: 43.3ms | Allocations: 403458)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:31:13 +0300
+Processing by Api::MajorGeneralsController#index as */*
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:31:13 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (2.3ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.9ms)
+Completed 200 OK in 64ms (Views: 28.4ms | ActiveRecord: 7.0ms | Allocations: 12426)
+
+
+  [1m[36mSoldier Load (52.4ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (684.42ms)
+Completed 200 OK in 1226ms (Views: 1157.3ms | ActiveRecord: 52.7ms | Allocations: 413974)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:31:33 +0300
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:31:33 +0300
+Processing by Api::SoldiersController#index as */*
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (27.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (11.7ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.04ms)
+Completed 200 OK in 83ms (Views: 31.9ms | ActiveRecord: 38.8ms | Allocations: 10924)
+
+
+  [1m[36mSoldier Load (123.6ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (589.37ms)
+Completed 200 OK in 1172ms (Views: 1022.8ms | ActiveRecord: 124.1ms | Allocations: 414570)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:31:45 +0300
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:31:45 +0300
+  [1m[36mMajorGeneral Load (0.8ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.18ms)
+Processing by Api::SoldiersController#index as */*
+Completed 200 OK in 42ms (Views: 32.9ms | ActiveRecord: 2.3ms | Allocations: 11670)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mSoldier Load (45.1ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1979.12ms)
+Completed 200 OK in 2336ms (Views: 2286.3ms | ActiveRecord: 45.7ms | Allocations: 403799)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:31:59 +0300
+Processing by Api::MajorGeneralsController#index as */*
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:31:59 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (2.8ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.74ms)
+Completed 200 OK in 65ms (Views: 28.0ms | ActiveRecord: 3.5ms | Allocations: 12393)
+
+
+  [1m[36mSoldier Load (62.0ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (651.34ms)
+Completed 200 OK in 1035ms (Views: 957.2ms | ActiveRecord: 62.5ms | Allocations: 413965)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:32:22 +0300
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (1.2ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.92ms)
+Completed 200 OK in 64ms (Views: 30.5ms | ActiveRecord: 1.4ms | Allocations: 10334)
+
+
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:32:22 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mSoldier Load (38.2ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1684.57ms)
+Completed 200 OK in 2290ms (Views: 2249.2ms | ActiveRecord: 38.5ms | Allocations: 403414)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:32:38 +0300
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:32:38 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (3.8ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (96.24ms)
+Completed 200 OK in 195ms (Views: 105.3ms | ActiveRecord: 4.1ms | Allocations: 10346)
+
+
+  [1m[36mSoldier Load (242.9ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (603.74ms)
+Completed 200 OK in 1210ms (Views: 963.1ms | ActiveRecord: 243.2ms | Allocations: 414528)
+
+
+Started GET "/api/community_impacts/7" for 127.0.0.1 at 2022-10-11 00:34:51 +0300
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-11 00:34:51 +0300
+Processing by Api::CommunityImpactsController#show as */*
+  Parameters: {"id"=>"7"}
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (0.9ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts" WHERE "community_impacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/community_impacts_controller.rb:9:in `show'
+[active_model_serializers] Rendered CommunityImpactSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 50ms (Views: 2.0ms | ActiveRecord: 1.4ms | Allocations: 2891)
+
+
+Started GET "/api/community_impacts/7" for 127.0.0.1 at 2022-10-11 00:34:51 +0300
+  [1m[36mTechnology Load (39.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.55ms)
+Completed 200 OK in 124ms (Views: 51.8ms | ActiveRecord: 43.3ms | Allocations: 12233)
+
+
+Processing by Api::CommunityImpactsController#show as */*
+  Parameters: {"id"=>"7"}
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-11 00:34:51 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (11.8ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts" WHERE "community_impacts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTechnology Load (1.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:9:in `show'
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (59.63ms)
+[active_model_serializers] Rendered CommunityImpactSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 126ms (Views: 1.8ms | ActiveRecord: 28.4ms | Allocations: 12171)
+
+
+Completed 200 OK in 97ms (Views: 76.6ms | ActiveRecord: 2.2ms | Allocations: 10145)
+
+
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:34:53 +0300
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:34:53 +0300
+Processing by Api::SoldiersController#index as */*
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (5.7ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.76ms)
+Completed 200 OK in 34ms (Views: 20.2ms | ActiveRecord: 6.7ms | Allocations: 10932)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:34:53 +0300
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (3.8ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.16ms)
+Completed 200 OK in 42ms (Views: 34.5ms | ActiveRecord: 4.4ms | Allocations: 10346)
+
+
+  [1m[36mSoldier Load (137.8ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (574.38ms)
+Completed 200 OK in 1056ms (Views: 902.0ms | ActiveRecord: 140.5ms | Allocations: 426824)
+
+
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:34:54 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mSoldier Load (16.6ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (477.83ms)
+Completed 200 OK in 814ms (Views: 783.6ms | ActiveRecord: 16.9ms | Allocations: 403422)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:37:17 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (45.5ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (309.38ms)
+Completed 200 OK in 565ms (Views: 448.5ms | ActiveRecord: 45.8ms | Allocations: 160593)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:37:18 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (31.1ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (682.89ms)
+Completed 200 OK in 846ms (Views: 789.0ms | ActiveRecord: 36.2ms | Allocations: 160592)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:43:17 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (16.8ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (483.11ms)
+Completed 200 OK in 696ms (Views: 587.6ms | ActiveRecord: 55.4ms | Allocations: 163607)
+
+
+Started GET "/api/memorials" for 127.0.0.1 at 2022-10-11 00:44:22 +0300
+Processing by Api::MemorialsController#index as */*
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMemorial Load (11.9ms)[0m  [1m[34mSELECT "memorials".* FROM "memorials"[0m
+  ↳ app/controllers/api/memorials_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (327.32ms)
+Completed 200 OK in 516ms (Views: 454.5ms | ActiveRecord: 14.9ms | Allocations: 160592)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:44:40 +0300
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:44:40 +0300
+Processing by Api::MajorGeneralsController#index as */*
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (29.4ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.18ms)
+Completed 200 OK in 66ms (Views: 20.8ms | ActiveRecord: 30.1ms | Allocations: 12108)
+
+
+Started GET "/api/major_generals" for 127.0.0.1 at 2022-10-11 00:44:40 +0300
+Processing by Api::MajorGeneralsController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mMajorGeneral Load (4.3ms)[0m  [1m[34mSELECT "major_generals".* FROM "major_generals"[0m
+  ↳ app/controllers/api/major_generals_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (59.82ms)
+Completed 200 OK in 75ms (Views: 65.9ms | ActiveRecord: 5.6ms | Allocations: 10334)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mSoldier Load (86.8ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (465.61ms)
+Completed 200 OK in 1222ms (Views: 878.5ms | ActiveRecord: 143.9ms | Allocations: 429044)
+
+
+Started GET "/api/soldiers" for 127.0.0.1 at 2022-10-11 00:44:41 +0300
+Processing by Api::SoldiersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mSoldier Load (49.0ms)[0m  [1m[34mSELECT "soldiers".* FROM "soldiers"[0m
+  ↳ app/controllers/api/soldiers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (601.13ms)
+Completed 200 OK in 1030ms (Views: 945.8ms | ActiveRecord: 49.8ms | Allocations: 403409)
+
+

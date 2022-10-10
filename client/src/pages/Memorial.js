@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, TextField, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Pagination, TextField, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import MemorialImage from '../memorial.jpeg';
 
@@ -99,10 +99,24 @@ const Memorial = () => {
           <Grid item xs={12} md={12}>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <TextField 
-              label="Search..."
+              label="Go back to the first page for a full search..."
               variant='outlined'
               style={{ marginBottom: 20, width: "70%", borderRadius: 20 }}
               onChange={(e) => setSearch(e.target.value.toLocaleLowerCase())}
+              />
+            </Box>
+            <Box>
+              <Pagination 
+              style={{
+                  padding: 20,
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center"
+              }}
+              count={(handleSearch().length/10).toFixed(0)}
+              onChange={(_, value) => {
+                  setPage(value);
+              }}
               />
             </Box>
           </Grid>
@@ -117,9 +131,29 @@ const Memorial = () => {
                 </Box>
               </div>
             </Box>
+            <br />
           </Grid>
         </Grid>
         <br />
+        <Grid container spacing={2} columns={12}>
+          <Grid item xs={12} md={12}>
+            <Box>
+              <Pagination 
+              style={{
+                  padding: 20,
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center"
+              }}
+              count={(handleSearch().length/10).toFixed(0)}
+              onChange={(_, value) => {
+                  setPage(value);
+                  window.scroll(0, 0);
+              }}
+              />
+            </Box>
+          </Grid>
+        </Grid>
       </Box>
     </>
   )
