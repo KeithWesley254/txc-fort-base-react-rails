@@ -1,6 +1,7 @@
 import { Grid, Box, Card, CardMedia, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import AboutUsForm from '../components/AboutUsForm';
+import OurImage from '../our_image.jpg';
 
 const AboutUs = () => {
   const [communityData, setCommunityData] = useState([]);
@@ -132,9 +133,19 @@ const AboutUs = () => {
           </Grid>
           <br />
           <Grid item xs={12} md={6}>
-            <Box>
-              
-            </Box>
+            <Box sx={{ml: 4, mr: 4}}>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                  <Card sx={{ maxWidth: 600 }}>
+                    <CardMedia
+                    component="img"
+                    height="450"
+                    image= {OurImage}
+                    alt= "our_image"
+                    loading="lazy"
+                    />
+                  </Card>
+                </div>
+            </Box> 
           </Grid>
         </Grid>
         <br />

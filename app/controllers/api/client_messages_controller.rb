@@ -6,8 +6,10 @@ class Api::ClientMessagesController < ApplicationController
     end
 
     def create
-        user = @current_user.create!(cm_params)
-        render json: user, status: :created
+        if @current_user
+            user = ClientMessage.create!(cm_params)
+            render json: user, status: :created
+        end
     end
 
     private
