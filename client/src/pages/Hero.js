@@ -23,7 +23,7 @@ const Hero = () => {
   const my_cards = techStories.map((story) => {
     return(
       <>
-        <Card sx={{ width: 200, height: 150 }}>
+        <Card key={story.id} sx={{ width: 200, height: 150 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -47,7 +47,7 @@ const Hero = () => {
       <main>
         <Box>
           <br />
-          <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
+          <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, pr:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
             <Grid item xs={12} md={12} >
             <div className='heroScroll' style={{ position: "relative", width: "100%", overflowX: "auto",}}>
               <Box sx={{ borderRadius: 5, display: "flex", display: "inline-flex", flexDirection: 'row'  }}>
@@ -75,7 +75,7 @@ const Hero = () => {
                 </Grid>
               </Grid>  
             </Grid>
-            <Grid item xs={12} md={6} >
+            <Grid item xs={12} md={6} sx={{pr: 4}}>
               <div>
                 <Box>
                   <Typography>

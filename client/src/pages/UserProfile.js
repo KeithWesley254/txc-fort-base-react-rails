@@ -25,8 +25,6 @@ const UserProfile = ({user, setUser}) => {
     .then(data => setUserData(data))
   }, [])
 
-  console.log(userData)
-
   function handleUpdateUser() {
     fetch(`/api/user_details/${user.id}`, {
     method: "PATCH",
