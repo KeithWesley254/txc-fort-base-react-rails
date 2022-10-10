@@ -1,4 +1,4 @@
-import { Button, Box, TextField, FormControl } from '@mui/material'
+import { Button, Box, TextField, FormControl, InputLabel, OutlinedInput } from '@mui/material'
 import React, { useState } from 'react'
 
 const AboutUsForm = () => {
@@ -35,30 +35,38 @@ const AboutUsForm = () => {
         autoComplete="off"
         >
             <div style={{textAlign: "center"}}>
-             <TextField
-              label="Full Name"
-              size="large"
-              fullWidth
-              onChange={(e) => setFullName(e.target.value)} 
-            />
+            <FormControl sx={{ m: 1, width: "70%" }}>
+              <InputLabel htmlFor="Full Name">Full Name</InputLabel>
+              <OutlinedInput
+                id="full_name"
+                value={full_name}
+                onChange={(e) => setFullName(e.target.value)} 
+                label="Full Name"
+              />
+            </FormControl>
             <br />
-            <TextField
-              label="Professional Email"
-              size="large"
-              fullWidth
-              onChange={(e) => setProfEmail(e.target.value)}
-            />
+            <FormControl sx={{ m: 1, width: "70%" }}>
+              <InputLabel htmlFor="Professional Email">Professional Email</InputLabel>
+              <OutlinedInput
+                id="professional_email"
+                value={professional_email}
+                onChange={(e) => setProfEmail(e.target.value)}
+                label="Professional Email"
+              />
+            </FormControl>
             <br />
-            <TextField
-              label="Message"
-              size="large"
-              multiline
-              rows={4}
-              type="text"
-              fullWidth
-              onChange={(e) => setTheirMessage(e.target.value)}
-            />
-
+            <FormControl sx={{ m: 1, width: "70%" }}>
+              <InputLabel htmlFor="Message">Message</InputLabel>
+              <OutlinedInput
+                id="their_message"
+                multiline
+                rows={4}
+                type="text"
+                value={their_message}
+                onChange={(e) => setTheirMessage(e.target.value)}
+                label="Message"
+              />
+            </FormControl>
         </div>
         <div className='aboutBtn' style={{
             display: "flex", justifyContent: "center", alignItems: "center", fontSize: 30, fontFamily: "nunito", fontWeight: "bolder"

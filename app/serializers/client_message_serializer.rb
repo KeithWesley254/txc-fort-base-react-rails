@@ -1,3 +1,3 @@
 class ClientMessageSerializer < ActiveModel::Serializer
-  attributes :id, :professional_email, :their_message
+  attributes :id, :full_name, :professional_email, :their_message
 end

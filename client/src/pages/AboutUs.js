@@ -129,7 +129,7 @@ const AboutUs = () => {
         <br />
         <Grid container spacing={2} columns={12}>
           <Grid item xs={12} md={6}>
-            <AboutUsForm />
+              <AboutUsForm />
           </Grid>
           <br />
           <Grid item xs={12} md={6}>

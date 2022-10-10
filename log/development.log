@@ -18723,3 +18723,238 @@ Processing by Api::SoldiersController#index as */*
 Completed 200 OK in 1030ms (Views: 945.8ms | ActiveRecord: 49.8ms | Allocations: 403409)
 
 
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-11 00:49:22 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (8.0ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.77ms)
+Completed 200 OK in 49ms (Views: 30.7ms | ActiveRecord: 9.3ms | Allocations: 9286)
+
+
+Started GET "/api/technologies" for 127.0.0.1 at 2022-10-11 00:49:22 +0300
+Processing by Api::TechnologiesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mTechnology Load (2.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies"[0m
+  ↳ app/controllers/api/technologies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.86ms)
+Completed 200 OK in 88ms (Views: 28.6ms | ActiveRecord: 3.1ms | Allocations: 9265)
+
+
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-11 00:49:37 +0300
+Processing by Api::CommunityImpactsController#index as */*
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-11 00:49:37 +0300
+Processing by Api::AboutUsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (7.0ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.74ms)
+Completed 200 OK in 55ms (Views: 6.0ms | ActiveRecord: 8.1ms | Allocations: 4820)
+
+
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-11 00:49:37 +0300
+Processing by Api::CommunityImpactsController#index as */*
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mAboutU Load (47.4ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.58ms)
+Completed 200 OK in 82ms (Views: 5.4ms | ActiveRecord: 52.3ms | Allocations: 7074)
+
+
+  [1m[36mCommunityImpact Load (6.7ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.25ms)
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-11 00:49:37 +0300
+Completed 200 OK in 45ms (Views: 23.1ms | ActiveRecord: 10.4ms | Allocations: 4823)
+
+
+Processing by Api::AboutUsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mAboutU Load (0.8ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.35ms)
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 1.4ms | Allocations: 2084)
+
+
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-11 00:52:35 +0300
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-11 00:52:35 +0300
+Processing by Api::CommunityImpactsController#index as */*
+Processing by Api::AboutUsController#index as */*
+  [1m[36mUser Load (19.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (1.5ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.36ms)
+Completed 200 OK in 40ms (Views: 5.4ms | ActiveRecord: 20.8ms | Allocations: 4345)
+
+
+  [1m[36mAboutU Load (6.9ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.38ms)
+Completed 200 OK in 39ms (Views: 7.1ms | ActiveRecord: 7.5ms | Allocations: 4949)
+
+
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-11 00:52:47 +0300
+Processing by Api::CommunityImpactsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (0.6ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.66ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 2705)
+
+
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-11 00:52:47 +0300
+Processing by Api::AboutUsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mAboutU Load (0.9ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.95ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.6ms | Allocations: 2046)
+
+
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-11 00:53:43 +0300
+Processing by Api::CommunityImpactsController#index as */*
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-11 00:53:43 +0300
+Processing by Api::AboutUsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (0.4ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+  [1m[36mAboutU Load (0.9ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.62ms)
+Completed 200 OK in 18ms (Views: 5.5ms | ActiveRecord: 1.3ms | Allocations: 3135)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.23ms)
+Completed 200 OK in 40ms (Views: 13.2ms | ActiveRecord: 1.8ms | Allocations: 6152)
+
+
+Started GET "/api/community_impacts" for 127.0.0.1 at 2022-10-11 00:54:08 +0300
+Processing by Api::CommunityImpactsController#index as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mCommunityImpact Load (1.0ms)[0m  [1m[34mSELECT "community_impacts".* FROM "community_impacts"[0m
+  ↳ app/controllers/api/community_impacts_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.77ms)
+Completed 200 OK in 28ms (Views: 5.3ms | ActiveRecord: 3.7ms | Allocations: 2697)
+
+
+Started GET "/api/about_us" for 127.0.0.1 at 2022-10-11 00:54:09 +0300
+Processing by Api::AboutUsController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mAboutU Load (1.1ms)[0m  [1m[34mSELECT "about_us".* FROM "about_us"[0m
+  ↳ app/controllers/api/about_us_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.23ms)
+Completed 200 OK in 58ms (Views: 7.7ms | ActiveRecord: 2.9ms | Allocations: 2038)
+
+
+Started GET "/" for ::1 at 2022-10-11 01:00:16 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/exhale/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/exhale/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 15)
+Completed 200 OK in 21ms (Views: 15.1ms | Allocations: 186)
+
+
+Started GET "/api/client_messages" for ::1 at 2022-10-11 01:00:23 +0300
+Processing by Api::ClientMessagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mClientMessage Load (23.6ms)[0m  [1m[34mSELECT "client_messages".* FROM "client_messages"[0m
+  ↳ app/controllers/api/client_messages_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.03ms)
+Completed 200 OK in 263ms (Views: 30.5ms | ActiveRecord: 118.2ms | Allocations: 7072)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-10-11 01:00:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/api/client_messages" for 127.0.0.1 at 2022-10-11 01:00:45 +0300
+Processing by Api::ClientMessagesController#create as */*
+  Parameters: {"full_name"=>"Tyga", "professional_email"=>"tyga@gmail.com", "their_message"=>"Great work", "client_message"=>{"full_name"=>"Tyga", "professional_email"=>"tyga@gmail.com", "their_message"=>"Great work"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[31mUnpermitted parameter: :client_message. Context: { controller: Api::ClientMessagesController, action: create, request: #<ActionDispatch::Request:0x00007fd120316e30>, params: {"full_name"=>"Tyga", "professional_email"=>"tyga@gmail.com", "their_message"=>"Great work", "controller"=>"api/client_messages", "action"=>"create", "client_message"=>{"full_name"=>"Tyga", "professional_email"=>"tyga@gmail.com", "their_message"=>"Great work"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/client_messages_controller.rb:10:in `create'
+  [1m[36mClientMessage Create (6.6ms)[0m  [1m[32mINSERT INTO "client_messages" ("full_name", "professional_email", "their_message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["full_name", "Tyga"], ["professional_email", "tyga@gmail.com"], ["their_message", "Great work"], ["created_at", "2022-10-10 22:00:45.337478"], ["updated_at", "2022-10-10 22:00:45.337478"]]
+  ↳ app/controllers/api/client_messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (24.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/client_messages_controller.rb:10:in `create'
+[active_model_serializers] Rendered ClientMessageSerializer with ActiveModelSerializers::Adapter::Attributes (0.62ms)
+Completed 201 Created in 74ms (Views: 1.3ms | ActiveRecord: 32.4ms | Allocations: 2612)
+
+
+Started GET "/api/client_messages" for ::1 at 2022-10-11 01:00:49 +0300
+Processing by Api::ClientMessagesController#index as HTML
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mClientMessage Load (1.0ms)[0m  [1m[34mSELECT "client_messages".* FROM "client_messages"[0m
+  ↳ app/controllers/api/client_messages_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.45ms)
+Completed 200 OK in 21ms (Views: 5.0ms | ActiveRecord: 8.4ms | Allocations: 1961)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-10-11 01:00:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/client_messages" for ::1 at 2022-10-11 01:01:19 +0300
+Processing by Api::ClientMessagesController#index as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mClientMessage Load (16.1ms)[0m  [1m[34mSELECT "client_messages".* FROM "client_messages"[0m
+  ↳ app/controllers/api/client_messages_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.19ms)
+Completed 200 OK in 94ms (Views: 9.2ms | ActiveRecord: 45.0ms | Allocations: 9107)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-10-11 01:01:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/api/client_messages" for 127.0.0.1 at 2022-10-11 01:05:41 +0300
+Processing by Api::ClientMessagesController#create as */*
+  Parameters: {"full_name"=>"Popol", "professional_email"=>"tygapopol@gmail.com", "their_message"=>"Great work Kabisa", "client_message"=>{"full_name"=>"Popol", "professional_email"=>"tygapopol@gmail.com", "their_message"=>"Great work Kabisa"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[31mUnpermitted parameter: :client_message. Context: { controller: Api::ClientMessagesController, action: create, request: #<ActionDispatch::Request:0x00007fd120866db8>, params: {"full_name"=>"Popol", "professional_email"=>"tygapopol@gmail.com", "their_message"=>"Great work Kabisa", "controller"=>"api/client_messages", "action"=>"create", "client_message"=>{"full_name"=>"Popol", "professional_email"=>"tygapopol@gmail.com", "their_message"=>"Great work Kabisa"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/client_messages_controller.rb:10:in `create'
+  [1m[36mClientMessage Create (26.1ms)[0m  [1m[32mINSERT INTO "client_messages" ("full_name", "professional_email", "their_message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["full_name", "Popol"], ["professional_email", "tygapopol@gmail.com"], ["their_message", "Great work Kabisa"], ["created_at", "2022-10-10 22:05:41.456424"], ["updated_at", "2022-10-10 22:05:41.456424"]]
+  ↳ app/controllers/api/client_messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/client_messages_controller.rb:10:in `create'
+[active_model_serializers] Rendered ClientMessageSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 201 Created in 83ms (Views: 1.7ms | ActiveRecord: 29.1ms | Allocations: 2614)
+
+
+Started GET "/api/client_messages" for ::1 at 2022-10-11 01:05:45 +0300
+Processing by Api::ClientMessagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mClientMessage Load (3.3ms)[0m  [1m[34mSELECT "client_messages".* FROM "client_messages"[0m
+  ↳ app/controllers/api/client_messages_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.77ms)
+Completed 200 OK in 37ms (Views: 5.6ms | ActiveRecord: 3.8ms | Allocations: 2141)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-10-11 01:05:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
