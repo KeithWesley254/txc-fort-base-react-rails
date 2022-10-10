@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :fan_messages, only: [:create]
     resources :soldier_trainings, only: [:create]
     resources :community_impacts, only: [:index, :show]
+    resources :client_messages, only: [:index, :create]
   end
   
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
