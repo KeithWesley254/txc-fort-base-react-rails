@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import {Grid, Box, CardMedia, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography} from '@mui/material';
 import Card from '@mui/material/Card';
+import { useNavigate } from 'react-router-dom';
 
 
-const UserProfile = ({user}) => {
+const UserProfile = ({user, setUser}) => {
 
   const [userData, setUserData] = useState({});
   const [formData, setFormData] = useState({
     full_name: '',
-    email: '',
-    user_id: '',
     gender: '',
     age: '',
     bio: '',
@@ -18,32 +17,24 @@ const UserProfile = ({user}) => {
     favourite_military_branch: ''
   });
 
-  function handleSubmit(e){
-    e.preventDefault();
-    fetch('/api/user_profiles',{
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(r => r.json())
-    .then(data => {
-        setUserData(data)
-    })
-    alert("Profile Created!")
-  }
+  const navigate = useNavigate();
 
-  function handleUpdatePlayer() {
-    fetch(`/api/user_profiles/${user.id}`, {
+  useEffect(() => {
+    fetch('/api/me')
+    .then(r => r.json())
+    .then(data => setUserData(data))
+  }, [])
+
+  console.log(userData)
+
+  function handleUpdateUser() {
+    fetch(`/api/user_details/${user.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
       full_name: formData.full_name,
-      email: formData.email,
-      user_id: formData.user_id,
       gender: formData.gender,
       age: formData.age,
       bio: formData.bio,
@@ -56,8 +47,21 @@ const UserProfile = ({user}) => {
     .then((updatedItem) => {
       setUserData(updatedItem)
     });
-    alert("Profile Updated!")
   }
+
+  function handleLogoutClick() {
+    fetch("/api/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+      }
+    });
+  }
+
+  function deleteProfile(id){
+    fetch(`/api/users/${id}`,{
+        method: "DELETE",
+    })
+    }
 
   function handleChange(e){
     setFormData({
@@ -65,7 +69,7 @@ const UserProfile = ({user}) => {
     });
   }
 
-  console.log(formData)
+  // console.log(formData)
   
   return (
     <>
@@ -78,13 +82,13 @@ const UserProfile = ({user}) => {
             <br />
           <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
-                <Box sx={{ml: 5}}>
+                <Box sx={{xs: {ml: 5}, ml: 5 }}>
                   <Card sx={{ maxWidth: 345}}>
                       <CardMedia
                         component="img"
                         height="230"
-                        image={user?.image_upload}
-                        alt={user?.full_name}
+                        image={userData?.image_upload}
+                        alt={userData?.full_name}
                         sx={{width: "auto"}}
                       />
                   </Card>
@@ -100,7 +104,6 @@ const UserProfile = ({user}) => {
                   </Typography>
                 </Box>
                 <br />
-                <br />
                 <Box sx={{ textAlign: "left", ml: 5}}>
                   <Typography variant="h5" component="h2">
                     Email Address
@@ -109,8 +112,7 @@ const UserProfile = ({user}) => {
                     {userData?.email}
                   </Typography>
                 </Box>
-                <br />
-                <br />
+               <br />
                 <Box sx={{ textAlign: "left", ml: 5}}>
                   <Typography variant="h5" component="h2">
                     Gender
@@ -118,7 +120,16 @@ const UserProfile = ({user}) => {
                   <Typography variant="body2" component="h2">
                     {userData?.gender}
                   </Typography>
-                </Box>                        
+                </Box> 
+                <br />
+                <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Typography variant="h5" component="h2">
+                    Age
+                  </Typography>
+                  <Typography variant="body2" component="h2">
+                    {userData?.age}
+                  </Typography>
+                </Box>                             
               </Grid>
             </Grid>
             <br />
@@ -138,14 +149,14 @@ const UserProfile = ({user}) => {
             <br />
             <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
-                <Box sx={{ textAlign: "left", ml: 5}}>
+              <Box sx={{ textAlign: "left", ml: 5}}>
                   <Typography variant="h5" component="h2">
-                    Age
+                    Favourite Military Branch
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {userData?.age}
+                    {userData?.favourite_military_branch}
                   </Typography>
-                </Box>      
+                </Box>         
               </Grid>
               <Grid item xs={6} md={6}>
               <Box sx={{ textAlign: "left", ml: 5}}>
@@ -168,13 +179,13 @@ const UserProfile = ({user}) => {
               <Grid container spacing={2} columns={6}>
                 <Grid item xs={6} md={3}>
                   <br />
-                  <Box sx={{ml: 5}}>
+                  <Box sx={{xs: {ml: 5}}}>
                   <Card sx={{ maxWidth: 345}}>
                     <CardMedia
                       component="img"
                       height="230"
-                      image={user?.image_upload}
-                      alt={user?.full_name}
+                      image={userData?.image_upload}
+                      alt={userData?.full_name}
                       sx={{width: "auto"}}
                     />
                   </Card>
@@ -195,26 +206,22 @@ const UserProfile = ({user}) => {
                       id="full_name"
                       label="Full Name"
                       fullWidth
-                      defaultValue={user?.full_name}
+                      name='full_name'
                       onChange={handleChange}
                     />
-                     <TextField
+                     {/* <TextField
                       required
                       id="email"
                       label="Email Address"
                       fullWidth
-                      defaultValue={user?.email}
+                      name='email'
                       onChange={handleChange}
-                    />
-                     <TextField
-                      required
-                      id="user_id"
-                      label="User_id"
+                    /> */}
+                    <TextField
+                      id="age"
+                      label="age"
+                      name='age'
                       fullWidth
-                      inputProps={
-                        { readOnly: true, }
-                      }
-                      defaultValue={user?.id}
                       onChange={handleChange}
                     />
                   </Box>
@@ -228,7 +235,7 @@ const UserProfile = ({user}) => {
                   <TextField
                       id="bio"
                       label="Bio"
-                      defaultValue={user?.bio}
+                      name='bio'
                       multiline
                       rows={5}
                       fullWidth
@@ -242,7 +249,7 @@ const UserProfile = ({user}) => {
                     <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
                     <RadioGroup
                       aria-labelledby="demo-radio-buttons-group-label"
-                      defaultValue={user?.gender}
+                      defaultValue="male"
                       name="gender"
                       onChange={handleChange}
                     >
@@ -261,7 +268,7 @@ const UserProfile = ({user}) => {
                   <TextField
                     id="interests"
                     label="Interests"
-                    defaultValue={user?.interests}
+                    name='interests'
                     fullWidth
                     onChange={handleChange}
                   />
@@ -272,7 +279,7 @@ const UserProfile = ({user}) => {
                   <TextField
                     id="image_upload"
                     label="Image upload"
-                    defaultValue={user?.image_upload}
+                    name='image_upload'
                     fullWidth
                     onChange={handleChange}
                   />
@@ -286,7 +293,7 @@ const UserProfile = ({user}) => {
                   <TextField
                     id="favourite_military_branch"
                     label="Favourite Military Branch"
-                    defaultValue={user?.favourite_military_branch}
+                    name='favourite_military_branch'
                     fullWidth
                     onChange={handleChange}
                   />
@@ -294,13 +301,12 @@ const UserProfile = ({user}) => {
               </Grid>
               <Grid item xs={6} md={6}>
                 <Box>
-                  <TextField
-                    id="age"
-                    label="age"
-                    defaultValue={user?.age}
-                    fullWidth
-                    onChange={handleChange}
-                  />
+                  <Typography color="red">
+                    WARNING!
+                  </Typography>
+                  <Typography color="red">
+                    Deleting your Profile will delete you from our database!
+                  </Typography>
                 </Box>
               </Grid>
             </Grid>
@@ -319,9 +325,12 @@ const UserProfile = ({user}) => {
                     cursor: "pointer",
                     border: "none"
                   }}
-                  onClick={handleSubmit}
+                  onClick={() => {
+                    handleUpdateUser()
+                    navigate('/')
+                  }}
                   >
-                    Submit
+                    UPDATE
                   </button>
                 </FormControl>
                 </Box>
@@ -331,16 +340,20 @@ const UserProfile = ({user}) => {
                   <FormControl>
                     <button style={{
                       fontSize: 14,
-                      backgroundColor: "#4e60ff",
-                      width: 255,
+                      backgroundColor: "#ff0101",
+                      width: 200,
                       height: 40,
                       color: "#fff",
                       borderRadius: 10,
                       cursor: "pointer",
                       border: "none"
                     }}
+                    onClick={() => {
+                      handleLogoutClick()
+                      deleteProfile(user.id)
+                    }}
                     >
-                      Update
+                      DELETE
                     </button>
                   </FormControl>
                 </Box>        

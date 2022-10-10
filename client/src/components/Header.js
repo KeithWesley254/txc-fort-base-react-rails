@@ -8,8 +8,6 @@ import { useNavigate } from 'react-router-dom';
 const Header = ({setUser, user}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [userProfile, setUserProfile] = React.useState({});
-  
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -25,12 +23,6 @@ const Header = ({setUser, user}) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
-  React.useEffect(() => {
-    fetch(`/api/user_profiles/${user.id}`)
-    .then(r => r.json())
-    .then(data => setUserProfile(data))
-  }, []);
 
   function handleLogoutClick() {
     fetch("/api/logout", { method: "DELETE" }).then((r) => {
@@ -131,28 +123,36 @@ const Header = ({setUser, user}) => {
               >
                 Soldiers
               </Button>
-
+              &nbsp;
+              &nbsp;
+              &nbsp;
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, textTransform: "none", display: 'block', fontSize: 14, fontWeight: "bolder", color: 'black' }}
               >
                 Stories
               </Button>
-
+              &nbsp;
+              &nbsp;
+              &nbsp;
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, textTransform: "none", display: 'block', fontSize: 14, fontWeight: "bolder", color: 'black' }}
               >
                 Technology
               </Button>
-
+              &nbsp;
+              &nbsp;
+              &nbsp;
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, textTransform: "none", display: 'block', fontSize: 14, fontWeight: "bolder", color: 'black' }}
               >
                 Memorial
               </Button>
-
+              &nbsp;
+              &nbsp;
+              &nbsp;
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, textTransform: "none", display: 'block', fontSize: 14, fontWeight: "bolder", color: 'black' }}
@@ -165,7 +165,7 @@ const Header = ({setUser, user}) => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, mr: {md: 15}}}>
-                <Avatar alt={userProfile?.full_name} src={userProfile?.image_upload} />
+                <Avatar alt={user?.full_name} src={user?.image_upload} />
               </IconButton>
             </Tooltip>
             <Menu

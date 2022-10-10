@@ -29,7 +29,7 @@ function App() {
         <main>
           <Routes>
             <Route exact='true' path='/' element={<Hero />}/>
-            <Route path='/user-profiles/:id' element={<UserProfile user={user}/>}/>
+            <Route path='/user-profiles/:id' element={<UserProfile setUser={setUser} user={user}/>}/>
           </Routes>
         </main>
       </div>

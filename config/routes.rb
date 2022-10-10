@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
     post '/signup', to: 'users#create'
     get '/me', to: 'users#show'
+    patch '/user_details/:id', to: 'users#update'
+    delete '/users/:id', to: 'users#destroy'
 
     resources :login_page_slides, only: [:index, :show]
     resources :about_us, only: [:index, :show]

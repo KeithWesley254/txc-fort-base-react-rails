@@ -191,6 +191,7 @@ const SignUpForm = ({ onLogin }) => {
                       aria-labelledby="demo-radio-buttons-group-label"
                       defaultValue="male"
                       name="gender"
+                      value={gender}
                       onChange={(e) => setGender(e.target.value)} 
                       size="small"
                     >
