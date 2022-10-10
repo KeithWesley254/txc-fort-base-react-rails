@@ -90,6 +90,7 @@ const Hero = () => {
             </Grid>
           </Grid>
         </Box>
+        <br />
       </main>
     </>
   )

@@ -10,6 +10,7 @@ import AboutUs from '../pages/AboutUs';
 import Soldiers from '../pages/Soldiers';
 import Stories from '../pages/Stories';
 import Memorial from '../pages/Memorial';
+import Footer from './Footer';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
             <Route path='/about-us' element={<AboutUs />}/>      
           </Routes>
         </main>
+        <Footer />
       </div>
       </BrowserRouter>
     </>

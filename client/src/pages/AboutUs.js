@@ -1,5 +1,6 @@
-import { Grid, Box, Card, CardMedia, Typography, TextField } from '@mui/material';
+import { Grid, Box, Card, CardMedia, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
+import AboutUsForm from '../components/AboutUsForm';
 
 const AboutUs = () => {
   const [communityData, setCommunityData] = useState([]);
@@ -127,41 +128,7 @@ const AboutUs = () => {
         <br />
         <Grid container spacing={2} columns={12}>
           <Grid item xs={12} md={6}>
-            <div style={{textAlign: "center", fontSize: 14, fontWeight: "bold"}}>
-              <p>Leave Us A Message</p>
-            </div>
-            <Box
-              component="form"
-              sx={{
-                '& .MuiTextField-root': { m: 1, width: '25ch' },
-              }}
-              noValidate
-              autoComplete="off"
-            >
-               <div style={{textAlign: "center"}}>
-                <TextField
-                  label="Full Name"
-                  size="large"
-                  fullWidth
-                />
-                <br />
-                <TextField
-                  label="Professional Email"
-                  size="large"
-                  fullWidth
-                />
-                <br />
-                <TextField
-                  label="Message"
-                  size="large"
-                  multiline
-                  rows={4}
-                  type="text"
-                  fullWidth
-                />
-              
-              </div>
-            </Box>
+            <AboutUsForm />
           </Grid>
           <br />
           <Grid item xs={12} md={6}>

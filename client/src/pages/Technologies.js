@@ -63,7 +63,7 @@ const Technologies = () => {
         {techStories.map((techStory) => {
           return(
             <>
-              <Box>
+              <Box key={techStory.id}>
                 <Grid container spacing={2} columns={12} >
                   <Grid item xs={12} md={6}>
                     <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
