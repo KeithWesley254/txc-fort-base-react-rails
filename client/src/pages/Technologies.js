@@ -1,4 +1,5 @@
 import { Box, Card, CardMedia, Grid, CardActionArea, Typography, Button } from '@mui/material';
+import { fontWeight } from '@mui/system';
 import React, { useEffect, useState } from 'react'
 
 const Technologies = () => {
@@ -87,7 +88,8 @@ const Technologies = () => {
                           {techStory?.description}
                         </Typography>
                         <div style={{position: "absolute", right: 40}}>
-                          <Button onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+                          <Button sx={{color: "#4E60FF", fontWeight: "bold"}} 
+                          onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
                             Go Top
                           </Button>
                         </div>  
