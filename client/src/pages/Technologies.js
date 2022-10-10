@@ -1,6 +1,5 @@
-import { Box, Card, CardMedia, Grid, CardActionArea, Typography } from '@mui/material';
+import { Box, Card, CardMedia, Grid, CardActionArea, Typography, Button } from '@mui/material';
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 
 const Technologies = () => {
 
@@ -12,7 +11,9 @@ const Technologies = () => {
     .then(data => setTechStories(data))
   }, [])
 
-  const navigate = useNavigate
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
 
   const my_cards = techStories.map((story) => {
     return(
@@ -24,9 +25,6 @@ const Technologies = () => {
               height="140"
               image={story?.image_url}
               alt={story?.title}
-              onClick={() => {
-                navigate()
-              }}
             />
           </CardActionArea>
         </Card>
@@ -83,11 +81,16 @@ const Technologies = () => {
                     </Grid>  
                   </Grid>
                   <Grid item xs={12} md={6} sx={{pr: 4}} >
-                    <div>
+                    <div id={techStory?.id}>
                       <Box>
                         <Typography>
                           {techStory?.description}
                         </Typography>
+                        <div style={{position: "absolute", right: 40}}>
+                          <Button onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+                            Go Top
+                          </Button>
+                        </div>  
                       </Box>  
                     </div>
                   </Grid>
