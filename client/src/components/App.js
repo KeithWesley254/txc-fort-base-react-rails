@@ -5,6 +5,11 @@ import Login from '../pages/Login';
 import Header from './Header';
 import Hero from '../pages/Hero';
 import UserProfile from '../pages/UserProfile';
+import Technologies from '../pages/Technologies';
+import AboutUs from '../pages/AboutUs';
+import Soldiers from '../pages/Soldiers';
+import Stories from '../pages/Stories';
+import Memorial from '../pages/Memorial';
 
 
 function App() {
@@ -30,6 +35,11 @@ function App() {
           <Routes>
             <Route exact='true' path='/' element={<Hero />}/>
             <Route path='/user-profiles/:id' element={<UserProfile setUser={setUser} user={user}/>}/>
+            <Route path='/soldiers' element={<Soldiers />}/>
+            <Route path='/stories' element={<Stories />}/>
+            <Route path='/technologies' element={<Technologies />}/>
+            <Route path='/memorial' element={<Memorial />}/>
+            <Route path='/about-us' element={<AboutUs />}/>      
           </Routes>
         </main>
       </div>

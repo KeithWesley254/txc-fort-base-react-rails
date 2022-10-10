@@ -75,19 +75,34 @@ const Header = ({setUser, user}) => {
               }}
             >
               
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/soldiers')
+                  }}>
                   <Typography textAlign="center">Soldiers</Typography>
                 </MenuItem>
-                <MenuItem  onClick={handleCloseNavMenu}>
+                <MenuItem  onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/stories')
+                  }}>
                   <Typography textAlign="center">Stories</Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/technologies')
+                  }}>
                   <Typography textAlign="center">Technology</Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/memorial')
+                  }}>
                   <Typography textAlign="center">Memorial</Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/about-us')
+                  }}>
                   <Typography textAlign="center">About Us</Typography>
                 </MenuItem>
                 
@@ -118,7 +133,10 @@ const Header = ({setUser, user}) => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: "center" } }}>
             
               <Button
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/soldiers')
+                  }}
                 sx={{ my: 2, textTransform: "none", display: 'block', fontSize: 14, fontWeight: "bolder", color: 'black' }}
               >
                 Soldiers
@@ -127,7 +145,10 @@ const Header = ({setUser, user}) => {
               &nbsp;
               &nbsp;
               <Button
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/stories')
+                  }}
                 sx={{ my: 2, textTransform: "none", display: 'block', fontSize: 14, fontWeight: "bolder", color: 'black' }}
               >
                 Stories
@@ -136,7 +157,10 @@ const Header = ({setUser, user}) => {
               &nbsp;
               &nbsp;
               <Button
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/technologies')
+                  }}
                 sx={{ my: 2, textTransform: "none", display: 'block', fontSize: 14, fontWeight: "bolder", color: 'black' }}
               >
                 Technology
@@ -145,7 +169,10 @@ const Header = ({setUser, user}) => {
               &nbsp;
               &nbsp;
               <Button
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/memorial')
+                  }}
                 sx={{ my: 2, textTransform: "none", display: 'block', fontSize: 14, fontWeight: "bolder", color: 'black' }}
               >
                 Memorial
@@ -154,7 +181,10 @@ const Header = ({setUser, user}) => {
               &nbsp;
               &nbsp;
               <Button
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseNavMenu()
+                  navigate('/about-us')
+                  }}
                 sx={{ my: 2, textTransform: "none", display: 'block', fontSize: 14, fontWeight: "bolder", color: 'black' }}
               >
                 About Us
