@@ -27,16 +27,16 @@ const Login = ({ onLogin }) => {
           <CardMedia 
           component="img"
           height="400"
-          image={slide.image_url}
-          alt="green iguana"
+          image={slide?.image_url}
+          alt={slide?.title}
           sx={{borderRadius: 10, p: 3}}
           />
           <CardContent>
             <Typography sx={{textAlign: "start"}} gutterBottom variant="h5" component="div">
-              {slide.title}
+              {slide?.title}
             </Typography>
             <Typography sx={{textAlign: "start"}} variant="body2" color="#545563">
-              {slide.summary}
+              {slide?.summary}
             </Typography>
             </CardContent>
         </CardActionArea>
@@ -98,20 +98,20 @@ const Login = ({ onLogin }) => {
               )}
 
             </Grid>
-            <Grid item xs={4} sm={8} md={6} >
+            <Grid item xs={4} sm={8} md={6}>
               <>
-                <div style={{backgroundColor: "#4e60ff", position: "relative", width: "100%", height: "100vh" }}>
-                  <Container>
-                  <Box sx={{p: 2, display: "flex", overflowX: "auto", flexDirection: 'row' }}>
+              <div style={{ backgroundColor: "#4e60ff", position: "relative", width: "100%", height: "100vh" }}>
+              <div className='heroScroll' style={{ overflowX: "auto" }}>
+                  <Box sx={{p: 2, display: "flex", display: "inline-flex", flexDirection: 'row', }}>
                     {myCards}
                   </Box>
-                  <div style={{ flexWrap: "wrap", fontSize: 30, color: "#fff", textAlign: "center"}}>
+                </div>
+                <div style={{ flexWrap: "wrap", fontSize: 30, color: "#fff", textAlign: "center"}}>
                     <p>
                       Come connect with the Heroes that defend our Beautiful Nation
                     </p>
                   </div>
-                  </Container>
-                </div>
+              </div>  
               </>
             </Grid>
           </Grid>
