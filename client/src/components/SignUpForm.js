@@ -222,17 +222,17 @@ const SignUpForm = ({ onLogin }) => {
                     {isLoading ? "Loading..." : "Sign Up"}
                   </button>
                 </FormControl>
-              </div>
-              <div>
-                <FormControl>
+                <div>
                   {errors.map((err) => (
-                    <>
+                  <>
                     <div key={err}>
-                     {alert(err)}
+                    <li style={{color: "red" }}>
+                      {err}
+                    </li>
                     </div>
-                    </>
+                  </>
                   ))}
-                </FormControl>
+                </div>
               </div>
             </div>
             </Box>

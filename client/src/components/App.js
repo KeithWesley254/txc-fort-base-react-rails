@@ -37,7 +37,7 @@ function App() {
             <Route exact='true' path='/' element={<Hero />}/>
             <Route path='/user-profiles/:id' element={<UserProfile setUser={setUser} user={user}/>}/>
             <Route path='/soldiers' element={<Soldiers />}/>
-            <Route path='/stories' element={<Stories />}/>
+            <Route path='/stories' element={<Stories user={user}/>}/>
             <Route path='/technologies' element={<Technologies />}/>
             <Route path='/memorial' element={<Memorial />}/>
             <Route path='/about-us' element={<AboutUs />}/>      

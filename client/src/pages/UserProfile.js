@@ -359,6 +359,7 @@ const UserProfile = ({user, setUser}) => {
             </Grid>
           </Grid>
         </Grid>
+        <br />
       </Box>
     </>
   )

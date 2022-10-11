@@ -1,6 +1,5 @@
 import { Box, FormControl, FormHelperText, TextField } from '@mui/material';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 
 const LoginForm = ({ onLogin }) => {
   const [email, setEmail] = useState("");
@@ -85,20 +84,19 @@ const LoginForm = ({ onLogin }) => {
               >
                 Login
               </button>
-            </FormControl>
-            
-          </div>
-          
-          <div>
-            <FormControl>
-            {errors.map((err) => (
-            <>
-              <div key={err}>
-               {alert(err)}
-              </div>
-            </>
-            ))}
-            </FormControl>
+              <br />
+            </FormControl>  
+            <div>
+              {errors.map((err) => (
+              <>
+                <div key={err}>
+                <li style={{color: "red" }}>
+                  {err}
+                </li>
+                </div>
+              </>
+              ))}
+            </div>       
           </div>
           </form>
         </main>
