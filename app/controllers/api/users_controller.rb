@@ -3,9 +3,16 @@ class Api::UsersController < ApplicationController
     skip_before_action :authorize, only: [:create]
     
     def create
-        @user = User.create!(user_params)
-        session[:user_id] = @user.id
-        render json: @user, status: :created
+        ActiveRecord::Base.transaction do
+            @user = User.create!(user_params)
+            session[:user_id] = @user.id
+            render json: @user, status: :created
+
+            user_profile = OneUserProfile.create!(
+                email: @user.email,
+                user_id: @user.id
+            )
+        end
     end
 
     def show
@@ -13,24 +20,10 @@ class Api::UsersController < ApplicationController
         render json: user
     end
 
-    def update
-            user = @current_user.update!(update_params)
-            render json: user, status: :created
-    end
-
-    def destroy
-        user = @current_user.destroy
-        head :no_content
-    end
-
     private
     
     def user_params
-        params.permit(:full_name, :email, :password, :password_confirmation, :age, :gender, :bio, :interests, :image_upload, :favourite_military_branch)
-    end
-
-    def update_params
-        params.permit(:full_name, :age, :gender, :bio, :interests, :image_upload, :favourite_military_branch)
+        params.permit(:email, :password, :password_confirmation )
     end
 
 end

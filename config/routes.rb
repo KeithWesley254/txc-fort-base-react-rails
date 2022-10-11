@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :soldier_trainings, only: [:create]
     resources :community_impacts, only: [:index, :show]
     resources :client_messages, only: [:index, :create]
+    resources :one_user_profiles, only: [ :show, :update, :destroy]
   end
   
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }

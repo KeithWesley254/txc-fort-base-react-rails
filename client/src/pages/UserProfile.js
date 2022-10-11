@@ -43,7 +43,7 @@ const UserProfile = ({user, setUser}) => {
   })
     .then((r) => r.json())
     .then((updatedItem) => {
-      setUserData(updatedItem)
+      setUserData([...userData, updatedItem])
     });
   }
 
@@ -325,7 +325,7 @@ const UserProfile = ({user, setUser}) => {
                   }}
                   onClick={() => {
                     handleUpdateUser()
-                    navigate('/')
+                    // navigate('/')
                   }}
                   >
                     UPDATE
