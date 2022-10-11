@@ -33,8 +33,6 @@ const UserProfile = ({user, setUser}) => {
   })
   }
 
-  console.log(formData)
-
   const navigate = useNavigate();
 
   function handleLogoutClick() {

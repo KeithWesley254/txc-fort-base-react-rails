@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Box, FormControl, FormLabel, FormControlLabel, FormHelperText, Radio, RadioGroup, TextField } from '@mui/material';
+import { Grid, Box, FormControl, FormHelperText, TextField } from '@mui/material';
 
 const SignUpForm = ({ onLogin }) => {
 
@@ -26,7 +26,10 @@ const SignUpForm = ({ onLogin }) => {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
+        r.json().then((user) => {
+          onLogin(user)
+          window.location.reload()
+        });
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
