@@ -1,7 +1,7 @@
 class Api::UserCommentsController < ApplicationController
 
     def index
-        slides = @current_user.user_comments.all
+        slides = UserComment.all
         render json: slides
     end
 
@@ -17,18 +17,18 @@ class Api::UserCommentsController < ApplicationController
 
     def destroy
         slide = find_comment
-        find_comment.destroy!
-        render json: {"comment deleted!"}, status: :ok
+        find_comment.destroy
+        render json: {notice: "comment deleted!"}
     end
 
     private
 
     def uc_params
-        params.permit(:user_comment)
+        params.permit(:full_name, :image_upload, :user_comment, :user_id)
     end
 
     def find_comment
-        UserComment.find_by!(id: session[:user_id])
+        UserComment.find_by(id: params[:id])
     end
 
 end

@@ -1,7 +1,141 @@
 import { Box, Card, CardMedia, Grid, Typography, CardActionArea, FormControl, InputLabel, OutlinedInput, Avatar } from '@mui/material'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const Stories = ({user}) => {
+  const [user_id, setUserId] = useState(user.id);
+  const [full_name, setFullName] = useState(user.full_name);
+  const [image_upload, setImageUpload] = useState(user.image_upload);
+  const [user_comment, setUserComment] = useState('');
+  const [comments, setComments] = useState([]);
+  const [randomIndex, setRandomIndex] = useState();
+  const [randomIndex2, setRandomIndex2] = useState();
+  const [technologies, setTechnologies] = useState([]);
+  const [technologies2, setTechnologies2] = useState([]);
+
+  console.log(user_id)
+  
+  useEffect(() => {
+    fetch(`/api/user_comments`)
+    .then(r => r.json())
+    .then(data => setComments(data))
+  }, []);
+
+  useEffect(() => {
+    fetch(`/api/technologies`)
+    .then(r => r.json())
+    .then(data => {
+      setTechnologies(data)
+      setTechnologies2(data)
+    })
+  }, []);
+
+  useEffect(() => {
+    changeTechnology()
+  }, []);
+
+  useEffect(() => {
+    changeTechnology2()
+  }, []);
+
+  function changeTechnology(){
+    const randomNumber = Math.floor(Math.random() * technologies.length);
+    setRandomIndex(randomNumber)
+  }
+
+  function changeTechnology2(){
+    const randomNumber = Math.floor(Math.random() * technologies2.length);
+    setRandomIndex2(randomNumber)
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/api/user_comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        full_name,
+        image_upload,
+        user_comment,
+        user_id
+      }),
+    }).then((r) => r.json()).then( data => {
+      setComments([...comments, data])
+    })
+    setUserComment('')
+  }
+
+  function deleteComment(id){
+    fetch(`/api/user_comments/${id}`,{
+        method: "DELETE",
+    })
+    .then(r => r.json())
+    .then(() => {
+      const goThru = comments.filter((comment) => comment.id !== id)
+          setComments(goThru)
+      })
+    }
+    
+
+  const allUserComments = comments?.map((comment) => {
+    return (
+      <>
+      <Grid key={comment.id} container spacing={2} columns={6}>
+          <Grid item xs={6} md={6}>
+            <Box sx={{ pt: 10}}>
+              <Grid container spacing={2} columns={6}>
+                <Grid item xs={2} md={2}>
+                  <Box sx={{display: "flex", justifyContent: "center"}}>
+                    <Avatar alt={comment?.full_name} src={comment?.image_upload} />
+                  </Box>
+                </Grid>
+                <Grid item xs={4} md={4}>
+                  <Box sx={{ml: 4, mr: 4 }}>
+                    <Typography>
+                      {comment?.user_comment}
+                    </Typography>
+                    { user.id === comment.user_id ?
+                      (
+                        <>
+                        <Box sx={{ textAlign: "center", display: "flex", justifyContent: "end", mr: 2}}>
+                          <FormControl>
+                            <button style={{
+                              fontSize: 14,
+                              backgroundColor: "#ff0101",
+                              width: 100,
+                              height: 40,
+                              color: "#fff",
+                              borderRadius: 10,
+                              cursor: "pointer",
+                              border: "none"
+                            }}
+                            onClick={() => {
+                              deleteComment(comment.id)
+                            }}
+                            >
+                              DELETE
+                            </button>
+                          </FormControl>
+                        </Box>
+                        </>
+                      ) : (
+                        <>
+                          <Box>
+                            <p>- <i>{comment.full_name}</i></p>
+                          </Box>
+                        </>
+                      )}
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>      
+          </Grid>
+        </Grid>
+      </>
+    )
+  })
+
   return (
     <>
       <Box>
@@ -36,8 +170,8 @@ const Stories = ({user}) => {
                       <CardMedia
                         component="img"
                         height="140"
-                        image=''
-                        alt=''
+                        image={technologies[randomIndex]?.image_url}
+                        alt={technologies[randomIndex]?.title}
                       />
                     </CardActionArea>
                   </Card>
@@ -46,7 +180,7 @@ const Stories = ({user}) => {
                 <Grid item xs={6} md={3}>
                   <Box>
                     <Typography>
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                      {technologies[randomIndex]?.description}
                     </Typography>
                   </Box>
                 </Grid>
@@ -60,8 +194,8 @@ const Stories = ({user}) => {
                       <CardMedia
                         component="img"
                         height="140"
-                        image=''
-                        alt=''
+                        image={technologies2[randomIndex2]?.image_url}
+                        alt={technologies2[randomIndex2]?.title}
                       />
                     </CardActionArea>
                   </Card>
@@ -70,7 +204,7 @@ const Stories = ({user}) => {
                 <Grid item xs={6} md={3}>
                   <Box>
                     <Typography>
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                      {technologies2[randomIndex2]?.description}
                     </Typography>
                   </Box>
                 </Grid>
@@ -93,7 +227,7 @@ const Stories = ({user}) => {
                   <Typography sx={{fontWeight: "ligher"}}>
                     Write A Comment
                   </Typography>
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <FormControl sx={{ m: 1, width: "70%" }}>
                       <InputLabel htmlFor="Comment">Comment</InputLabel>
                       <OutlinedInput
@@ -101,8 +235,8 @@ const Stories = ({user}) => {
                         multiline
                         rows={4}
                         type="text"
-                        // value={their_message}
-                        // onChange={(e) => setTheirMessage(e.target.value)}
+                        value={user_comment}
+                        onChange={(e) => setUserComment(e.target.value)}
                         label="Comment"
                       />
                     </FormControl>
@@ -125,25 +259,14 @@ const Stories = ({user}) => {
                   <br />
                 </Box>
                 <br />
+                <div style={{textAlign: "center", fontFamily: "nunito", fontWeight: "bold"}}>
+                  <p><i>Scroll Down</i></p>
+                </div>
+                <br />
               </Grid>
-              <Grid container spacing={2} columns={6}>
-                <Grid item xs={6} md={6}>
-                  <Box sx={{ pt: 10}}>
-                    <Grid container spacing={2} columns={6}>
-                      <Grid item xs={2} md={2}>
-                        <Box sx={{display: "flex", justifyContent: "center"}}>
-                          <Avatar alt={user?.full_name} src={user?.image_upload} />
-                        </Box>
-                      </Grid>
-                      <Grid item xs={4} md={4}>
-                        <Box sx={{ml: 4}}>
-                          Lorem
-                        </Box>
-                      </Grid>
-                    </Grid>
-                  </Box>      
-                </Grid>
-              </Grid>
+              <div className='heroScroll' style={{ overflowY: "auto", maxHeight: 1200}}>
+                {allUserComments}
+              </div>
             </Grid>
             <br />
           </Grid>

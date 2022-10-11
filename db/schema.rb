@@ -159,6 +159,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_155010) do
   end
 
   create_table "user_comments", force: :cascade do |t|
+    t.string "full_name"
+    t.string "image_upload"
     t.string "user_comment"
     t.bigint "user_id"
     t.datetime "created_at", null: false

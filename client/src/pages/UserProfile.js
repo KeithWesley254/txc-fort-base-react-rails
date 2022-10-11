@@ -59,7 +59,7 @@ const UserProfile = ({user, setUser}) => {
     fetch(`/api/users/${id}`,{
         method: "DELETE",
     })
-    }
+  }
 
   function handleChange(e){
     setFormData({
