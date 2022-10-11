@@ -1,18 +1,13 @@
 class Api::OneUserProfilesController < ApplicationController
 
     def show
-        user = OneUserProfile.find_by!(id: params[:id])
+        user = OneUserProfile.find_by(id: params[:id])
         render json: user, status: :ok
     end
 
     def update
-        user = @current_user.update!(update_params)
+        user = @current_user.one_user_profile.update!(update_params)
         render json: user, status: :created
-    end
-
-    def destroy
-        user = @current_user.destroy
-        head :no_content
     end
 
     private

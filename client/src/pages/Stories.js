@@ -3,8 +3,8 @@ import React, {useState, useEffect} from 'react'
 
 const Stories = ({user}) => {
   const [user_id, setUserId] = useState(user.id);
-  const [full_name, setFullName] = useState(user.full_name);
-  const [image_upload, setImageUpload] = useState(user.image_upload);
+  const [full_name, setFullName] = useState(user.one_user_profile.full_name);
+  const [image_upload, setImageUpload] = useState(user.one_user_profile.image_upload);
   const [user_comment, setUserComment] = useState('');
   const [comments, setComments] = useState([]);
   const [randomIndex, setRandomIndex] = useState();

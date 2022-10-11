@@ -20,6 +20,11 @@ class Api::UsersController < ApplicationController
         render json: user
     end
 
+    def destroy
+        user = @current_user.destroy
+        head :no_content
+    end
+    
     private
     
     def user_params

@@ -195,7 +195,7 @@ const Header = ({setUser, user}) => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, mr: {md: 15}}}>
-                <Avatar alt={user?.full_name} src={user?.image_upload} />
+                <Avatar alt={user?.one_user_profile.full_name} src={user?.one_user_profile.image_upload} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -215,7 +215,7 @@ const Header = ({setUser, user}) => {
               onClose={handleCloseUserMenu}
             >
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" onClick={() => navigate(`/user-profiles/${user.id}`)}>Profile</Typography>
+                  <Typography textAlign="center" onClick={() => navigate(`/user-profiles/${user?.id}`)}>Profile</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
                   <Typography textAlign="center" onClick = {handleLogoutClick}>Logout</Typography>

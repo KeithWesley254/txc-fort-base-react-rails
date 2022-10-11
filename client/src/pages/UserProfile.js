@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import {Grid, Box, CardMedia, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography} from '@mui/material';
+import {Grid, Box, CardMedia, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput} from '@mui/material';
 import Card from '@mui/material/Card';
 import { useNavigate } from 'react-router-dom';
 
 
 const UserProfile = ({user, setUser}) => {
-
-  const [userData, setUserData] = useState({});
   const [formData, setFormData] = useState({
     full_name: '',
     gender: '',
@@ -17,16 +15,8 @@ const UserProfile = ({user, setUser}) => {
     favourite_military_branch: ''
   });
 
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetch('/api/me')
-    .then(r => r.json())
-    .then(data => setUserData(data))
-  }, [])
-
   function handleUpdateUser() {
-    fetch(`/api/user_details/${user.id}`, {
+    fetch(`/api/one_user_profiles/${user?.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -41,11 +31,11 @@ const UserProfile = ({user, setUser}) => {
       favourite_military_branch: formData.favourite_military_branch
     }),
   })
-    .then((r) => r.json())
-    .then((updatedItem) => {
-      setUserData([...userData, updatedItem])
-    });
   }
+
+  console.log(formData)
+
+  const navigate = useNavigate();
 
   function handleLogoutClick() {
     fetch("/api/logout", { method: "DELETE" }).then((r) => {
@@ -85,8 +75,8 @@ const UserProfile = ({user, setUser}) => {
                       <CardMedia
                         component="img"
                         height="230"
-                        image={userData?.image_upload}
-                        alt={userData?.full_name}
+                        image={user?.one_user_profile.image_upload}
+                        alt={user?.one_user_profile.full_name}
                         sx={{width: "auto"}}
                       />
                   </Card>
@@ -98,7 +88,7 @@ const UserProfile = ({user, setUser}) => {
                     Full Name
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {userData?.full_name}
+                    {user?.one_user_profile.full_name}
                   </Typography>
                 </Box>
                 <br />
@@ -107,7 +97,7 @@ const UserProfile = ({user, setUser}) => {
                     Email Address
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {userData?.email}
+                    {user?.one_user_profile.email}
                   </Typography>
                 </Box>
                <br />
@@ -116,7 +106,7 @@ const UserProfile = ({user, setUser}) => {
                     Gender
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {userData?.gender}
+                    {user?.one_user_profile.gender}
                   </Typography>
                 </Box> 
                 <br />
@@ -125,7 +115,7 @@ const UserProfile = ({user, setUser}) => {
                     Age
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {userData?.age}
+                    {user?.one_user_profile.age}
                   </Typography>
                 </Box>                             
               </Grid>
@@ -138,7 +128,7 @@ const UserProfile = ({user, setUser}) => {
                       Bio
                     </Typography>
                     <Typography variant="body2" component="h2">
-                      {userData?.bio}
+                      {user?.one_user_profile.bio}
                   </Typography>
                 </Box>
               </Grid>
@@ -152,7 +142,7 @@ const UserProfile = ({user, setUser}) => {
                     Favourite Military Branch
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {userData?.favourite_military_branch}
+                    {user?.one_user_profile.favourite_military_branch}
                   </Typography>
                 </Box>         
               </Grid>
@@ -162,7 +152,7 @@ const UserProfile = ({user, setUser}) => {
                     Interests
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {userData?.interests}
+                    {user?.one_user_profile.interests}
                   </Typography>
                 </Box>      
               </Grid>
@@ -182,8 +172,8 @@ const UserProfile = ({user, setUser}) => {
                     <CardMedia
                       component="img"
                       height="230"
-                      image={userData?.image_upload}
-                      alt={userData?.full_name}
+                      image={user?.one_user_profile.image_upload}
+                      alt={user?.one_user_profile.full_name}
                       sx={{width: "auto"}}
                     />
                   </Card>
@@ -194,34 +184,32 @@ const UserProfile = ({user, setUser}) => {
                   <Box 
                   component="form"
                   sx={{
-                    '& .MuiTextField-root': { m: 1, width: '25ch' },
+                    '& .MuiTextField-root': { width: '25ch' },
                   }}
                   noValidate
                   autoComplete="off"
                   >
-                    <TextField
-                      required
-                      id="full_name"
-                      label="Full Name"
-                      fullWidth
-                      name='full_name'
-                      onChange={handleChange}
-                    />
-                     {/* <TextField
-                      required
-                      id="email"
-                      label="Email Address"
-                      fullWidth
-                      name='email'
-                      onChange={handleChange}
-                    /> */}
-                    <TextField
-                      id="age"
-                      label="age"
-                      name='age'
-                      fullWidth
-                      onChange={handleChange}
-                    />
+                    <FormControl sx={{ mb: 2, width: "70%" }}>
+                      <InputLabel htmlFor="full_name">Full Name</InputLabel>
+                      <OutlinedInput
+                        id="full_name"
+                        name='full_name'
+                        value={formData.full_name}
+                        autoComplete="on"
+                        onChange={handleChange}
+                        label="Full Name"
+                      />
+                    </FormControl>
+                    <FormControl sx={{ width: "70%" }}>
+                      <InputLabel htmlFor="age">Age</InputLabel>
+                      <OutlinedInput
+                        id="age"
+                        name='age'
+                        value={formData.age}
+                        onChange={handleChange}
+                        label="Age"
+                      />
+                    </FormControl>
                   </Box>
                 </Grid>
               </Grid>
@@ -230,15 +218,18 @@ const UserProfile = ({user, setUser}) => {
             <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
                 <Box>
-                  <TextField
-                      id="bio"
-                      label="Bio"
-                      name='bio'
-                      multiline
-                      rows={5}
-                      fullWidth
-                      onChange={handleChange}
+                <FormControl sx={{ width: "100%" }}>
+                  <InputLabel htmlFor="bio">Bio</InputLabel>
+                  <OutlinedInput
+                    id="bio"
+                    name='bio'
+                    value={formData.bio}
+                    onChange={handleChange}
+                    multiline
+                    rows={5}
+                    label="Bio"
                   />
+                  </FormControl>
                 </Box>        
               </Grid>
               <Grid item xs={6} md={6}>
@@ -249,6 +240,7 @@ const UserProfile = ({user, setUser}) => {
                       aria-labelledby="demo-radio-buttons-group-label"
                       defaultValue="male"
                       name="gender"
+                      value={formData.gender}
                       onChange={handleChange}
                     >
                       <FormControlLabel value="male" control={<Radio />} label="Male" />
@@ -263,24 +255,30 @@ const UserProfile = ({user, setUser}) => {
             <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
                 <Box>
-                  <TextField
-                    id="interests"
-                    label="Interests"
-                    name='interests'
-                    fullWidth
-                    onChange={handleChange}
-                  />
+                  <FormControl sx={{ width: "100%" }}>
+                    <InputLabel htmlFor="interests">Interests</InputLabel>
+                    <OutlinedInput
+                      id="interests"
+                      name='interests'
+                      value={formData.interests}
+                      onChange={handleChange}
+                      label="Interests"
+                    />
+                  </FormControl>
                 </Box>
               </Grid>
               <Grid item xs={6} md={6}>
                 <Box sx={{ textAlign: "center"}}>
-                  <TextField
-                    id="image_upload"
-                    label="Image upload"
-                    name='image_upload'
-                    fullWidth
-                    onChange={handleChange}
-                  />
+                  <FormControl sx={{ width: "100%" }}>
+                    <InputLabel htmlFor="image_upload">Image Upload</InputLabel>
+                    <OutlinedInput
+                      id="image_upload"
+                      name='image_upload'
+                      value={formData.image_upload}
+                      onChange={handleChange}
+                      label="Image_upload"
+                    />
+                  </FormControl>
                 </Box>        
               </Grid>
             </Grid>
@@ -288,13 +286,16 @@ const UserProfile = ({user, setUser}) => {
             <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
                 <Box>
-                  <TextField
-                    id="favourite_military_branch"
-                    label="Favourite Military Branch"
-                    name='favourite_military_branch'
-                    fullWidth
-                    onChange={handleChange}
-                  />
+                  <FormControl sx={{ width: "100%" }}>
+                    <InputLabel htmlFor="favourite_military_branch">Favourite Military Branch</InputLabel>
+                    <OutlinedInput
+                      id="favourite_military_branch"
+                      name='favourite_military_branch'
+                      value={formData.favourite_military_branch}
+                      onChange={handleChange}
+                      label="Favourite Military Branch"
+                    />
+                  </FormControl>
                 </Box>
               </Grid>
               <Grid item xs={6} md={6}>
@@ -303,7 +304,7 @@ const UserProfile = ({user, setUser}) => {
                     WARNING!
                   </Typography>
                   <Typography color="red">
-                    Deleting your Profile will delete you from our database!
+                    Deleting your Profile will delete your Account from our database!
                   </Typography>
                 </Box>
               </Grid>
@@ -325,7 +326,7 @@ const UserProfile = ({user, setUser}) => {
                   }}
                   onClick={() => {
                     handleUpdateUser()
-                    // navigate('/')
+                    window.location.reload();
                   }}
                   >
                     UPDATE
@@ -339,7 +340,7 @@ const UserProfile = ({user, setUser}) => {
                     <button style={{
                       fontSize: 14,
                       backgroundColor: "#ff0101",
-                      width: 200,
+                      width: 180,
                       height: 40,
                       color: "#fff",
                       borderRadius: 10,

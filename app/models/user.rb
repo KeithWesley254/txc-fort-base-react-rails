@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
 
     has_secure_password
     has_many :user_comments, dependent: :destroy
-    has_one :one_user_profile
+    has_one :one_user_profile, dependent: :destroy
     
 end

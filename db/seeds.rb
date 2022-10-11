@@ -22,13 +22,13 @@ puts "🎖️ Seeding..."
 #     )
 # end
 
-10.times do
-    CommunityImpact.create!(
-        title: Faker::Lorem.sentence,
-        description: Faker::Lorem.paragraphs * 4,
-        image_url: nature_images.sample
-    )
-end
+# 10.times do
+#     CommunityImpact.create!(
+#         title: Faker::Lorem.sentence,
+#         description: Faker::Lorem.paragraphs * 4,
+#         image_url: nature_images.sample
+#     )
+# end
 
 # army_careers.map do |career|
 #     MilitarySpecialization.create!(
@@ -129,26 +129,6 @@ end
 #     SoldierTraining.create!(
 #         soldier_id: soldier.id,
 #         training_id: rand(1..5)
-#     )
-# end
-
-# 10.times do
-#     user = User.create!(
-#         full_name: Faker::Name.unique.name,
-#         email: Faker::Internet.unique.email,
-#         password_digest: "Vg5mSvY1UeRg724",
-#         is_admin?: false
-#     )
-#     UserProfile.create(
-#         full_name: user.full_name,
-#         email: user.email,
-#         age: rand(15..70),
-#         gender: ["Male", "Female"].sample,
-#         bio: Faker::Lorem.paragraphs * 3,
-#         interests: hobbies.sample + hobbies.sample +  hobbies.sample +  hobbies.sample,
-#         image_upload: personal_images.sample,
-#         favourite_military_branch: favourite_military_branch.sample,
-#         user_id: user.id
 #     )
 # end
 
