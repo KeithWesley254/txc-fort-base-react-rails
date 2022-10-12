@@ -4,8 +4,6 @@ import React, { useEffect, useState } from 'react'
 const SoldierProfile = ({ oneSoldier }) => {
   const [soldier_id, setFullName] = useState(oneSoldier.id);
   const [message, setFanMessage] = useState('');
-  const [user, setTheUser] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
 
   const loopPlatoon = oneSoldier?.soldier_profile.platoon.map((platoon) => {
       return (
