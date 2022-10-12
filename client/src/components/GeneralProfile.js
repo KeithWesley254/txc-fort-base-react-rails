@@ -7,7 +7,7 @@ const SoldierProfile = ({ oneGeneral }) => {
     <>
         <Grid container spacing={2}>
           <Grid item xs={6} md={6}>
-            <Box sx={{xs: {ml: 5}, ml: 5 }}>
+            <Box sx={{xs: {ml: 5}, ml: 5, display: "flex", justifyContent: "center" }}>
               <Card sx={{ maxWidth: 345}}>
                   <CardMedia
                     component="img"

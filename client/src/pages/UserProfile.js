@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Grid, Box, CardMedia, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput, LinearProgress, CircularProgress} from '@mui/material';
+import {Grid, Box, CardMedia, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput, CircularProgress} from '@mui/material';
 import Card from '@mui/material/Card';
 import PropTypes from 'prop-types';
 
@@ -121,7 +121,7 @@ const UserProfile = ({setUser}) => {
             <br />
           <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
-                <Box sx={{xs: {ml: 5}, ml: 5 }}>
+                <Box sx={{xs: {ml: 5}, ml: 5, display: "flex", justifyContent: "center" }}>
                   <Card sx={{ maxWidth: 345}}>
                       <CardMedia
                         component="img"
@@ -218,7 +218,7 @@ const UserProfile = ({setUser}) => {
               <Grid container spacing={2} columns={6}>
                 <Grid item xs={6} md={3}>
                   <br />
-                  <Box sx={{xs: {ml: 5}}}>
+                  <Box sx={{xs: {ml: 5}, display: "flex", justifyContent: "center"}}>
                   <Card sx={{ maxWidth: 345}}>
                     <CardMedia
                       component="img"

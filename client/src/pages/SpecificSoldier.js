@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 const SpecificSoldier = () => {
   const [oneSoldier, setOneSoldier] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [user, setTheUser] = useState({});
 
   const params = useParams();
 
@@ -21,6 +22,18 @@ const SpecificSoldier = () => {
     });
   }, [params])
 
+  useEffect(() => {
+    fetch(`/api/me`)
+    .then(r => {
+      if (r.ok) {
+        r.json().then((data) => {
+          setTheUser(data)
+          setIsLoading(false)
+        });
+      }
+    });
+  }, [])
+
   if(isLoading === true) return <LinearProgress style={{backgroundColor: "#4e60ff"}} />
 
   return (
@@ -35,7 +48,7 @@ const SpecificSoldier = () => {
               </Typography>
             </Box>
             <br />
-            <SoldierProfile oneSoldier={oneSoldier}/>
+            <SoldierProfile user={user} oneSoldier={oneSoldier}/>
           </Grid>
           <br />
           <Grid item xs={12} md={6} sx={{textAlign: "center"}}>

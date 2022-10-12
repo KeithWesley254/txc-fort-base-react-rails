@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resources :soldiers, only: [:index, :show]
     resources :soldier_profiles, only: [:show]
     resources :user_comments, only: [:index, :show, :create, :destroy]
-    resources :fan_messages, only: [:create]
+    resources :fan_messages, only: [:index, :create]
     resources :soldier_trainings, only: [:create]
     resources :community_impacts, only: [:index, :show]
     resources :client_messages, only: [:index, :create]

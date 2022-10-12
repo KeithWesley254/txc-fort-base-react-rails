@@ -13,7 +13,7 @@ class Api::FanMessagesController < ApplicationController
     private
 
     def fm_params
-        params.permit(:message)
+        params.permit(:message, :user_id, :soldier_id)
     end
 
 end

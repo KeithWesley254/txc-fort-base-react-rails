@@ -95,7 +95,7 @@ const Login = ({ onLogin }) => {
             </Grid>
             <Grid item xs={4} sm={8} md={6}>
               <>
-              <Box sx={{bgcolor: "#4e60ff", height: "100%", pt: 10}}>
+              <Box sx={{bgcolor: "#4e60ff", height: "100%", pt: 10, pb: 1}}>
                 <Carousel
                         autoPlay={true}
                         interval={6000}
