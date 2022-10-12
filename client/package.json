@@ -18,6 +18,7 @@
     "react-alice-carousel": "^2.6.4",
     "react-card-scroll": "^2.2.4",
     "react-dom": "^18.2.0",
+    "react-material-ui-carousel": "^3.4.2",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",

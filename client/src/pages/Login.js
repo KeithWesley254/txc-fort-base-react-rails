@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {  CardActionArea, Grid, Box, Button, Card, CardContent, Typography, CardMedia } from '@mui/material';
 import LoginForm from '../components/LoginForm';
 import SignUpForm from '../components/SignUpForm';
+import Carousel from "react-material-ui-carousel";
 
 const Login = ({ onLogin }) => {
 
@@ -94,18 +95,32 @@ const Login = ({ onLogin }) => {
             </Grid>
             <Grid item xs={4} sm={8} md={6}>
               <>
-              <div style={{ backgroundColor: "#4e60ff", position: "relative", width: "100%", height: "100vh" }}>
-              <div className='heroScroll' style={{ overflowX: "auto" }}>
-                  <Box sx={{p: 2, display: "flex", display: "inline-flex", flexDirection: 'row', }}>
-                    {myCards}
-                  </Box>
-                </div>
-                <div style={{ flexWrap: "wrap", fontSize: 30, color: "#fff", textAlign: "center"}}>
-                    <p>
-                      Come connect with the Heroes that defend our Beautiful Nation
-                    </p>
+              <Box sx={{bgcolor: "#4e60ff", height: "100%", pt: 9}}>
+                <Carousel
+                        autoPlay={true}
+                        swipe={true}
+                        indicators={true}
+                        activeIndicatorIconButtonProps={{
+                          style: {
+                              color: '#fff'
+                          }
+                        }}
+                        indicatorContainerProps={{
+                          style: {
+                            zIndex: 1,
+                            marginTop: 20,
+                            position: "relative",
+                          }
+                        }}
+                      >
+                        {myCards}
+                    </Carousel>
+                  <div style={{ flexWrap: "wrap", fontSize: 30, color: "#fff", textAlign: "center"}}>
+                      <p>
+                        Come connect with the Heroes that defend our Beautiful Nation
+                      </p>
                   </div>
-              </div>  
+              </Box>
               </>
             </Grid>
           </Grid>
