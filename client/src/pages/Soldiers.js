@@ -1,5 +1,6 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Pagination, TextField, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
+import { useNavigate, Link } from 'react-router-dom';
 
 const Soldiers = () => {
   const [searchGeneral, setSearchGenerals] = useState("");
@@ -33,13 +34,14 @@ const Soldiers = () => {
     .then(data => setAllSoldiers(data))
   }, [])
 
+  const navigate = useNavigate();
 
   const myGeneralsCards =  
   handleSearchGenerals()
   .slice((generalsPage - 1) * 10, (generalsPage - 1) * 10 + 10)
   .map((general) => {
     return(
-      <>
+      <Link style={{textDecoration: "none"}} to={`/generals/${general.id}`}>
         <Card key={general.id} sx={{ width: 200, height: 260, border: 1, p: 2 }}>
           <CardActionArea>
             <CardMedia
@@ -60,7 +62,7 @@ const Soldiers = () => {
         </Card>
         &nbsp;
         &nbsp;
-      </>
+      </Link>
     )
   }) 
 
@@ -69,7 +71,7 @@ const Soldiers = () => {
   .slice((soldiersPage - 1) * 10, (soldiersPage - 1) * 10 + 10)
   .map((soldier) => {
     return(
-      <>
+      <Link style={{textDecoration: "none"}} to={`/soldiers/${soldier.id}`}>
         <Card key={soldier.id} sx={{ width: 200, height: 260, border: 1, p: 2 }}>
           <CardActionArea>
             <CardMedia
@@ -90,7 +92,7 @@ const Soldiers = () => {
         </Card>
         &nbsp;
         &nbsp;
-      </>
+      </Link>
     )
   }) 
     

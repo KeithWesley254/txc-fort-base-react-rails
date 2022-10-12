@@ -1,4 +1,4 @@
-import { Grid, Box, Card, CardMedia, Typography } from '@mui/material';
+import { Grid, Box, Card, CardMedia, Typography, Button } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import AboutUsForm from '../components/AboutUsForm';
 import OurImage from '../our_image.jpg';
@@ -79,7 +79,11 @@ const AboutUs = () => {
                   <Typography>
                     {aboutUsData[randomIndexAbout]?.description}
                   </Typography>
-                </Box>  
+                </Box>
+                <br />  
+                <Box sx={{display: "flex", justifyContent: "center"}}>
+                    <Button onClick={changeAboutImage} variant="contained">See More</Button>
+                </Box>
               </div>
             </Box> 
           </Grid>
@@ -121,6 +125,10 @@ const AboutUs = () => {
                   <Typography>
                     {communityData[randomIndexCommunity]?.description}
                   </Typography>
+                </Box>
+                <br />  
+                <Box sx={{display: "flex", justifyContent: "center"}}>
+                    <Button onClick={changeCommunityImage} variant="contained">See More</Button>
                 </Box>  
               </div>
             </Box> 

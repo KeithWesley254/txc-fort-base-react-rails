@@ -1,5 +1,4 @@
 import { Box, Card, CardMedia, Grid, CardActionArea, Typography, Button } from '@mui/material';
-import { fontWeight } from '@mui/system';
 import React, { useEffect, useState } from 'react'
 
 const Technologies = () => {
@@ -74,7 +73,7 @@ const Technologies = () => {
                               component="img"
                               height="450"
                               image={techStory?.image_url}
-                              alt="green iguana"
+                              alt={techStory?.title}
                             />
                           </Card>
                         </Box>
