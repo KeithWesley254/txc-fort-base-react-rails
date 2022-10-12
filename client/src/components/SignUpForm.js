@@ -28,7 +28,6 @@ const SignUpForm = ({ onLogin }) => {
       if (r.ok) {
         r.json().then((user) => {
           onLogin(user)
-          window.location.reload()
         });
       } else {
         r.json().then((err) => setErrors(err.errors));

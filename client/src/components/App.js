@@ -35,13 +35,13 @@ function App() {
     <>
       <BrowserRouter>
       <div className="overallTop">
-        <Header setUser={setUser} user={user}/>
+        <Header setUser={setUser} />
         <main>
           <Routes>
             <Route exact='true' path='/' element={<Hero />}/>
-            <Route path='/user-profiles/:id' element={<UserProfile setUser={setUser} user={user}/>}/>
+            <Route path='/user-profiles/:id' element={<UserProfile setUser={setUser}/>}/>
             <Route path='/soldiers' element={<Soldiers />}/>
-            <Route path='/stories' element={<Stories user={user}/>}/>
+            <Route path='/stories' element={<Stories />}/>
             <Route path='/technologies' element={<Technologies />}/>
             <Route path='/memorial' element={<Memorial />}/>
             <Route path='/about-us' element={<AboutUs />}/> 

@@ -95,7 +95,7 @@ const Login = ({ onLogin }) => {
             </Grid>
             <Grid item xs={4} sm={8} md={6}>
               <>
-              <Box sx={{bgcolor: "#4e60ff", height: "100%", pt: 9}}>
+              <Box sx={{bgcolor: "#4e60ff", height: "100%", pt: 10}}>
                 <Carousel
                         autoPlay={true}
                         interval={6000}
@@ -118,9 +118,9 @@ const Login = ({ onLogin }) => {
                       >
                         {myCards}
                     </Carousel>
-                  <div style={{ flexWrap: "wrap", fontSize: 30, color: "#fff", textAlign: "center"}}>
+                  <div style={{ flexWrap: "wrap", fontSize: 25, color: "#fff", textAlign: "center"}}>
                       <p>
-                        Come connect with the Heroes that defend our Beautiful Nation
+                        Come join the TXC FortBase fanbase and connect with the Heroes that Defend our Beautiful Nation
                       </p>
                   </div>
               </Box>

@@ -1,8 +1,9 @@
-import { Box, Card, CardMedia, Grid, Typography, CardActionArea, FormControl, InputLabel, OutlinedInput, Avatar, Button } from '@mui/material'
+import { Box, Card, CardMedia, Grid, Typography, CardActionArea, FormControl, InputLabel, OutlinedInput, Avatar, Button, LinearProgress } from '@mui/material'
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 
-const Stories = ({user}) => {
+const Stories = ({}) => {
+  const [user, setTheUser] = useState({});
   const [user_id, setUserId] = useState(user.id);
   const [full_name, setFullName] = useState(user.one_user_profile.full_name);
   const [image_upload, setImageUpload] = useState(user.one_user_profile.image_upload);
@@ -12,6 +13,19 @@ const Stories = ({user}) => {
   const [randomIndex2, setRandomIndex2] = useState();
   const [technologies, setTechnologies] = useState([]);
   const [technologies2, setTechnologies2] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    fetch(`/api/me`)
+    .then(r => {
+      if (r.ok) {
+        r.json().then((data) => {
+          setTheUser(data)
+          setIsLoading(false)
+        });
+      }
+    });
+  }, [])
   
   useEffect(() => {
     fetch(`/api/user_comments`)
@@ -74,8 +88,9 @@ const Stories = ({user}) => {
       const goThru = comments.filter((comment) => comment.id !== id)
           setComments(goThru)
       })
-    }
+  }
     
+  if(isLoading === true) return <LinearProgress style={{backgroundColor: "#4e60ff"}} />
 
   const allUserComments = comments?.map((comment) => {
     return (

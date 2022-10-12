@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import {Grid, Box, CardMedia, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput} from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import {Grid, Box, CardMedia, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput, LinearProgress, CircularProgress} from '@mui/material';
 import Card from '@mui/material/Card';
+import PropTypes from 'prop-types';
 
-const UserProfile = ({user, setUser}) => {
+const UserProfile = ({setUser}) => {
   const [formData, setFormData] = useState({
     full_name: '',
     gender: '',
@@ -12,9 +13,33 @@ const UserProfile = ({user, setUser}) => {
     image_upload: '',
     favourite_military_branch: ''
   });
+  const [user, setTheUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(10);
+
+  useEffect(() => {
+    fetch(`/api/me`)
+    .then(r => {
+      if (r.ok) {
+        r.json().then((data) => {
+          setTheUser(data)
+          setIsLoading(false)
+        });
+      }
+    });
+  }, [])
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
+    }, 800);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
 
   function handleUpdateUser() {
-    fetch(`/api/one_user_profiles/${user?.id}`, {
+    fetch(`/api/one_user_profiles/${user.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -50,7 +75,41 @@ const UserProfile = ({user, setUser}) => {
         ...formData, [e.target.name]: e.target.value,
     });
   }
+  function CircularProgressWithLabel(props) {
+    return (
+      <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+        <CircularProgress variant="determinate" {...props} />
+        <Box
+          sx={{
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            position: 'absolute',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Typography variant="caption" component="div" color="text.secondary">
+            {`${Math.round(props.value)}%`}
+          </Typography>
+        </Box>
+      </Box>
+    );
+  }
+
+  CircularProgressWithLabel.propTypes = {
+    /**
+     * The value of the progress indicator for the determinate variant.
+     * Value between 0 and 100.
+     * @default 0
+     */
+    value: PropTypes.number.isRequired,
+  };
   
+  if(isLoading === true) return <CircularProgressWithLabel value={progress} />;
+
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -182,20 +241,17 @@ const UserProfile = ({user, setUser}) => {
                   autoComplete="off"
                   >
                     <FormControl sx={{ mb: 2, width: "70%" }}>
-                      <InputLabel htmlFor="full_name">Full Name</InputLabel>
+                      <InputLabel>Full Name</InputLabel>
                       <OutlinedInput
-                        id="full_name"
                         name='full_name'
                         value={formData.full_name}
-                        autoComplete="on"
                         onChange={handleChange}
                         label="Full Name"
                       />
                     </FormControl>
                     <FormControl sx={{ width: "70%" }}>
-                      <InputLabel htmlFor="age">Age</InputLabel>
+                      <InputLabel>Age</InputLabel>
                       <OutlinedInput
-                        id="age"
                         name='age'
                         value={formData.age}
                         onChange={handleChange}
@@ -211,9 +267,8 @@ const UserProfile = ({user, setUser}) => {
               <Grid item xs={6} md={6}>
                 <Box>
                 <FormControl sx={{ width: "100%" }}>
-                  <InputLabel htmlFor="bio">Bio</InputLabel>
+                  <InputLabel>Bio</InputLabel>
                   <OutlinedInput
-                    id="bio"
                     name='bio'
                     value={formData.bio}
                     onChange={handleChange}
@@ -227,9 +282,8 @@ const UserProfile = ({user, setUser}) => {
               <Grid item xs={6} md={6}>
                 <Box sx={{ textAlign: "center"}}>
                   <FormControl>
-                    <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+                    <FormLabel>Gender</FormLabel>
                     <RadioGroup
-                      aria-labelledby="demo-radio-buttons-group-label"
                       defaultValue="male"
                       name="gender"
                       value={formData.gender}
@@ -248,9 +302,8 @@ const UserProfile = ({user, setUser}) => {
               <Grid item xs={6} md={6}>
                 <Box>
                   <FormControl sx={{ width: "100%" }}>
-                    <InputLabel htmlFor="interests">Interests</InputLabel>
+                    <InputLabel>Interests</InputLabel>
                     <OutlinedInput
-                      id="interests"
                       name='interests'
                       value={formData.interests}
                       onChange={handleChange}
@@ -262,13 +315,12 @@ const UserProfile = ({user, setUser}) => {
               <Grid item xs={6} md={6}>
                 <Box sx={{ textAlign: "center"}}>
                   <FormControl sx={{ width: "100%" }}>
-                    <InputLabel htmlFor="image_upload">Image Upload</InputLabel>
+                    <InputLabel>Image Upload</InputLabel>
                     <OutlinedInput
-                      id="image_upload"
                       name='image_upload'
                       value={formData.image_upload}
                       onChange={handleChange}
-                      label="Image_upload"
+                      label="Image Upload"
                     />
                   </FormControl>
                 </Box>        
@@ -279,9 +331,8 @@ const UserProfile = ({user, setUser}) => {
               <Grid item xs={6} md={6}>
                 <Box>
                   <FormControl sx={{ width: "100%" }}>
-                    <InputLabel htmlFor="favourite_military_branch">Favourite Military Branch</InputLabel>
+                    <InputLabel>Favourite Military Branch</InputLabel>
                     <OutlinedInput
-                      id="favourite_military_branch"
                       name='favourite_military_branch'
                       value={formData.favourite_military_branch}
                       onChange={handleChange}
