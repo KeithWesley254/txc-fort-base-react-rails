@@ -52,7 +52,7 @@ const Technologies = () => {
         <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, pr:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
           <Grid item xs={12} md={12} >
             <div className='heroScroll' style={{ position: "relative", width: "100%", overflowX: "auto",}}>
-              <Box sx={{ borderRadius: 20, display: "flex", display: "inline-flex", flexDirection: 'row'  }}>
+              <Box sx={{ borderRadius: 20, display: "inline-flex", flexDirection: 'row'  }}>
                 {my_cards}
               </Box>
             </div>

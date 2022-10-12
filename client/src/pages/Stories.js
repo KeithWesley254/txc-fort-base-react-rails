@@ -1,5 +1,6 @@
 import { Box, Card, CardMedia, Grid, Typography, CardActionArea, FormControl, InputLabel, OutlinedInput, Avatar, Button } from '@mui/material'
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
 
 const Stories = ({user}) => {
   const [user_id, setUserId] = useState(user.id);
@@ -85,7 +86,7 @@ const Stories = ({user}) => {
               <Grid container spacing={2} columns={6}>
                 <Grid item xs={2} md={2}>
                   <Box sx={{display: "flex", justifyContent: "center"}}>
-                    <Avatar alt={comment?.full_name} src={comment?.image_upload} />
+                      <Avatar alt={comment?.full_name} src={comment?.image_upload} />
                   </Box>
                 </Grid>
                 <Grid item xs={4} md={4}>
@@ -257,6 +258,7 @@ const Stories = ({user}) => {
                         cursor: "pointer",
                         border: "none"
                       }}
+                      onClick={() => {window.scrollTo({top: 1400, left: 0, behavior: 'smooth'});}}
                       >
                         Post
                       </button>

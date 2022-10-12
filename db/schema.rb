@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_11_132036) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_12_131451) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,6 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_11_132036) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "soldier_id"
+    t.index ["soldier_id"], name: "index_fan_messages_on_soldier_id"
     t.index ["user_id"], name: "index_fan_messages_on_user_id"
   end
 
@@ -191,6 +193,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_11_132036) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "fan_messages", "soldiers"
   add_foreign_key "fan_messages", "users"
   add_foreign_key "one_user_profiles", "users"
   add_foreign_key "soldier_profiles", "soldiers"

@@ -16,12 +16,10 @@ const Login = ({ onLogin }) => {
     })
   }, []);
 
- 
-
   const myCards = loginSlides.map((slide) => {
     return (
       <>
-      <Card key={slide.id} sx={{ minWidth: 640, alignItems: "center", textAlign: "center", borderRadius: 5}}>
+      <Card key={slide.id} sx={{ mr: 3, ml: 3, minWidth: 640, alignItems: "center", textAlign: "center", borderRadius: 5}}>
         <CardActionArea>
           <CardMedia 
           component="img"
@@ -40,9 +38,6 @@ const Login = ({ onLogin }) => {
             </CardContent>
         </CardActionArea>
         </Card>
-        &nbsp;
-        &nbsp;
-        &nbsp;
       </>
       )
     })

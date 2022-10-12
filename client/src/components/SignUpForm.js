@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Box, FormControl, FormHelperText, TextField } from '@mui/material';
+import { Grid, Box, FormControl, FormHelperText, TextField, Snackbar, Alert } from '@mui/material';
 
 const SignUpForm = ({ onLogin }) => {
 
@@ -28,6 +28,7 @@ const SignUpForm = ({ onLogin }) => {
       if (r.ok) {
         r.json().then((user) => {
           onLogin(user)
+          window.location.reload()
         });
       } else {
         r.json().then((err) => setErrors(err.errors));
@@ -105,11 +106,9 @@ const SignUpForm = ({ onLogin }) => {
                 <div>
                   {errors.map((err) => (
                   <>
-                    <div key={err}>
-                    <li style={{color: "red" }}>
-                      {err}
-                    </li>
-                    </div>
+                      <Alert severity="error" sx={{ width: '100%' }}>
+                        {err}
+                      </Alert>
                   </>
                   ))}
                 </div>

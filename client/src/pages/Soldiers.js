@@ -41,28 +41,28 @@ const Soldiers = () => {
   .slice((generalsPage - 1) * 10, (generalsPage - 1) * 10 + 10)
   .map((general) => {
     return(
-      <Link style={{textDecoration: "none"}} to={`/generals/${general.id}`}>
-        <Card key={general.id} sx={{ width: 200, height: 260, border: 1, p: 2 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={general?.image_url}
-              alt={general?.name}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="body2" component="div">
-                Full Name
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {general?.name}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        &nbsp;
-        &nbsp;
-      </Link>
+      <Box sx={{mr:2, ml: 2}}>
+        <Link style={{textDecoration: "none"}} to={`/generals/${general.id}`}>
+          <Card key={general.id} sx={{ width: 200, height: 260, border: 1, p: 2 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={general?.image_url}
+                alt={general?.name}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="body2" component="div">
+                  Full Name
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {general?.name}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Link>
+      </Box>
     )
   }) 
 
@@ -71,28 +71,30 @@ const Soldiers = () => {
   .slice((soldiersPage - 1) * 10, (soldiersPage - 1) * 10 + 10)
   .map((soldier) => {
     return(
-      <Link style={{textDecoration: "none"}} to={`/soldiers/${soldier.id}`}>
-        <Card key={soldier.id} sx={{ width: 200, height: 260, border: 1, p: 2 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={soldier?.image_url}
-              alt={soldier?.name}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="body2" component="div">
-                Full Name
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {soldier?.name}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        &nbsp;
-        &nbsp;
-      </Link>
+      <Box sx={{mr:2, ml: 2}}>
+        <Link style={{textDecoration: "none"}} to={`/soldiers/${soldier.id}`}>
+          <Card key={soldier.id} sx={{ width: 200, height: 260, border: 1, p: 2 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={soldier?.image_url}
+                alt={soldier?.name}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="body2" component="div">
+                  Full Name
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {soldier?.name}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+          &nbsp;
+          &nbsp;
+        </Link>
+      </Box>
     )
   }) 
     

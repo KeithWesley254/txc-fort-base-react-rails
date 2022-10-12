@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SoldierProfile from '../components/SoldierProfile';
-import { Box, Grid, CardMedia, Card, LinearProgress } from '@mui/material';
+import { Box, Grid, CardMedia, Card, LinearProgress, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 
 const SpecificSoldier = () => {
@@ -21,8 +21,6 @@ const SpecificSoldier = () => {
     });
   }, [params])
 
-  console.log(oneSoldier)
-
   if(isLoading === true) return <LinearProgress style={{backgroundColor: "#4e60ff"}} />
 
   return (
@@ -30,6 +28,12 @@ const SpecificSoldier = () => {
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2} columns={12}>
           <Grid item xs={12} md={6} sx={{textAlign: "center"}}>
+            <br />
+            <Box>
+              <Typography sx={{fontFamily: "nunito", fontWeight: "bold", fontSize: 40}}>
+                Soldier
+              </Typography>
+            </Box>
             <br />
             <SoldierProfile oneSoldier={oneSoldier}/>
           </Grid>

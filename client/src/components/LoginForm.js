@@ -1,4 +1,4 @@
-import { Box, FormControl, FormHelperText, TextField } from '@mui/material';
+import { Alert, Box, FormControl, FormHelperText, TextField } from '@mui/material';
 import React, { useState } from 'react'
 
 const LoginForm = ({ onLogin }) => {
@@ -89,11 +89,9 @@ const LoginForm = ({ onLogin }) => {
             <div>
               {errors.map((err) => (
               <>
-                <div key={err}>
-                <li style={{color: "red" }}>
+                <Alert severity="error" sx={{ width: '100%' }}>
                   {err}
-                </li>
-                </div>
+                </Alert>
               </>
               ))}
             </div>       
