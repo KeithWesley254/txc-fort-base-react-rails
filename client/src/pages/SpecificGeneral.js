@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, LinearProgress, Typography } from '@mui/material';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import GeneralProfile from '../components/GeneralProfile';
 
 const SpecificGeneral = () => {
@@ -26,6 +26,7 @@ const SpecificGeneral = () => {
   const loopSoldiers = oneGeneral?.soldiers.map((soldier) => {
     return (
         <>
+        <Link style={{textDecoration: "none"}} to={`/soldiers/${soldier.id}`}>
             <Card key={soldier.id} sx={{ width: 150, height: 200, border: 1, p: 2 }}>
                 <CardActionArea>
                     <CardMedia
@@ -44,6 +45,7 @@ const SpecificGeneral = () => {
                     </CardContent>
                 </CardActionArea>
             </Card>
+        </Link>
             <br />
         </>
     )
@@ -54,6 +56,11 @@ const SpecificGeneral = () => {
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2} columns={12}>
           <Grid item xs={12} md={6} sx={{textAlign: "center"}}>
+            <Box>
+              <Typography sx={{fontFamily: "nunito", fontWeight: "bold", fontSize: 40}}>
+                Major General
+              </Typography>
+            </Box>
             <br />
             <GeneralProfile oneGeneral={oneGeneral}/>
           </Grid>
@@ -61,7 +68,7 @@ const SpecificGeneral = () => {
           <Grid item xs={12} md={6} sx={{textAlign: "center"}}>
             <br />
             <Box>
-              <Typography sx={{fontFamily: "nunito", fontWeight: "bold", fontSize: 14}}>
+              <Typography sx={{fontFamily: "nunito", fontWeight: "bold", fontSize: 20}}>
                 <i>List of Assigned soldiers</i>
               </Typography>
             </Box>
