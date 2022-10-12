@@ -3,11 +3,11 @@ module ImagesModule
     def military_images
         [
             "https://p4.wallpaperbetter.com/wallpaper/454/567/808/su-27-military-aircraft-military-vehicle-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/318/136/933/aircraft-carrier-warship-vehicle-aircraft-wallpaper-preview.jpg",
+            "https://netstorage-tuko.akamaized.net/images/bf6921e6032a9709.jpg?imwidth=900",
             "https://p4.wallpaperbetter.com/wallpaper/177/4/50/army-mig-29-aircraft-military-wallpaper-preview.jpg",
             "https://p4.wallpaperbetter.com/wallpaper/706/752/917/tank-t-90-military-men-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/304/41/251/warship-vehicle-ship-military-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/265/469/297/t-80-tank-outdoors-military-wallpaper-preview.jpg"
+            "https://netstorage-tuko.akamaized.net/images/c1e83167990bffe6.jpg",
+            "https://images.hivisasa.com/1200/gF0AmB5kQwIMG_20190604_152816.jpg"
         ]
     end
 

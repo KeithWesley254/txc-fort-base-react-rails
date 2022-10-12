@@ -1,10 +1,11 @@
-import { Box, Card, CardMedia, Grid, Typography, InputLabel, OutlinedInput, FormControl } from '@mui/material'
-import React, { useState } from 'react'
+import { Box, Card, CardMedia, Grid, Typography, InputLabel, OutlinedInput, FormControl, LinearProgress } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 
-const SoldierProfile = ({ user, oneSoldier }) => {
-  const [user_id, setUserId] = useState(user.id);
+const SoldierProfile = ({ oneSoldier }) => {
   const [soldier_id, setFullName] = useState(oneSoldier.id);
   const [message, setFanMessage] = useState('');
+  const [user, setTheUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   const loopPlatoon = oneSoldier?.soldier_profile.platoon.map((platoon) => {
       return (
@@ -36,7 +37,6 @@ const SoldierProfile = ({ user, oneSoldier }) => {
       body: JSON.stringify({
         soldier_id,
         message,
-        user_id
       }),
     })
     setFanMessage('')
