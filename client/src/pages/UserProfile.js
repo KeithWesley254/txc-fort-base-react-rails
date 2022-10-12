@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {Grid, Box, CardMedia, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput} from '@mui/material';
 import Card from '@mui/material/Card';
-import { useNavigate } from 'react-router-dom';
-
 
 const UserProfile = ({user, setUser}) => {
   const [formData, setFormData] = useState({
@@ -33,8 +31,6 @@ const UserProfile = ({user, setUser}) => {
   })
   }
 
-  const navigate = useNavigate();
-
   function handleLogoutClick() {
     fetch("/api/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
@@ -54,8 +50,6 @@ const UserProfile = ({user, setUser}) => {
         ...formData, [e.target.name]: e.target.value,
     });
   }
-
-  // console.log(formData)
   
   return (
     <>

@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Grid, Typography, CardActionArea, FormControl, InputLabel, OutlinedInput, Avatar } from '@mui/material'
+import { Box, Card, CardMedia, Grid, Typography, CardActionArea, FormControl, InputLabel, OutlinedInput, Avatar, Button } from '@mui/material'
 import React, {useState, useEffect} from 'react'
 
 const Stories = ({user}) => {
@@ -11,8 +11,6 @@ const Stories = ({user}) => {
   const [randomIndex2, setRandomIndex2] = useState();
   const [technologies, setTechnologies] = useState([]);
   const [technologies2, setTechnologies2] = useState([]);
-
-  console.log(user_id)
   
   useEffect(() => {
     fetch(`/api/user_comments`)
@@ -176,6 +174,10 @@ const Stories = ({user}) => {
                     </CardActionArea>
                   </Card>
                   </Box>
+                  <br />
+                  <Box sx={{display: "flex", justifyContent: "center"}}>
+                    <Button onClick={changeTechnology} variant="contained">Change Story</Button>
+                  </Box>
                 </Grid>
                 <Grid item xs={6} md={3}>
                   <Box>
@@ -199,6 +201,10 @@ const Stories = ({user}) => {
                       />
                     </CardActionArea>
                   </Card>
+                  </Box>
+                  <br />
+                  <Box sx={{display: "flex", justifyContent: "center"}}>
+                    <Button onClick={changeTechnology2} variant="contained">Change Story</Button>
                   </Box>
                 </Grid>
                 <Grid item xs={6} md={3}>
