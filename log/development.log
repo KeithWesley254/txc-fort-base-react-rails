@@ -41618,3 +41618,59 @@ Processing by Api::UsersController#create as */*
 Completed 422 Unprocessable Entity in 1908ms (Views: 0.6ms | ActiveRecord: 28.7ms | Allocations: 701266)
 
 
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-12 20:11:28 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.87ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.4ms | Allocations: 2251)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-12 20:12:18 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.34ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 1.3ms | Allocations: 2251)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-12 20:13:15 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.0ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.83ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 1.0ms | Allocations: 2251)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-12 20:13:30 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (1.4ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.74ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 1.4ms | Allocations: 2252)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-12 20:13:56 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.16ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 2251)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-12 20:14:22 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.01ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 2251)
+
+
+Started GET "/api/login_page_slides" for 127.0.0.1 at 2022-10-12 20:15:11 +0300
+Processing by Api::LoginPageSlidesController#index as */*
+  [1m[36mLoginPageSlide Load (0.3ms)[0m  [1m[34mSELECT "login_page_slides".* FROM "login_page_slides"[0m
+  ↳ app/controllers/api/login_page_slides_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.92ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.3ms | Allocations: 2251)
+
+

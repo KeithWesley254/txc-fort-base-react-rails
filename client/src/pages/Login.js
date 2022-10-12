@@ -98,6 +98,9 @@ const Login = ({ onLogin }) => {
               <Box sx={{bgcolor: "#4e60ff", height: "100%", pt: 9}}>
                 <Carousel
                         autoPlay={true}
+                        interval={6000}
+                        animation="fade"
+                        duration={1000}
                         swipe={true}
                         indicators={true}
                         activeIndicatorIconButtonProps={{
