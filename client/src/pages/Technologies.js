@@ -17,8 +17,8 @@ const Technologies = () => {
 
   const my_cards = techStories.map((story) => {
     return(
-      <>
-        <Card key={story.id} sx={{ width: 200, height: 150 }}>
+      <Box key={story.id} sx={{display: "inline-flex", justifyContent: "center"}}>
+        <Card sx={{ width: 200, height: 150 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -30,7 +30,7 @@ const Technologies = () => {
         </Card>
         &nbsp;
         &nbsp;
-      </>
+      </Box>
     )
     })  
 
@@ -61,17 +61,16 @@ const Technologies = () => {
         <br />
         {techStories.map((techStory) => {
           return(
-            <>
               <Box key={techStory.id}>
                 <Grid container spacing={2} columns={12} >
                   <Grid item xs={12} md={6}>
-                    <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
+                    <Grid container spacing={2} columns={12} sx={{textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
                       <Grid item xs={12} md={12}>
                         <Box>
-                          <Card sx={{ maxWidth: "70%" }}>
+                          <Card sx={{ maxWidth: "100%", mr: 4, ml: 4 }}>
                             <CardMedia
                               component="img"
-                              height="450"
+                              height="480"
                               image={techStory?.image_url}
                               alt={techStory?.title}
                             />
@@ -80,25 +79,25 @@ const Technologies = () => {
                       </Grid>
                     </Grid>  
                   </Grid>
-                  <Grid item xs={12} md={6} sx={{pr: 4}} >
+                  <Grid item xs={12} md={6} >
                     <div id={techStory?.id}>
-                      <Box>
+                      <Box sx={{mr: 4, ml: 4, textAlign: "center"}}>
                         <Typography>
                           {techStory?.description}
                         </Typography>
-                        <div style={{position: "absolute", right: 40}}>
+                        <div style={{position: "absolute", right: 70}}>
                           <Button sx={{color: "#4E60FF", fontWeight: "bold"}} 
                           onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
                             Go Top
                           </Button>
-                        </div>  
+                        </div>
                       </Box>  
                     </div>
+                    <br />
                   </Grid>
                 </Grid>
-              </Box>
-              <br />
-            </>
+                <br />
+              </Box>   
           )
         })}
       </Box>

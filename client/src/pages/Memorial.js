@@ -24,8 +24,8 @@ const Memorial = () => {
   .slice((page - 1) * 10, (page - 1) * 10 + 48)
   .map((legend) => {
     return(
-      <>
-        <Card key={legend.id} sx={{ width: 300, height: 380, border: 3, p: 2 }}>
+      <Box key={legend.id}>
+        <Card sx={{ width: 300, height: 380, border: 3, p: 2 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -57,7 +57,7 @@ const Memorial = () => {
         </Card>
         &nbsp;
         &nbsp;
-      </>
+      </Box>
     )
     }) 
 
@@ -126,7 +126,7 @@ const Memorial = () => {
           <Grid item xs={12} md={12}>
             <Box sx={{ justifyContent: "center" }}>
               <div style={{ position: "relative", width: "100%"}}>
-                <Box sx={{ mr: 2, ml: 2, borderRadius: 20, gap: 2, justifyContent: "center", flexWrap: "wrap", display: "inline-flex", flexDirection: 'row'  }}>
+                <Box sx={{ mr: 2, ml: 2, borderRadius: 20, gap: 1, justifyContent: "center", flexWrap: "wrap", display: "inline-flex", flexDirection: 'row'  }}>
                   {my_cards}
                 </Box>
               </div>

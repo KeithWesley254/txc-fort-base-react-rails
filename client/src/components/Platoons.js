@@ -17,9 +17,9 @@ const Platoons = ({ platoons }) => {
     .slice((platoonsPage - 1) * 10, (platoonsPage - 1) * 10 + 10)
     .map((platoon) => {
     return(
-        <Box sx={{mr:2, ml: 2}}>
+        <Box key={platoon.id} sx={{mr:2, ml: 2}}>
         <Link style={{textDecoration: "none"}} to={`/platoons/${platoon.id}`}>
-            <Card key={platoon.id} sx={{ width: 200, height: 260, border: 1, p: 2 }}>
+            <Card sx={{ width: 200, height: 260, border: 1, p: 2 }}>
                 <CardContent sx={{textAlign: "center", fontFamily: "nunito" }}>
                     <Typography sx={{fontSize: 14, fontWeight: "bold"}} component="div">
                         Full Name
@@ -57,7 +57,7 @@ const Platoons = ({ platoons }) => {
         <Grid container spacing={2} columns={12}>
             <Grid item xs={12} md={12}>
                 <br />
-                <div style={{paddingLeft: 100, textAlign: "center", fontSize: 30, fontFamily: "nunito", fontWeight: "bolder"}}>
+                <div style={{ textAlign: "center", fontSize: 30, fontFamily: "nunito", fontWeight: "bolder"}}>
                     <p>
                         TXC FortBase Platoons
                     </p>

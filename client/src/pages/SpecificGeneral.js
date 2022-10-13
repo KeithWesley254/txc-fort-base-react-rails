@@ -25,9 +25,8 @@ const SpecificGeneral = () => {
 
   const loopSoldiers = oneGeneral?.soldiers.map((soldier) => {
     return (
-        <>
-        <Link style={{textDecoration: "none"}} to={`/soldiers/${soldier.id}`}>
-            <Card key={soldier.id} sx={{ width: 150, height: 200, border: 1, p: 2 }}>
+        <Link key={soldier.id} style={{textDecoration: "none"}} to={`/soldiers/${soldier.id}`}>
+            <Card sx={{ width: 150, height: 200, border: 1, p: 2 }}>
                 <CardActionArea>
                     <CardMedia
                     component="img"
@@ -46,8 +45,6 @@ const SpecificGeneral = () => {
                 </CardActionArea>
             </Card>
         </Link>
-            <br />
-        </>
     )
   })
 
@@ -75,6 +72,7 @@ const SpecificGeneral = () => {
             <br />
             <Box className='heroScroll' sx={{ mr: 2, ml: 2, borderRadius: 20, maxHeight: 800, gap: 2, justifyContent: "center", flexWrap: "wrap", display: "inline-flex", flexDirection: 'row', overflowY: "auto"  }}>
                 {loopSoldiers}
+                <br />
             </Box>
           </Grid>
         </Grid>

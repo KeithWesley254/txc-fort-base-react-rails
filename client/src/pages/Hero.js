@@ -32,8 +32,8 @@ const Hero = () => {
 
   const my_cards = techStories.map((story) => {
     return(
-      <>
-        <Card key={story.id} sx={{ width: 200, height: 150 }}>
+      <Box key={story.id}>
+        <Card sx={{ width: 200, height: 150, display: "inline-flex", justifyContent: "center" }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -48,15 +48,14 @@ const Hero = () => {
         </Card>
         &nbsp;
         &nbsp;
-      </>
+      </Box>
     )
   }) 
 
   const communitySlides = communityImpact.map((slide) => {
     return (
-      <>
-        <Box>
-          <Card sx={{ maxWidth: "70%" }}>
+        <Box key={slide.id} sx={{p: 2}}>
+          <Card sx={{ maxWidth: "100%" }}>
             <CardMedia
               component="img"
               height="450"
@@ -65,7 +64,6 @@ const Hero = () => {
             />
           </Card>
         </Box>
-      </>
     )
   })
 
@@ -87,7 +85,7 @@ const Hero = () => {
           <br />
           <Grid container spacing={2} columns={12} >
             <Grid item xs={12} md={6}>
-              <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
+              <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, pr: 4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
                 <Grid item xs={12} md={12}>
                   <Carousel
                     autoPlay={true}
@@ -104,7 +102,7 @@ const Hero = () => {
             </Grid>
             <Grid item xs={12} md={6} sx={{pr: 4}}>
               <div>
-                <Box>
+                <Box sx={{mr: 2, ml: 2, textAlign: "center"}}>
                   <Typography>
                     What is Lorem Ipsum?
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.

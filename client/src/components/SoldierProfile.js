@@ -2,26 +2,22 @@ import { Box, Card, CardMedia, Grid, Typography, InputLabel, OutlinedInput, Form
 import React, { useState } from 'react'
 
 const SoldierProfile = ({ oneSoldier }) => {
-  const [soldier_id, setFullName] = useState(oneSoldier.id);
+  const [soldier_id, setSoldierId] = useState(oneSoldier.id);
   const [message, setFanMessage] = useState('');
 
   const loopPlatoon = oneSoldier?.soldier_profile.platoon.map((platoon) => {
       return (
-          <>
-              <Typography key={platoon.id} variant="body2" component="h2">
-                  {platoon.name}
-              </Typography>
-          </>
+        <Typography key={platoon.id} variant="body2" component="h2">
+          {platoon.name}
+        </Typography>
       )
   })
 
   const loopMilitarySpec = oneSoldier?.soldier_profile.military_spec.map((specialization) => {
       return (
-          <>
-              <Typography key={specialization.id} variant="body2" component="h2">
-                  {specialization.title}
-              </Typography>
-          </>
+        <Typography key={specialization.id} variant="body2" component="h2">
+          {specialization.title}
+        </Typography>
       )
   })
 

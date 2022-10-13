@@ -78,8 +78,8 @@ const Stories = ({user}) => {
 
   const allUserComments = comments?.map((comment) => {
     return (
-      <>
-      <Grid key={comment.id} container spacing={2} columns={6}>
+      <Box key={comment.id}>
+      <Grid container spacing={2} columns={6}>
           <Grid item xs={6} md={6}>
             <Box sx={{ pt: 10}}>
               <Grid container spacing={2} columns={6}>
@@ -130,7 +130,7 @@ const Stories = ({user}) => {
             </Box>      
           </Grid>
         </Grid>
-      </>
+      </Box>
     )
   })
 
@@ -180,7 +180,7 @@ const Stories = ({user}) => {
                   </Box>
                 </Grid>
                 <Grid item xs={6} md={3}>
-                  <Box>
+                  <Box sx={{mr: 4, ml: 4}}>
                     <Typography>
                       {technologies[randomIndex]?.description}
                     </Typography>
@@ -208,7 +208,7 @@ const Stories = ({user}) => {
                   </Box>
                 </Grid>
                 <Grid item xs={6} md={3}>
-                  <Box>
+                  <Box sx={{mr: 4, ml: 4}}>
                     <Typography>
                       {technologies2[randomIndex2]?.description}
                     </Typography>

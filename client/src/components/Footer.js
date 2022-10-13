@@ -43,23 +43,23 @@ const Footer = () => {
                         <Box borderBottom={1}>Socials</Box>
                         &nbsp;
                         <Box>
-                            <Link href='https://www.instagram.com/keith_wesley_/' target="_blank" color="inherit" underline='none'><i class="fa-brands fa-instagram"></i> Instagram</Link>
+                            <Link href='https://www.instagram.com/keith_wesley_/' target="_blank" color="inherit" underline='none'><i className="fa-brands fa-instagram"></i> Instagram</Link>
                         </Box>
                         &nbsp;
                         <Box>
-                            <Link href='https://www.youtube.com/channel/UCZ-MKtsBjTD4glktrbEYFXw' target="_blank" color="inherit" underline='none'><i class="fa-brands fa-youtube"></i> Youtube</Link>
+                            <Link href='https://www.youtube.com/channel/UCZ-MKtsBjTD4glktrbEYFXw' target="_blank" color="inherit" underline='none'><i className="fa-brands fa-youtube"></i> Youtube</Link>
                         </Box>
                         &nbsp;
                         <Box>
-                            <Link href='https://twitter.com/Keith_wesley_' color="inherit" target="_blank" underline='none'><i class="fa-brands fa-twitter"></i> Twitter</Link>
+                            <Link href='https://twitter.com/Keith_wesley_' color="inherit" target="_blank" underline='none'><i className="fa-brands fa-twitter"></i> Twitter</Link>
                         </Box>
                         &nbsp;
                         <Box>
-                            <Link href='https://www.linkedin.com/in/keith-wesley-707802215/' color="inherit" target="_blank" underline='none'><i class="fa-brands fa-linkedin"></i> LinkedIn</Link>
+                            <Link href='https://www.linkedin.com/in/keith-wesley-707802215/' color="inherit" target="_blank" underline='none'><i className="fa-brands fa-linkedin"></i> LinkedIn</Link>
                         </Box>
                         &nbsp;
                         <Box>
-                            <Link href='https://github.com/KeithWesley254' color="inherit" target="_blank" underline='none'><i class="fa-brands fa-github"></i> Github</Link>
+                            <Link href='https://github.com/KeithWesley254' color="inherit" target="_blank" underline='none'><i className="fa-brands fa-github"></i> Github</Link>
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={4}>

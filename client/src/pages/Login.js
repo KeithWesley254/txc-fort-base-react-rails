@@ -19,27 +19,27 @@ const Login = ({ onLogin }) => {
 
   const myCards = loginSlides.map((slide) => {
     return (
-      <>
-      <Card key={slide.id} sx={{ mr: 3, ml: 3, minWidth: 640, alignItems: "center", textAlign: "center", borderRadius: 5}}>
-        <CardActionArea>
-          <CardMedia 
-          component="img"
-          height="400"
-          image={slide?.image_url}
-          alt={slide?.title}
-          sx={{borderRadius: 10, p: 3}}
-          />
-          <CardContent>
-            <Typography sx={{textAlign: "start"}} gutterBottom variant="h5" component="div">
-              {slide?.title}
-            </Typography>
-            <Typography sx={{textAlign: "start"}} variant="body2" color="#545563">
-              {slide?.summary}
-            </Typography>
-            </CardContent>
-        </CardActionArea>
+      <Box key={slide.id}>
+        <Card sx={{ mr: 3, ml: 3, minWidth: 450, alignItems: "center", textAlign: "center", borderRadius: 5}}>
+          <CardActionArea>
+            <CardMedia 
+            component="img"
+            height="400"
+            image={slide?.image_url}
+            alt={slide?.title}
+            sx={{borderRadius: 10, p: 3}}
+            />
+            <CardContent>
+              <Typography sx={{textAlign: "start"}} gutterBottom variant="h5" component="div">
+                {slide?.title}
+              </Typography>
+              <Typography sx={{textAlign: "start"}} variant="body2" color="#545563">
+                {slide?.summary}
+              </Typography>
+              </CardContent>
+          </CardActionArea>
         </Card>
-      </>
+      </Box>
       )
     })
 

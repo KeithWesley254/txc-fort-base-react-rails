@@ -39,9 +39,9 @@ const Soldiers = () => {
   .slice((generalsPage - 1) * 10, (generalsPage - 1) * 10 + 10)
   .map((general) => {
     return(
-      <Box sx={{mr:2, ml: 2}}>
+      <Box key={general.id} sx={{mr:2, ml: 2}}>
         <Link style={{textDecoration: "none"}} to={`/generals/${general.id}`}>
-          <Card key={general.id} sx={{ width: 200, height: 260, border: 1, p: 2 }}>
+          <Card sx={{ width: 200, height: 260, border: 1, p: 2 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -69,9 +69,9 @@ const Soldiers = () => {
   .slice((soldiersPage - 1) * 10, (soldiersPage - 1) * 10 + 10)
   .map((soldier) => {
     return(
-      <Box sx={{mr:2, ml: 2}}>
+      <Box key={soldier.id} sx={{mr:2, ml: 2}}>
         <Link style={{textDecoration: "none"}} to={`/soldiers/${soldier.id}`}>
-          <Card key={soldier.id} sx={{ width: 200, height: 260, border: 1, p: 2 }}>
+          <Card sx={{ width: 200, height: 260, border: 1, p: 2 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
