@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import '../App.css';
 import Login from '../pages/Login';
 import Header from './Header';
@@ -30,16 +30,14 @@ function App() {
     });
   }, []);
 
-  // if (!user) return <Login onLogin={setUser} />
+  if (!user) return <Login onLogin={setUser} />
 
   return (
     <>
-      <BrowserRouter>
       <div className="overallTop">
         <Header setUser={setUser} />
         <main>
           <Routes>
-            <Route exact='true' path='/' element={<Login onLogin={setUser}/>}/>
             <Route exact='true' path='/homepage' element={<Hero />}/>
             <Route path='/user-profiles/:id' element={<UserProfile setUser={setUser}/>}/>
             <Route path='/soldiers' element={<Soldiers />}/>
@@ -54,7 +52,6 @@ function App() {
         </main>
         <Footer />
       </div>
-      </BrowserRouter>
     </>
   );
 }

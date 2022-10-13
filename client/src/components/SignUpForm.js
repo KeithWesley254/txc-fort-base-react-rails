@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Grid, Box, FormControl, FormHelperText, TextField, Alert } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const SignUpForm = ({ onLogin }) => {
 
@@ -8,6 +9,8 @@ const SignUpForm = ({ onLogin }) => {
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -28,7 +31,7 @@ const SignUpForm = ({ onLogin }) => {
       if (r.ok) {
         r.json().then((user) => {
           onLogin(user)
-          window.location.reload()
+          navigate('/homepage')
         });
       } else {
         r.json().then((err) => setErrors(err.errors));

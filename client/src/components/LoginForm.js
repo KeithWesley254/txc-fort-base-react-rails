@@ -1,11 +1,14 @@
 import { Alert, Box, FormControl, FormHelperText, TextField } from '@mui/material';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -21,6 +24,7 @@ const LoginForm = ({ onLogin }) => {
       if (r.ok) {
         r.json().then((user) => {
           onLogin(user)
+          navigate('/homepage')
         });
       } else {
         r.json().then((err) => setErrors(err.errors));
