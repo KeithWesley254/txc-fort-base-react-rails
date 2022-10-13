@@ -39,7 +39,8 @@ function App() {
         <Header setUser={setUser} />
         <main>
           <Routes>
-            <Route exact='true' path='/' element={<Hero />}/>
+            <Route exact='true' path='/' element={<Login />}/>
+            <Route exact='true' path='/homepage' element={<Hero />}/>
             <Route path='/user-profiles/:id' element={<UserProfile setUser={setUser}/>}/>
             <Route path='/soldiers' element={<Soldiers />}/>
             <Route path='/stories' element={<Stories user={user}/>}/>

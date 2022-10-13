@@ -75,7 +75,7 @@ const Footer = () => {
                         textDecoration: 'none',
                         cursor: 'pointer',
                         }}
-                        onClick={() => navigate(`/`)}
+                        onClick={() => navigate(`/homepage`)}
                         >
                         <img src={image} alt="logo" style={{maxHeight: "40px", maxWidth: "60px", cursor: "pointer"}}/>
                         &nbsp;

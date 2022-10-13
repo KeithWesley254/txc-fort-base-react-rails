@@ -53,7 +53,7 @@ const Header = ({setUser}) => {
     <AppBar position="static" sx={{ bgcolor: "#fff"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-            <div className='headerLogo' onClick={() => navigate('/')}>
+            <div className='headerLogo' onClick={() => navigate('/homepage')}>
                 <p style={{fontWeight: "bolder", fontSize: 14, color: 'black', cursor: "pointer"}}>
                   TXC
                   <br />
@@ -129,7 +129,7 @@ const Header = ({setUser}) => {
             variant="h5"
             noWrap
             component="a"
-            href="/"
+            href="/homepage"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
