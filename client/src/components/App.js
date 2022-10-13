@@ -30,7 +30,7 @@ function App() {
     });
   }, []);
 
-  if (!user) return <Login onLogin={setUser} />
+  // if (!user) return <Login onLogin={setUser} />
 
   return (
     <>
@@ -39,7 +39,7 @@ function App() {
         <Header setUser={setUser} />
         <main>
           <Routes>
-            <Route exact='true' path='/' element={<Login />}/>
+            <Route exact='true' path='/' element={<Login onLogin={setUser}/>}/>
             <Route exact='true' path='/homepage' element={<Hero />}/>
             <Route path='/user-profiles/:id' element={<UserProfile setUser={setUser}/>}/>
             <Route path='/soldiers' element={<Soldiers />}/>
