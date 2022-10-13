@@ -13,6 +13,7 @@ import Memorial from '../pages/Memorial';
 import Footer from './Footer';
 import SpecificSoldier from '../pages/SpecificSoldier';
 import SpecificGeneral from '../pages/SpecificGeneral';
+import SpecificPlatoon from '../pages/SpecificPlatoon';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
             <Route path='/about-us' element={<AboutUs />}/> 
             <Route path='/soldiers/:id' element={<SpecificSoldier />}/>
             <Route path='/generals/:id' element={<SpecificGeneral />}/>  
+            <Route path='/platoons/:id' element={<SpecificPlatoon />}/>  
           </Routes>
         </main>
         <Footer />

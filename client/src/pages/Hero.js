@@ -1,10 +1,14 @@
 import { Grid, Box, CardActionArea, CardMedia, Typography, Card } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import Carousel from "react-material-ui-carousel";
+import Platoons from '../components/Platoons';
 
 const Hero = () => {
   const [techStories, setTechStories] = useState([]);
-  const [communityImpact, setCommunityImpact] = useState({});
+  const [communityImpact, setCommunityImpact] = useState([]);
+  const [randomIndexCommunity, setRandomIndex] = useState();
+  const [platoons, setPlatoons] = useState([])
 
   useEffect(() => {
     fetch(`/api/technologies`)
@@ -13,9 +17,15 @@ const Hero = () => {
   }, [])
 
   useEffect(() => {
-    fetch(`/api/community_impacts/${7}`)
+    fetch(`/api/community_impacts`)
     .then(r => r.json())
     .then(data => setCommunityImpact(data))
+  }, [])
+
+  useEffect(() => {
+    fetch(`/api/platoons`)
+    .then(r => r.json())
+    .then(data => setPlatoons(data))
   }, [])
 
   const navigate = useNavigate();
@@ -40,7 +50,24 @@ const Hero = () => {
         &nbsp;
       </>
     )
-    })  
+  }) 
+
+  const communitySlides = communityImpact.map((slide) => {
+    return (
+      <>
+        <Box>
+          <Card sx={{ maxWidth: "70%" }}>
+            <CardMedia
+              component="img"
+              height="450"
+              image={slide?.image_url}
+              alt={slide?.title}
+            />
+          </Card>
+        </Box>
+      </>
+    )
+  })
 
   return (
     <>
@@ -62,16 +89,16 @@ const Hero = () => {
             <Grid item xs={12} md={6}>
               <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
                 <Grid item xs={12} md={12}>
-                  <Box>
-                    <Card sx={{ maxWidth: "70%" }}>
-                      <CardMedia
-                        component="img"
-                        height="450"
-                        image={communityImpact?.image_url}
-                        alt="green iguana"
-                      />
-                    </Card>
-                  </Box>
+                  <Carousel
+                    autoPlay={true}
+                    interval={6000}
+                    animation="slide"
+                    duration={2000}
+                    indicators={false}
+                    swipe={true}
+                  >    
+                    {communitySlides}
+                  </Carousel>
                 </Grid>
               </Grid>  
             </Grid>
@@ -89,6 +116,9 @@ const Hero = () => {
               </div>
             </Grid>
           </Grid>
+
+          <Platoons platoons={platoons}/>
+
         </Box>
         <br />
       </main>
