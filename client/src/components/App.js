@@ -30,7 +30,11 @@ function App() {
     });
   }, []);
 
-  if (!user) return <Login onLogin={setUser} />
+  if (!user) return (
+    <Routes>
+      <Route exact='true' path='/' element={<Login onLogin={setUser} />}/>
+    </Routes>
+  )
 
   return (
     <>
