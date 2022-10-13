@@ -25,9 +25,9 @@ const SpecificPlatoon = () => {
 
   const loopSoldiers = platoon?.soldiers.map((soldier) => {
     return (
-        <>
+        <Box key={soldier.id}>
         <Link style={{textDecoration: "none"}} to={`/soldiers/${soldier.id}`}>
-            <Card key={soldier.id} sx={{ width: 150, height: 200, border: 1, p: 2 }}>
+            <Card sx={{ width: 150, height: 200, border: 1, p: 2 }}>
                 <CardActionArea>
                     <CardMedia
                     component="img"
@@ -47,7 +47,7 @@ const SpecificPlatoon = () => {
             </Card>
         </Link>
             <br />
-        </>
+        </Box>
     )
   })
 
@@ -65,9 +65,9 @@ const SpecificPlatoon = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Box sx={{border: 1, width: "100%"}}>
+              <Box sx={{ border: 1, textAlign: "center", ml: 2, width: "100%"}}>
                 <Grid item xs={4} md={4}>
-                  <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Box>
                     <Typography sx={{ fontWeight: "bold" }} variant="h5" component="h2">
                       Full Name
                     </Typography>
@@ -76,7 +76,7 @@ const SpecificPlatoon = () => {
                     </Typography>
                   </Box>
                   <br />
-                  <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Box >
                     <Typography sx={{ fontWeight: "bold" }} variant="h5" component="h2">
                       Sphere of Operations
                     </Typography>
@@ -85,7 +85,7 @@ const SpecificPlatoon = () => {
                     </Typography>
                   </Box>
                   <br />
-                  <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Box>
                     <Typography sx={{ fontWeight: "bold" }} variant="h5" component="h2">
                       Skill Level
                     </Typography>
@@ -97,7 +97,7 @@ const SpecificPlatoon = () => {
                 <br />
                 <Grid container spacing={2} columns={4}>
                 <Grid item xs={4} md={4}>
-                  <Box sx={{ textAlign: "left", ml: 5}}>
+                  <Box >
                     <Typography sx={{ fontWeight: "bold" }} variant="h5" component="h2">
                       Ranking
                     </Typography>

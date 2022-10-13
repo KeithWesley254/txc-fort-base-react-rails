@@ -40,7 +40,7 @@ const SignUpForm = ({ onLogin }) => {
    <>
       <Box sx={{'& .MuiTextField-root': { m: 1, width: '25ch' },}}>
         <div>
-          <p style={{fontWeight: "bolder", fontSize: 20}}>Sign Up</p>
+          <p style={{fontWeight: "bolder", fontSize: 30}}>Sign Up</p>
         </div>
         <form  onSubmit={handleSubmit}>
           <Box>
@@ -102,6 +102,7 @@ const SignUpForm = ({ onLogin }) => {
                   >
                     {isLoading ? "Loading..." : "Sign Up"}
                   </button>
+                  <br />
                 </FormControl>
                 <div>
                   {errors.map((err) => (

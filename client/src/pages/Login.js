@@ -20,7 +20,7 @@ const Login = ({ onLogin }) => {
   const myCards = loginSlides.map((slide) => {
     return (
       <Box key={slide.id}>
-        <Card sx={{ mr: 3, ml: 3, minWidth: 450, alignItems: "center", textAlign: "center", borderRadius: 5}}>
+        <Card sx={{ mr: 3, ml: 3, minWidth: 420, alignItems: "center", textAlign: "center", borderRadius: 5}}>
           <CardActionArea>
             <CardMedia 
             component="img"
@@ -63,9 +63,6 @@ const Login = ({ onLogin }) => {
                 <div className='loginForm'>
                   <LoginForm onLogin={onLogin} />
                 </div>
-                <br />
-                <br />
-                <br />
                 <div className='loginForm'>
                   <p>
                     Don't have an account? &nbsp;

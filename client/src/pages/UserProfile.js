@@ -239,6 +239,7 @@ const UserProfile = ({setUser}) => {
                   }}
                   noValidate
                   autoComplete="off"
+                  sx={{mr: 2, ml: 2}}
                   >
                     <FormControl sx={{ mb: 2, width: "70%" }}>
                       <InputLabel>Full Name</InputLabel>
@@ -265,7 +266,7 @@ const UserProfile = ({setUser}) => {
             <br />
             <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
-                <Box>
+                <Box sx={{mr: 2, ml: 2}}>
                 <FormControl sx={{ width: "100%" }}>
                   <InputLabel>Bio</InputLabel>
                   <OutlinedInput
@@ -300,7 +301,7 @@ const UserProfile = ({setUser}) => {
             <br />
             <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
-                <Box>
+                <Box sx={{mr: 2, ml: 2}}>
                   <FormControl sx={{ width: "100%" }}>
                     <InputLabel>Interests</InputLabel>
                     <OutlinedInput
@@ -313,7 +314,7 @@ const UserProfile = ({setUser}) => {
                 </Box>
               </Grid>
               <Grid item xs={6} md={6}>
-                <Box sx={{ textAlign: "center"}}>
+                <Box sx={{ textAlign: "center", mr: 2, ml: 2}}>
                   <FormControl sx={{ width: "100%" }}>
                     <InputLabel>Image Upload</InputLabel>
                     <OutlinedInput
@@ -329,7 +330,7 @@ const UserProfile = ({setUser}) => {
             <br />
             <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
-                <Box>
+                <Box sx={{mr: 2, ml: 2}}>
                   <FormControl sx={{ width: "100%" }}>
                     <InputLabel>Favourite Military Branch</InputLabel>
                     <OutlinedInput
@@ -355,7 +356,7 @@ const UserProfile = ({setUser}) => {
             <br />
             <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
-                <Box>
+                <Box sx={{mr: 2, ml: 2}}>
                 <FormControl>
                   <button style={{
                     fontSize: 14,

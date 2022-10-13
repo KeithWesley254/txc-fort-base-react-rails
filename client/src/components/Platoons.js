@@ -78,8 +78,8 @@ const Platoons = ({ platoons }) => {
         <br />
         <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, pr:4, justifyContent: "center", alignItems: "center", fontSize: 14 }}>
           <Grid item xs={12} md={12} >
-            <div className='heroScroll' style={{ position: "relative", width: "100%", overflowX: "auto",}}>
-              <Box sx={{ borderRadius: 20, display: "inline-flex", flexDirection: 'row'  }}>
+            <div className='heroScroll' style={{ position: "relative", width: "100%", overflowX: "auto" }}>
+              <Box sx={{ display: "inline-flex", flexDirection: 'row'  }}>
                 {myPlatoonsCards}
               </Box>
             </div>
