@@ -47,8 +47,8 @@ const Login = ({ onLogin }) => {
     <>
       <main>
         <Box >
-          <Grid container spacing={{ xs: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            <Grid item xs={4} sm={8} md={6}>
+          <Grid container spacing={2} columns={12}>
+            <Grid item xs={6} md={6}>
 
               <div className='logoLogin'>
                 <p style={{fontWeight: "bolder", fontSize: 14}}>
@@ -90,7 +90,7 @@ const Login = ({ onLogin }) => {
               )}
 
             </Grid>
-            <Grid item xs={4} sm={8} md={6}>
+            <Grid item xs={6} md={6}>
               <>
               <Box sx={{bgcolor: "#4e60ff", height: "100%", pt: 10, pb: 1}}>
                 <Carousel
