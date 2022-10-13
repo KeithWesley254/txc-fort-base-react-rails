@@ -20,7 +20,7 @@ const Login = ({ onLogin }) => {
   const myCards = loginSlides.map((slide) => {
     return (
       <Box key={slide.id}>
-        <Card sx={{ mr: 3, ml: 3, minWidth: 420, alignItems: "center", textAlign: "center", borderRadius: 5}}>
+        <Card sx={{ mr: 3, ml: 3, alignItems: "center", textAlign: "center", borderRadius: 5}}>
           <CardActionArea>
             <CardMedia 
             component="img"
@@ -48,7 +48,7 @@ const Login = ({ onLogin }) => {
       <main>
         <Box >
           <Grid container spacing={2} columns={12}>
-            <Grid item xs={6} md={6}>
+            <Grid item xs={12} md={6}>
 
               <div className='logoLogin'>
                 <p style={{fontWeight: "bolder", fontSize: 14}}>
@@ -90,9 +90,9 @@ const Login = ({ onLogin }) => {
               )}
 
             </Grid>
-            <Grid item xs={6} md={6}>
+            <Grid item xs={12} md={6}>
               <>
-              <Box sx={{bgcolor: "#4e60ff", height: "100%", pt: 10, pb: 1}}>
+              <Box sx={{bgcolor: "#4e60ff", height: "100vh", pt: 10 }}>
                 <Carousel
                         autoPlay={true}
                         interval={6000}

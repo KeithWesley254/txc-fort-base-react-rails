@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Grid, Box, CardMedia, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput, CircularProgress} from '@mui/material';
+import {Grid, Box, CardMedia, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput, CircularProgress } from '@mui/material';
 import Card from '@mui/material/Card';
 import PropTypes from 'prop-types';
 
@@ -356,16 +356,15 @@ const UserProfile = ({setUser}) => {
             <br />
             <Grid container spacing={2}>
               <Grid item xs={6} md={6}>
-                <Box sx={{mr: 2, ml: 2}}>
+                <Box sx={{mr: 2, ml: 2, textAlign: "center"}}>
                 <FormControl>
                   <button style={{
                     fontSize: 14,
+                    width: 100,
                     backgroundColor: "#4e60ff",
-                    width: 200,
                     height: 40,
                     color: "#fff",
                     borderRadius: 10,
-                    cursor: "pointer",
                     border: "none"
                   }}
                   onClick={() => {
@@ -379,17 +378,16 @@ const UserProfile = ({setUser}) => {
                 </Box>
               </Grid>
               <Grid item xs={6} md={6}>
-                <Box sx={{ textAlign: "center"}}>
+                <Box sx={{ mr: 2, ml: 2, textAlign: "center"}}>
                   <FormControl>
                     <button style={{
                       fontSize: 14,
                       backgroundColor: "#ff0101",
-                      width: 180,
                       height: 40,
-                      color: "#fff",
+                      width: 100,
+                      border: "none",
                       borderRadius: 10,
-                      cursor: "pointer",
-                      border: "none"
+                      color: "#fff",
                     }}
                     onClick={() => {
                       handleLogoutClick()

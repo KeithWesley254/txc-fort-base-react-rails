@@ -271,7 +271,7 @@ const Stories = ({user}) => {
                 </div>
                 <br />
               </Grid>
-              <div className='heroScroll' style={{ overflowY: "auto", maxHeight: 1200}}>
+              <div className='heroScroll' style={{ overflowY: "auto", maxHeight: 1500}}>
                 {allUserComments}
               </div>
             </Grid>

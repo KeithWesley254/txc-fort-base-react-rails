@@ -37,13 +37,13 @@ const Technologies = () => {
       <Box>
         <Grid container spacing={2} columns={12}>
           <Grid item xs={12} md={12}>
-            <div style={{paddingLeft: 100, fontSize: 60, fontFamily: "nunito", fontWeight: "bolder"}}>
+            <Box sx={{ mr: 4, ml: 4, fontSize: 60, fontFamily: "nunito", fontWeight: "bolder" }}>
               <p>
                 TXC Technologies
                 <br />
                 And Researches
               </p>
-            </div>
+            </Box>
           </Grid>
         </Grid>
         <br />

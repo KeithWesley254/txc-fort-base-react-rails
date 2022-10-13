@@ -93,7 +93,7 @@ const LoginForm = ({ onLogin }) => {
             <div>
               {errors.map((err) => (
               <>
-                <Alert severity="error" sx={{ width: '100%' }}>
+                <Alert key={err} severity="error" sx={{ width: '100%' }}>
                   {err}
                 </Alert>
               </>
