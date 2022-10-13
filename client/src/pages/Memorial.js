@@ -124,9 +124,9 @@ const Memorial = () => {
         <br />
         <Grid container spacing={2} columns={12}>
           <Grid item xs={12} md={12}>
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <Box sx={{ justifyContent: "center" }}>
               <div style={{ position: "relative", width: "100%"}}>
-                <Box sx={{ mr: 2, ml: 2, borderRadius: 20, display: "grid", gap: 2, justifyContent: "center", flexWrap: "wrap", display: "inline-flex", flexDirection: 'row'  }}>
+                <Box sx={{ mr: 2, ml: 2, borderRadius: 20, gap: 2, justifyContent: "center", flexWrap: "wrap", display: "inline-flex", flexDirection: 'row'  }}>
                   {my_cards}
                 </Box>
               </div>

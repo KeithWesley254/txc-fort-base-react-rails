@@ -82,7 +82,7 @@ const LoginForm = ({ onLogin }) => {
               }}
               type="submit"
               >
-                Login
+                {isLoading ? "Loading..." : "Login"}
               </button>
               <br />
             </FormControl>  

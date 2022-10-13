@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Box, FormControl, FormHelperText, TextField, Snackbar, Alert } from '@mui/material';
+import { Grid, Box, FormControl, FormHelperText, TextField, Alert } from '@mui/material';
 
 const SignUpForm = ({ onLogin }) => {
 

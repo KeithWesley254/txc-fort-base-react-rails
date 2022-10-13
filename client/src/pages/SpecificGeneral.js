@@ -73,7 +73,7 @@ const SpecificGeneral = () => {
               </Typography>
             </Box>
             <br />
-            <Box className='heroScroll' sx={{ mr: 2, ml: 2, borderRadius: 20, display: "grid", maxHeight: 800, gap: 2, justifyContent: "center", flexWrap: "wrap", display: "inline-flex", flexDirection: 'row', overflowY: "auto"  }}>
+            <Box className='heroScroll' sx={{ mr: 2, ml: 2, borderRadius: 20, maxHeight: 800, gap: 2, justifyContent: "center", flexWrap: "wrap", display: "inline-flex", flexDirection: 'row', overflowY: "auto"  }}>
                 {loopSoldiers}
             </Box>
           </Grid>

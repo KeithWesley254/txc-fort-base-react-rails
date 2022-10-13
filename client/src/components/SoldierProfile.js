@@ -1,5 +1,5 @@
-import { Box, Card, CardMedia, Grid, Typography, InputLabel, OutlinedInput, FormControl, LinearProgress } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import { Box, Card, CardMedia, Grid, Typography, InputLabel, OutlinedInput, FormControl } from '@mui/material'
+import React, { useState } from 'react'
 
 const SoldierProfile = ({ oneSoldier }) => {
   const [soldier_id, setFullName] = useState(oneSoldier.id);

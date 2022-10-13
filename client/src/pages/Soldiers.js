@@ -1,6 +1,6 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Pagination, TextField, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Soldiers = () => {
   const [searchGeneral, setSearchGenerals] = useState("");
@@ -33,8 +33,6 @@ const Soldiers = () => {
     .then(r => r.json())
     .then(data => setAllSoldiers(data))
   }, [])
-
-  const navigate = useNavigate();
 
   const myGeneralsCards =  
   handleSearchGenerals()
@@ -129,10 +127,10 @@ const Soldiers = () => {
           </Grid>
         </Grid>
         <br />
-        <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, pr:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
+        <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, pr:4, justifyContent: "center", alignItems: "center", fontSize: 14 }}>
           <Grid item xs={12} md={12} >
             <div className='heroScroll' style={{ position: "relative", width: "100%", overflowX: "auto",}}>
-              <Box sx={{ borderRadius: 20, display: "flex", display: "inline-flex", flexDirection: 'row'  }}>
+              <Box sx={{ borderRadius: 20, display: "inline-flex", flexDirection: 'row'  }}>
                 {myGeneralsCards}
               </Box>
             </div>
@@ -181,10 +179,10 @@ const Soldiers = () => {
             </Grid>
           </Grid>
           <br />
-          <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, pr:4, display: "flex", justifyContent: "center", alignItems: "center", fontSize: 14 }}>
+          <Grid container spacing={2} columns={12} sx={{textAlign: "center", pl:4, pr:4, justifyContent: "center", alignItems: "center", fontSize: 14 }}>
             <Grid item xs={12} md={12} >
               <div className='heroScroll' style={{ position: "relative", width: "100%", overflowX: "auto",}}>
-                <Box sx={{ borderRadius: 20, display: "flex", display: "inline-flex", flexDirection: 'row'  }}>
+                <Box sx={{ borderRadius: 20, display: "inline-flex", flexDirection: 'row'  }}>
                   {mySoldiersCards}
                 </Box>
               </div>
