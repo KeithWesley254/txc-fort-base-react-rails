@@ -139,13 +139,13 @@ const Stories = ({user}) => {
       <Box>
         <Grid container spacing={2} columns={12}>
           <Grid item xs={12} md={12}>
-              <div style={{paddingLeft: 100, fontSize: 60, fontFamily: "nunito", fontWeight: "bolder"}}>
-                <p>
-                  TXC Activities
-                  <br />
-                  And Fan Messages
-                </p>
-              </div>
+            <Box sx={{ mr: 4, ml: 4, fontSize: 60, fontFamily: "nunito", fontWeight: "bolder" }}>
+              <p>
+                TXC Activities
+                <br />
+                And Fan Messages
+              </p>
+            </Box>
           </Grid>
         </Grid>
         <Grid container spacing={2} columns={12}>
