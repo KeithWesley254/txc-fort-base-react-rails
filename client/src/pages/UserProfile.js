@@ -236,10 +236,10 @@ const UserProfile = ({setUser}) => {
                   component="form"
                   sx={{
                     '& .MuiTextField-root': { width: '25ch' },
+                    mr: 2, ml: 2
                   }}
                   noValidate
                   autoComplete="off"
-                  sx={{mr: 2, ml: 2}}
                   >
                     <FormControl sx={{ mb: 2, width: "70%" }}>
                       <InputLabel>Full Name</InputLabel>
