@@ -18,7 +18,7 @@ const Technologies = () => {
   const my_cards = techStories.map((story) => {
     return(
       <Box key={story.id} sx={{display: "inline-flex", justifyContent: "center"}}>
-        <Card sx={{ width: 200, height: 150 }}>
+        <Card sx={{ width: 200, height: 150, mr: 1, ml: 1, display: "inline-flex", justifyContent: "center" }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -28,8 +28,6 @@ const Technologies = () => {
             />
           </CardActionArea>
         </Card>
-        &nbsp;
-        &nbsp;
       </Box>
     )
     })  
@@ -56,6 +54,7 @@ const Technologies = () => {
                 {my_cards}
               </Box>
             </div>
+            <br />
           </Grid>
         </Grid>
         <br />

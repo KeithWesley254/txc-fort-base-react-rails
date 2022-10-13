@@ -32,7 +32,7 @@ const Hero = () => {
 
   const my_cards = techStories.map((story) => {
     return(
-      <Box key={story.id}>
+      <Box key={story.id} sx={{mr: 1, ml: 1}}>
         <Card sx={{ width: 200, height: 150, display: "inline-flex", justifyContent: "center" }}>
           <CardActionArea>
             <CardMedia
@@ -46,8 +46,6 @@ const Hero = () => {
             />
           </CardActionArea>
         </Card>
-        &nbsp;
-        &nbsp;
       </Box>
     )
   }) 
