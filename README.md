@@ -15,6 +15,7 @@ Come and Connect
 ● The military would benefit from a fanbase as it will raise troop morale, they will have a place where their comrades will be commemorated and have the general population want to join the army which will be of great use to their recruitment process.
 <br>
 ● In the case of a user, a user can do the following:
+    <br>
     ○ Create a profile
     <br>
     ○ Leave a comment
