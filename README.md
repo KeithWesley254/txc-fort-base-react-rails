@@ -33,20 +33,11 @@ Come and Connect
 
 # Setup Instructions:
 
-Here is a complete list of public endpoints:
+The application requires a user to sign up to access the full website. Features have been explained and some made intuitive for the user.
+<br>
+<br>
+Report any bugs so that they may be fixed in the next versions.
 
-    resources :login_page_slides, only: [:index, :show]
-    resources :about_us, only: [:index, :show]
-    resources :military_specializations, only: [:index, :show]
-    resources :major_generals, only: [:index, :show]
-    resources :platoons, only: [:index, :show]
-    resources :memorials, only: [:index, :show]
-    resources :technologies, only: [:index, :show]
-    resources :trainings, only: [:index, :show]
-    resources :soldiers, only: [:index, :show]
-    resources :soldier_profiles, only: [:show]
-    resources :soldier_trainings, only: [:create]
-    resources :community_impacts, only: [:index, :show]
 # Deployment Link:
 
 https://txc-fortbase.herokuapp.com/
