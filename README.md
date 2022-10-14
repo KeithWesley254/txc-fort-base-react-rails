@@ -11,15 +11,24 @@ Come and Connect
 
 # User Story:
 ● As Keith Wesley, I want users to connect to their heroes on the battlefield and send motivational messages to them. I want to bridge the gap between soldiers and the population and make joining the military a more enticing choice of a career to those who may not see it that way.
+<br>
 ● The military would benefit from a fanbase as it will raise troop morale, they will have a place where their comrades will be commemorated and have the general population want to join the army which will be of great use to their recruitment process.
-    ● In the case of a user, a user can do the following:
+<br>
+● In the case of a user, a user can do the following:
     ○ Create a profile
+    <br>
     ○ Leave a comment
+    <br>
     ○ Update their profile
+    <br>
     ○ Delete their profile
+    <br>
     ○ Login and logout
+    <br>
     ○ View technology and stories
+    <br>
     ○ View Soldiers and generals
+    <br>
     ○ Any other information that may be added in the future for users
 
 
