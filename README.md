@@ -16,8 +16,6 @@ Come and Connect
 <br>
 ● In the case of a user, a user can do the following:
     <br>
-    ○ Create a profile
-    <br>
     ○ Leave a comment
     <br>
     ○ Update their profile
