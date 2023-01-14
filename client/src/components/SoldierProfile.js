@@ -2,7 +2,7 @@ import { Box, Card, CardMedia, Grid, Typography, InputLabel, OutlinedInput, Form
 import React, { useState } from 'react'
 
 const SoldierProfile = ({ oneSoldier }) => {
-  const [soldier_id, setSoldierId] = useState(oneSoldier.id);
+  const soldier_id = oneSoldier.id;
   const [message, setFanMessage] = useState('');
 
   const loopPlatoon = oneSoldier?.soldier_profile.platoon.map((platoon) => {

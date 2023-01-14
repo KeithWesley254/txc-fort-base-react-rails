@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Grid, Box, CardMedia, FormControl, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput, LinearProgress } from '@mui/material';
+import {Grid, Box, CardMedia, FormControl, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput } from '@mui/material';
 import Card from '@mui/material/Card';
 import { UserState } from '../UserContext';
 import { useNavigate } from 'react-router-dom';
