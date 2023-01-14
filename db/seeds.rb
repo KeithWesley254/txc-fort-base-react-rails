@@ -42,7 +42,7 @@ army_careers.map do |career|
     )
 end
 
-50.times do
+10.times do
     MajorGeneral.create!(
         name: Faker::Name.unique.name,
         image_url: Faker::Avatar.image,
@@ -54,16 +54,16 @@ end
     )
 end
 
-100.times do
+20.times do
     Platoon.create!(
         name: Faker::Book.title + Faker::Ancient.god,
         sphere_assigned: ["lithosphere", "hydrosphere", "atmosphere"].sample,
         skill_lvl: ["Bronze", "Silver", "Masters", "GrandMasters", "Epics", "Legends", "Mythics", "Mythical Glories"].sample,
-        ranking: rand(1..300)
+        ranking: rand(1..20)
     )
 end
 
-200.times do
+50.times do
     Memorial.create!(
         name: Faker::Name.unique.name,
         title: [Faker::Military.army_rank, Faker::Military.marines_rank, Faker::Military.navy_rank, Faker::Military.air_force_rank, Faker::Military.space_force_rank, Faker::Military.coast_guard_rank].sample,
@@ -73,7 +73,7 @@ end
     )
 end
 
-50.times do
+10.times do
     Technology.create!(
         title: Faker::Lorem.sentence,
         author: Faker::Name.unique.name,
@@ -103,15 +103,15 @@ end
     )
 end
 
-1000.times do
+50.times do
     soldier = Soldier.create!(
         name: Faker::Name.unique.name,
         image_url: Faker::Avatar.image,
         age: rand(18..60),
         gender: ["Male", "Female"].sample,
         military_specialization_id: rand(1..35),
-        platoon_id: rand(1..100),
-        major_general_id: rand(1..50)
+        platoon_id: rand(1..20),
+        major_general_id: rand(1..10)
     )
     SoldierProfile.create!(
         name: soldier.name,

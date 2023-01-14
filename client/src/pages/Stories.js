@@ -6,6 +6,8 @@ const Stories = ({user}) => {
   const [full_name, setFullName] = useState(user.one_user_profile.full_name);
   const [image_upload, setImageUpload] = useState(user.one_user_profile.image_upload);
   const [user_comment, setUserComment] = useState('');
+  const [showMore, setShowMore] = useState(false);
+  const [showMore1, setShowMore1] = useState(false);
   const [comments, setComments] = useState([]);
   const [randomIndex, setRandomIndex] = useState();
   const [randomIndex2, setRandomIndex2] = useState();
@@ -182,8 +184,14 @@ const Stories = ({user}) => {
                 <Grid item xs={6} md={3}>
                   <Box sx={{mr: 4, ml: 4}}>
                     <Typography>
-                      {technologies[randomIndex]?.description}
+                      {showMore ? technologies[randomIndex]?.description : technologies[randomIndex]?.description.substring(0, 350)}
                     </Typography>
+                    <Button
+                    variant='contained'
+                    onClick = {() => setShowMore(!showMore)}
+                    >
+                      {showMore ? 'Show less' : 'Show More'}
+                    </Button>
                   </Box>
                 </Grid>
               </Grid>
@@ -210,8 +218,14 @@ const Stories = ({user}) => {
                 <Grid item xs={6} md={3}>
                   <Box sx={{mr: 4, ml: 4}}>
                     <Typography>
-                      {technologies2[randomIndex2]?.description}
+                      {showMore1 ? technologies2[randomIndex2]?.description : technologies2[randomIndex2]?.description.substring(0, 350)}
                     </Typography>
+                    <Button 
+                    variant='contained'
+                    onClick = {() => setShowMore1(!showMore1)}
+                    >
+                      {showMore1 ? 'Show less' : 'Show More'}
+                    </Button>
                   </Box>
                 </Grid>
               </Grid>
