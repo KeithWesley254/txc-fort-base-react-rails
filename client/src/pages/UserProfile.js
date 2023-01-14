@@ -1,42 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import {Grid, Box, CardMedia, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput, CircularProgress } from '@mui/material';
+import React, { useState } from 'react';
+import {Grid, Box, CardMedia, FormControl, RadioGroup, FormControlLabel, Radio, Typography, InputLabel, OutlinedInput, LinearProgress } from '@mui/material';
 import Card from '@mui/material/Card';
-import PropTypes from 'prop-types';
+import { UserState } from '../UserContext';
+import { useNavigate } from 'react-router-dom';
 
-const UserProfile = ({setUser}) => {
+const UserProfile = () => {
+  const { user, userProfile, setUserProfile, logOut } = UserState();
+
   const [formData, setFormData] = useState({
-    full_name: '',
-    gender: '',
-    age: '',
-    bio: '',
-    interests: '',
-    image_upload: '',
-    favourite_military_branch: ''
+    full_name: userProfile?.full_name,
+    gender: userProfile?.gender,
+    age: userProfile?.age,
+    bio: userProfile?.bio,
+    interests: userProfile?.interests,
+    image_upload: userProfile?.image_upload,
+    favourite_military_branch: userProfile?.favourite_military_branch
   });
-  const [user, setTheUser] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const [progress, setProgress] = useState(10);
 
-  useEffect(() => {
-    fetch(`/api/me`)
-    .then(r => {
-      if (r.ok) {
-        r.json().then((data) => {
-          setTheUser(data)
-          setIsLoading(false)
-        });
-      }
-    });
-  }, [])
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
-    }, 800);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  const navigate = useNavigate();
 
   function handleUpdateUser() {
     fetch(`/api/one_user_profiles/${user.id}`, {
@@ -53,15 +34,18 @@ const UserProfile = ({setUser}) => {
       image_upload: formData.image_upload,
       favourite_military_branch: formData.favourite_military_branch
     }),
-  })
+  }).then((res) => {
+    if (res.ok) {
+      res.json().then((data) => {
+        setUserProfile(data.one_user_profile)
+        navigate('/homepage')
+        window.location.reload();
+      });
+    }})
   }
 
   function handleLogoutClick() {
-    fetch("/api/logout", { method: "DELETE" }).then((r) => {
-      if (r.ok) {
-        setUser(null);
-      }
-    });
+    logOut();
   }
 
   function deleteProfile(id){
@@ -75,40 +59,8 @@ const UserProfile = ({setUser}) => {
         ...formData, [e.target.name]: e.target.value,
     });
   }
-  function CircularProgressWithLabel(props) {
-    return (
-      <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-        <CircularProgress variant="determinate" {...props} />
-        <Box
-          sx={{
-            top: 0,
-            left: 0,
-            bottom: 0,
-            right: 0,
-            position: 'absolute',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography variant="caption" component="div" color="text.secondary">
-            {`${Math.round(props.value)}%`}
-          </Typography>
-        </Box>
-      </Box>
-    );
-  }
 
-  CircularProgressWithLabel.propTypes = {
-    /**
-     * The value of the progress indicator for the determinate variant.
-     * Value between 0 and 100.
-     * @default 0
-     */
-    value: PropTypes.number.isRequired,
-  };
-  
-  if(isLoading === true) return <CircularProgressWithLabel value={progress} />;
+  const radios = ["male", "female", "other"]
 
   return (
     <>
@@ -126,8 +78,8 @@ const UserProfile = ({setUser}) => {
                       <CardMedia
                         component="img"
                         height="230"
-                        image={user?.one_user_profile.image_upload}
-                        alt={user?.one_user_profile.full_name}
+                        image={userProfile?.image_upload}
+                        alt={userProfile?.full_name}
                         sx={{width: "auto"}}
                       />
                   </Card>
@@ -139,7 +91,7 @@ const UserProfile = ({setUser}) => {
                     Full Name
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {user?.one_user_profile.full_name}
+                    {userProfile?.full_name}
                   </Typography>
                 </Box>
                 <br />
@@ -148,7 +100,7 @@ const UserProfile = ({setUser}) => {
                     Email Address
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {user?.one_user_profile.email}
+                    {userProfile?.email}
                   </Typography>
                 </Box>
                <br />
@@ -157,7 +109,7 @@ const UserProfile = ({setUser}) => {
                     Gender
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {user?.one_user_profile.gender}
+                    {userProfile?.gender}
                   </Typography>
                 </Box> 
                 <br />
@@ -166,7 +118,7 @@ const UserProfile = ({setUser}) => {
                     Age
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {user?.one_user_profile.age}
+                    {userProfile?.age}
                   </Typography>
                 </Box>                             
               </Grid>
@@ -179,7 +131,7 @@ const UserProfile = ({setUser}) => {
                       Bio
                     </Typography>
                     <Typography variant="body2" component="h2">
-                      {user?.one_user_profile.bio}
+                      {userProfile?.bio}
                   </Typography>
                 </Box>
               </Grid>
@@ -193,7 +145,7 @@ const UserProfile = ({setUser}) => {
                     Favourite Military Branch
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {user?.one_user_profile.favourite_military_branch}
+                    {userProfile?.favourite_military_branch}
                   </Typography>
                 </Box>         
               </Grid>
@@ -203,7 +155,7 @@ const UserProfile = ({setUser}) => {
                     Interests
                   </Typography>
                   <Typography variant="body2" component="h2">
-                    {user?.one_user_profile.interests}
+                    {userProfile?.interests}
                   </Typography>
                 </Box>      
               </Grid>
@@ -214,6 +166,9 @@ const UserProfile = ({setUser}) => {
           {/* POSTING SECTION */}
 
           <Grid item xs={12} md={6} >
+            <br />
+            <Box sx={{border: '1px solid black', mx: 2}}>
+              <br />
             <Box sx={{ textAlign: "center"}}>
               <Grid container spacing={2} columns={6}>
                 <Grid item xs={6} md={3}>
@@ -223,8 +178,8 @@ const UserProfile = ({setUser}) => {
                     <CardMedia
                       component="img"
                       height="230"
-                      image={user?.one_user_profile.image_upload}
-                      alt={user?.one_user_profile.full_name}
+                      image={userProfile?.image_upload}
+                      alt={userProfile?.full_name}
                       sx={{width: "auto"}}
                     />
                   </Card>
@@ -282,19 +237,25 @@ const UserProfile = ({setUser}) => {
               </Grid>
               <Grid item xs={6} md={6}>
                 <Box sx={{ textAlign: "center"}}>
-                  <FormControl>
-                    <FormLabel>Gender</FormLabel>
+
+                <FormControl fullWidth sx={{ mb: 1}}>
                     <RadioGroup
-                      defaultValue="male"
                       name="gender"
                       value={formData.gender}
-                      onChange={handleChange}
+                      onChange={(e) => { 
+                        setFormData({...formData, gender: e.target.value})
+                      }}
+                    size="small"
                     >
-                      <FormControlLabel value="male" control={<Radio />} label="Male" />
-                      <FormControlLabel value="female" control={<Radio />} label="Female" />
-                      <FormControlLabel value="other" control={<Radio />} label="Other" />
+                      {radios.map((radio) => {
+                        return (
+                          <FormControlLabel key={radio} value={radio} control={<Radio />} label={(radio).charAt(0).toUpperCase() + radio.slice(1)} />
+                        )
+                      })}
+                      
                     </RadioGroup>
                   </FormControl>
+
                 </Box>        
               </Grid>
             </Grid>
@@ -368,8 +329,7 @@ const UserProfile = ({setUser}) => {
                     border: "none"
                   }}
                   onClick={() => {
-                    handleUpdateUser()
-                    window.location.reload();
+                    handleUpdateUser();
                   }}
                   >
                     UPDATE
@@ -400,6 +360,8 @@ const UserProfile = ({setUser}) => {
                 </Box>        
               </Grid>
             </Grid>
+            <br />
+            </Box>
           </Grid>
         </Grid>
         <br />
@@ -408,4 +370,4 @@ const UserProfile = ({setUser}) => {
   )
 }
 
-export default UserProfile
+export default UserProfile;

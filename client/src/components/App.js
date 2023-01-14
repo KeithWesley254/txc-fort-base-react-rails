@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import '../App.css';
 import Login from '../pages/Login';
@@ -14,34 +14,25 @@ import Footer from './Footer';
 import SpecificSoldier from '../pages/SpecificSoldier';
 import SpecificGeneral from '../pages/SpecificGeneral';
 import SpecificPlatoon from '../pages/SpecificPlatoon';
+import { UserState } from '../UserContext';
 
 
 function App() {
 
-  const [user, setUser] = useState(null);
-  
-  useEffect(() => {
-    fetch("/api/me").then((r) => {
-      if (r.ok) {
-        r.json().then((user) => {
-          setUser(user)
-        });
-      }
-    });
-  }, []);
+  const {user} = UserState();
 
-  if (!user) return <Login onLogin={setUser} />
+  if (user === null) return <Login />
 
   return (
     <>
       <div className="overallTop">
-        <Header setUser={setUser} />
+        <Header />
         <main>
           <Routes>
             <Route exact='true' path='/homepage' element={<Hero />}/>
-            <Route path='/user-profiles/:id' element={<UserProfile setUser={setUser}/>}/>
+            <Route path='/user-profiles/:id' element={<UserProfile />}/>
             <Route path='/soldiers' element={<Soldiers />}/>
-            <Route path='/stories' element={<Stories user={user}/>}/>
+            <Route path='/stories' element={<Stories />}/>
             <Route path='/technologies' element={<Technologies />}/>
             <Route path='/memorial' element={<Memorial />}/>
             <Route path='/about-us' element={<AboutUs />}/> 

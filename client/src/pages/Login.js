@@ -4,7 +4,7 @@ import LoginForm from '../components/LoginForm';
 import SignUpForm from '../components/SignUpForm';
 import Carousel from "react-material-ui-carousel";
 
-const Login = ({ onLogin }) => {
+const Login = () => {
 
   const [showLogin, setShowLogin] = useState(true);
   const [loginSlides, setLoginSlides] = useState([]);
@@ -61,7 +61,7 @@ const Login = ({ onLogin }) => {
               {showLogin ? (
                 <>
                 <div className='loginForm'>
-                  <LoginForm onLogin={onLogin} />
+                  <LoginForm />
                 </div>
                 <div className='loginForm'>
                   <p>
@@ -75,7 +75,7 @@ const Login = ({ onLogin }) => {
               ): (
                 <>
                 <div className='loginForm'>
-                  <SignUpForm onLogin={onLogin} />
+                  <SignUpForm />
                 </div>
                
                 <div className='loginForm'>
@@ -92,7 +92,7 @@ const Login = ({ onLogin }) => {
             </Grid>
             <Grid item xs={12} md={6}>
               <>
-              <Box sx={{bgcolor: "#4e60ff", height: "100vh", pt: 10 }}>
+              <Box sx={{bgcolor: "#4e60ff", display: {xs: 'none', md: 'block'}, height: "100vh", pt: 10 }}>
                 <Carousel
                         autoPlay={true}
                         interval={6000}

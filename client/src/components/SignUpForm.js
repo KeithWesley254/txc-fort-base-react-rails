@@ -1,42 +1,16 @@
 import React, { useState } from 'react';
 import { Grid, Box, FormControl, FormHelperText, TextField, Alert } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { UserState } from '../UserContext';
 
-const SignUpForm = ({ onLogin }) => {
+const SignUpForm = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const [errors, setErrors] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  
-  const navigate = useNavigate();
+  const { handleSubmitSignUp, errors } = UserState();
 
   function handleSubmit(e) {
-    e.preventDefault();
-    setErrors([]);
-    setIsLoading(true);
-    fetch("/api/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-        password_confirmation: passwordConfirmation,
-      }),
-    }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        r.json().then((user) => {
-          onLogin(user)
-          navigate('/homepage')
-        });
-      } else {
-        r.json().then((err) => setErrors(err.errors));
-      }
-    });
+    handleSubmitSignUp(e, email, password, passwordConfirmation)
   }
 
   return (
@@ -103,17 +77,15 @@ const SignUpForm = ({ onLogin }) => {
                   }}
                   type='submit'
                   >
-                    {isLoading ? "Loading..." : "Sign Up"}
+                    Sign Up
                   </button>
                   <br />
                 </FormControl>
                 <div>
                   {errors.map((err) => (
-                  <>
-                      <Alert severity="error" sx={{ width: '100%' }}>
+                      <Alert key={err} severity="error" sx={{ width: '100%' }}>
                         {err}
                       </Alert>
-                  </>
                   ))}
                 </div>
               </div>

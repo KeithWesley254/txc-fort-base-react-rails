@@ -1,10 +1,12 @@
 import { Box, Card, CardMedia, Grid, Typography, CardActionArea, FormControl, InputLabel, OutlinedInput, Avatar, Button } from '@mui/material'
 import React, {useState, useEffect} from 'react'
+import { UserState } from '../UserContext';
 
-const Stories = ({user}) => {
-  const [user_id, setUserId] = useState(user.id);
-  const [full_name, setFullName] = useState(user.one_user_profile.full_name);
-  const [image_upload, setImageUpload] = useState(user.one_user_profile.image_upload);
+const Stories = () => {
+  const { user, userProfile } = UserState();
+  const user_id = user.id;
+  const full_name = userProfile?.full_name;
+  const image_upload = userProfile?.image_upload;
   const [user_comment, setUserComment] = useState('');
   const [showMore, setShowMore] = useState(false);
   const [showMore1, setShowMore1] = useState(false);

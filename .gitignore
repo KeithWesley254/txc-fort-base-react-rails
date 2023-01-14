@@ -1,0 +1,20 @@
+/.bundle
+
+.env
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+.byebug_history
+/db/schema.rb
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+/config/master.key

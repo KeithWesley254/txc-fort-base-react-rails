@@ -1,27 +1,15 @@
 import * as React from 'react';
-import {AppBar, Box, Toolbar, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem, LinearProgress } from '@mui/material';
+import {AppBar, Box, Toolbar, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import { useNavigate } from 'react-router-dom';
+import { UserState } from '../UserContext';
 
-const Header = ({setUser}) => {
+const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [user, setTheUser] = React.useState({});
-
-  React.useEffect(() => {
-    fetch(`/api/me`)
-    .then(r => {
-      if (r.ok) {
-        r.json().then((data) => {
-          setTheUser(data)
-          setIsLoading(false)
-        });
-      }
-    });
-  }, [])
+  const { user, userProfile, logOut } = UserState();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -39,16 +27,10 @@ const Header = ({setUser}) => {
   };
 
   function handleLogoutClick() {
-    fetch("/api/logout", { method: "DELETE" }).then((r) => {
-      if (r.ok) {
-        setUser(null);
-      }
-    });
+    logOut();
   }
   const navigate = useNavigate();
 
-  if(isLoading === true) return <LinearProgress style={{backgroundColor: "#4e60ff"}} />
-  
   return (
     <AppBar position="static" sx={{ bgcolor: "#fff"}}>
       <Container maxWidth="xl">
@@ -211,7 +193,7 @@ const Header = ({setUser}) => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, mr: {md: 15}}}>
-                <Avatar alt={user?.one_user_profile.full_name} src={user?.one_user_profile.image_upload} />
+                <Avatar alt={userProfile?.full_name} src={userProfile?.image_upload} />
               </IconButton>
             </Tooltip>
             <Menu

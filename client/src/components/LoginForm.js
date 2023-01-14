@@ -1,35 +1,14 @@
 import { Alert, Box, FormControl, FormHelperText, TextField } from '@mui/material';
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { UserState } from '../UserContext';
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const navigate = useNavigate();
+  const { handleSubmitLogin, errors } = UserState();
 
   function handleSubmit(e) {
-    e.preventDefault();
-    setIsLoading(true);
-    fetch("/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        r.json().then((user) => {
-          onLogin(user)
-          navigate('/homepage')
-        });
-      } else {
-        r.json().then((err) => setErrors(err.errors));
-      }
-    });
+    handleSubmitLogin( e, email, password )
   }
 
   return (
@@ -86,17 +65,15 @@ const LoginForm = ({ onLogin }) => {
               }}
               type="submit"
               >
-                {isLoading ? "Loading..." : "Login"}
+                Login
               </button>
               <br />
             </FormControl>  
             <div>
               {errors.map((err) => (
-              <>
                 <Alert key={err} severity="error" sx={{ width: '100%' }}>
                   {err}
                 </Alert>
-              </>
               ))}
             </div>       
           </div>
