@@ -48,7 +48,7 @@ end
         image_url: Faker::Avatar.image,
         bio: Faker::Lorem.paragraphs,
         gender: ["Male", "Female"].sample,
-        interests: hobbies.sample + hobbies.sample + hobbies.sample,
+        interests: hobbies.sample + ', ' + hobbies.sample + ', ' + hobbies.sample,
         favourite_foot: ["Left", "Right"].sample,
         age: rand(35..50)
     )
@@ -118,7 +118,7 @@ end
         platoon_id: soldier.platoon_id,
         gender: soldier.gender,
         bio: Faker::Lorem.paragraphs * 3,
-        interests: hobbies.sample + hobbies.sample + hobbies.sample + hobbies.sample,
+        interests: hobbies.sample + ', ' + hobbies.sample + ', ' + hobbies.sample + ', ' + hobbies.sample,
         image_url: soldier.image_url,
         image_url_2: personal_images.sample,
         image_url_3: personal_images.sample,

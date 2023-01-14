@@ -13,25 +13,26 @@ module ImagesModule
 
     def images_mods
         [
-            "https://p4.wallpaperbetter.com/wallpaper/669/914/562/mobile-legends-mobile-legend-mlbb-hd-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/727/771/831/mobile-legends-mobile-legend-mlbb-hd-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/239/625/228/mobile-legends-gatotkaca-mighty-legend-hd-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/260/244/13/mobile-legends-lunox-cosmic-harmony-hd-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/442/515/764/mobile-legends-moskov-twilight-dragon-hd-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/426/904/972/mobile-legends-freya-war-angel-hd-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/696/593/247/mobile-legends-ruby-edelweiss-hd-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/117/661/166/mobile-legends-kimmy-bio-frontier-hd-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/788/1011/710/war-and-army-handgun-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/435/677/97/cs-go-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/631/1019/698/anime-anime-girls-girls-with-guns-stockings-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/114/470/346/russian-army-fighter-helicopter-russian-air-force-mi-24-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/166/320/10/300-spartans-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/476/548/972/battlefield-1-battlefield-british-army-uniform-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/160/677/79/army-enemy-front-german-mg42-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/541/319/709/military-flares-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/476/556/968/army-f-35-lightning-ii-airplane-military-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/208/726/461/ss-27-sickle-b-topol-m-russian-army-military-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/334/302/537/u-s-army-mountain-m777-artillery-wallpaper-preview.jpg"
+            'https://p4.wallpaperbetter.com/wallpaper/228/211/830/sukhoi-su-27-military-military-aircraft-afterburner-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/318/136/933/aircraft-carrier-warship-vehicle-aircraft-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/630/55/609/military-the-punisher-navy-seals-tactical-1920x1200-aircraft-military-hd-art-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/727/892/1019/artwork-military-aircraft-military-aircraft-su-57-hd-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/321/315/633/aircraft-vehicle-military-military-aircraft-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/759/825/289/jets-lockheed-martin-f-22-raptor-aircraft-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/713/923/611/war-tank-call-of-duty-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/469/48/19/military-special-forces-navy-seals-aircraft-military-hd-art-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/188/661/251/ah-64-apache-fire-birds-military-aircraft-helicopters-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/464/633/266/weapons-rifles-assault-machine-mech-military-free-background-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/689/733/243/military-sci-fi-tank-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/623/215/720/helicopters-nhindustries-nh90-aircraft-military-aircraft-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/568/535/598/ammo-desert-eagle-gun-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/484/327/586/military-soldier-futuristic-sci-fi-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/553/470/327/futuristic-military-science-fiction-space-wallpaper-preview.jpg',
+            'https://mcdn.wallpapersafari.com/medium/64/74/wkMf9P.jpg',
+            'https://mcdn.wallpapersafari.com/medium/35/66/CJzS5s.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/184/378/323/ship-military-aircraft-carrier-vehicle-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/304/41/251/warship-vehicle-ship-military-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/824/282/370/assault-gun-military-pistol-wallpaper-preview.jpg'
         ]
     end
 
@@ -87,19 +88,16 @@ module ImagesModule
     
     def nature_images
         [
-            "https://p4.wallpaperbetter.com/wallpaper/616/547/693/landscapes-nature-lakes-1920x1080-nature-lakes-hd-art-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/362/276/920/nature-4k-pc-full-hd-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/947/583/747/mountain-nature-hd-wallpapers-top-beautiful-desktop-nature-images-background-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/461/728/993/download-nature-for-pc-1920x1080-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/833/194/438/best-wallpapers-for-laptop-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/41/681/303/pc-hd-1080p-nature-1920x1080-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/608/245/253/desktop-nature-wallpaper-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/388/726/456/laptop-backgrounds-nature-images-1920x1200-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/849/138/463/nature-high-resolution-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/896/100/974/download-nature-for-pc-1920x1080-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/542/369/209/hi-def-nature-pictures-2560x1440-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/514/934/573/desktop-backgrounds-hd-nature-background-1920x1200-wallpaper-preview.jpg",
-            "https://p4.wallpaperbetter.com/wallpaper/367/398/511/hd-images-nature-pc-1920x1080-wallpaper-preview.jpg"
+            'https://p4.wallpaperbetter.com/wallpaper/267/315/745/fairchild-republic-a-10-thunderbolt-ii-general-dynamics-f-16-fighting-falcon-aircraft-military-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/484/327/586/military-soldier-futuristic-sci-fi-wallpaper-preview.jpg',
+            'https://mcdn.wallpapersafari.com/medium/35/66/CJzS5s.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/579/328/961/military-assault-rifle-military-accessories-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/32/498/377/military-special-forces-soldier-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/974/375/673/military-soldier-snipers-rifles-brown-sniper-rifle-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/688/716/895/military-helicopter-soldiers-sunset-silhouette-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/655/850/531/general-dynamics-f-16-fighting-falcon-turkish-air-force-turkish-armed-forces-jet-fighter-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/184/378/323/ship-military-aircraft-carrier-vehicle-wallpaper-preview.jpg',
+            'https://p4.wallpaperbetter.com/wallpaper/124/711/801/mcdonnell-douglas-f-a-18-hornet-airplane-jet-fighter-military-wallpaper-preview.jpg'
         ]
     end
     
