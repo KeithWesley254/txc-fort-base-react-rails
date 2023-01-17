@@ -25,7 +25,5 @@ Rails.application.routes.draw do
     resources :client_messages, only: [:index, :create]
     resources :one_user_profiles, only: [ :show, :update]
   end
-  
-  get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 
 end
