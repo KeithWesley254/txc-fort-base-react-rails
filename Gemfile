@@ -17,6 +17,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'sprockets', '~> 4.0'
 
+gem 'sass-rails'
+
 gem "faker"
 
 # Reduces boot times through caching; required in config/boot.rb
