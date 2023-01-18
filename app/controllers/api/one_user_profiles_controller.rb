@@ -6,7 +6,7 @@ class Api::OneUserProfilesController < ApplicationController
     end
 
     def update
-        user = @current_user.one_user_profile.update!(update_params)
+        user = @current_user.one_user_profiles.update!(update_params)
         render json: user, status: :created
     end
 
