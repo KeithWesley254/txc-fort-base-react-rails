@@ -46,7 +46,7 @@ class ApplicationController < ActionController::API
       end
   
       # If a user is NOT logged in, it sends the message "Please log in"
-      def authorized
+      def authorize
         render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
       end
   
