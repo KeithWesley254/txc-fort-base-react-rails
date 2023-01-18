@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
   namespace :api do
-    post '/login', to: 'sessions#create'
-    delete '/logout', to: 'sessions#destroy'
-
-    post '/signup', to: 'users#create'
-    get '/me', to: 'users#show'
+    
     patch '/user_details/:id', to: 'users#update'
     delete '/users/:id', to: 'users#destroy'
 
     resources :login_page_slides, only: [:index, :show]
+    resources :users, only: [:create, :destroy]
     resources :about_us, only: [:index, :show]
     resources :military_specializations, only: [:index, :show]
     resources :major_generals, only: [:index, :show]
@@ -25,5 +22,10 @@ Rails.application.routes.draw do
     resources :client_messages, only: [:index, :create]
     resources :one_user_profiles, only: [ :show, :update]
   end
+
+  post '/login', to: 'auth#create'
+  post '/auto_login', to: 'auth#auto_login'
+  get '/logged_in', to: 'application#logged_in?'
+  get "/", to: "home_database#index"
 
 end
