@@ -1,5 +1,7 @@
 class Api::FanMessagesController < ApplicationController
 
+    skip_before_action :authorize, only: [:index, :create]
+
     def index
         slides = FanMessage.all
         render json: slides

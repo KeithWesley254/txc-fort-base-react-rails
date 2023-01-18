@@ -1,12 +1,14 @@
 class Api::ClientMessagesController < ApplicationController
 
+    skip_before_action :authorize, only: [:index]
+
     def index
         messages = ClientMessage.all
         render json: messages, status: :ok
     end
 
     def create
-        if @current_user
+        if current_user
             user = ClientMessage.create!(cm_params)
             render json: user, status: :created
         end
