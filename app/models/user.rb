@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
     has_one :one_user_profile, dependent: :destroy
     has_many :fan_messages, dependent: :destroy
 
+    after_create :profile
+
     def profile
         UserProfile.create(
           email: self.email,
