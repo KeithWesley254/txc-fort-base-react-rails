@@ -11,7 +11,7 @@ class Api::UserCommentsController < ApplicationController
     end
 
     def create
-        slide = @current_user.user_comments.create!(uc_params)
+        slide = current_user.user_comments.create!(uc_params)
         render json: slide, status: :created
     end
 
