@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     after_create :profile
 
     def profile
-        UserProfile.create(
+        OneUserProfile.create(
           email: self.email,
           user_id: self.id
         )
