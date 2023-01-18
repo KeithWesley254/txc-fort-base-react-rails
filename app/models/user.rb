@@ -6,5 +6,12 @@ class User < ActiveRecord::Base
     has_many :user_comments, dependent: :destroy
     has_one :one_user_profile, dependent: :destroy
     has_many :fan_messages, dependent: :destroy
+
+    def profile
+        UserProfile.create(
+          email: self.email,
+          user_id: self.id
+        )
+    end  
     
 end

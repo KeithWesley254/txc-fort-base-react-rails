@@ -3,15 +3,10 @@ class Api::UsersController < ApplicationController
     skip_before_action :authorize, only: [:create]
     
     def create
-        ActiveRecord::Base.transaction do
-            @user = User.create!(user_params)
-            session[:user_id] = @user.id
-            render json: @user, status: :created
-
-            user_profile = OneUserProfile.create!(
-                email: @user.email,
-                user_id: @user.id
-            )
+        @user = User.create!(user_params)
+        if @user.valid?
+            @token = encode_token({ user_id: @user.id })   
+            render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
         end
     end
 
@@ -21,7 +16,7 @@ class Api::UsersController < ApplicationController
     end
 
     def destroy
-        user = @current_user.destroy
+        user = current_user.destroy
         head :no_content
     end
     
