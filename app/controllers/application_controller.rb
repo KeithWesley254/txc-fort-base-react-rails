@@ -2,9 +2,8 @@ class ApplicationController < ActionController::API
 
     rescue_from ActiveRecord::RecordInvalid, with: :entity_unread
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    rescue_from CanCan::AccessDenied, with: :cancan_denial
     
-    before_action :authorized
+    before_action :authorize
      
       def encode_token(payload)
         JWT.encode(payload, "194715b3254c06ed3776a68387af819b76")
