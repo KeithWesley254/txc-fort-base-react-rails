@@ -1,5 +1,7 @@
 class Api::AboutUsController < ApplicationController
 
+    skip_before_action :authorize, only: [:index, :show]
+
     def index
         slides = AboutU.all
         render json: slides

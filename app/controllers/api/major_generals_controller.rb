@@ -1,5 +1,7 @@
 class Api::MajorGeneralsController < ApplicationController
 
+    skip_before_action :authorize, only: [:index, :show]
+
     def index
         slides = MajorGeneral.all
         render json: slides

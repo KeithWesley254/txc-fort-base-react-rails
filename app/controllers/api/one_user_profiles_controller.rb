@@ -1,5 +1,7 @@
 class Api::OneUserProfilesController < ApplicationController
 
+    skip_before_action :authorize, only: [:show]
+
     def show
         user = OneUserProfile.find_by(id: params[:id])
         render json: user, status: :ok

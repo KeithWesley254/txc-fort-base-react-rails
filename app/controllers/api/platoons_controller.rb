@@ -1,4 +1,6 @@
 class Api::PlatoonsController < ApplicationController
+
+    skip_before_action :authorize, only: [:index, :show]
     
     def index
         slides = Platoon.all
