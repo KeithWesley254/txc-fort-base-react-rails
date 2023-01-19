@@ -1,4 +1,3 @@
-# Phase 4 Project Moringa School
 # Project Name:
 TXC FortBase Fanbase Application
 # Author:
