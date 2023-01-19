@@ -42,7 +42,6 @@ module TxcFortBase
 
     # Use SameSite=Strict for all cookies to help protect against CSRF
     config.action_dispatch.cookies_same_site_protection = :strict
-    # config.hosts << "rails-balancer-1623383035.eu-west-2.elb.amazonaws.com"
-    config.hosts.clear
+    config.hosts << "rails-balancer-1623383035.eu-west-2.elb.amazonaws.com"
   end
 end
