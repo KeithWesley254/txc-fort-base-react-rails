@@ -27,5 +27,6 @@ Rails.application.routes.draw do
   post '/auto_login', to: 'auth#auto_login'
   get '/logged_in', to: 'application#logged_in?'
   get "/", to: "home_database#index"
+  get '/health_check', to: 'health_check#show'
 
 end
