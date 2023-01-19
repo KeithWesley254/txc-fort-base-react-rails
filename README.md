@@ -20,13 +20,21 @@ Come and Connect
         </li>
         <li>
         In the case of a user, a user can do the following:
+        <br>
         ○ Leave a comment
+        <br>
         ○ Update their profile
+        <br>
         ○ Delete their profile
+        <br>
         ○ Login and logout
+        <br>
         ○ View technology and stories
+        <br>
         ○ View Soldiers and generals
+        <br>
         ○ Any other information that may be added in the future for users
+        <br>
         </li>
     </ol>  
 </div>
