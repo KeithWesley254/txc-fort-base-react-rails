@@ -40,7 +40,7 @@ Report any bugs so that they may be fixed in the next versions.
 
 # Deployment Link:
 
-https://txc-fortbase.herokuapp.com/
+http://fortbase-react-loadbalancer-1817682004.eu-west-2.elb.amazonaws.com/
 
 # License:
 
