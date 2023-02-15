@@ -3,5 +3,5 @@
 set -o errexit
 
 bundle install
-bundle exec rake db:drop db:migrate RAILS_ENV=production
+bundle exec rake db:migrate
 bundle exec rake db:seed
