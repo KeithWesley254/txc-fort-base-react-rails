@@ -4,8 +4,6 @@ require_relative '../lib/images_module'
 include HobbiesModule
 include ImagesModule
 
-DISABLE_DATABASE_ENVIRONMENT_CHECK=1
-
 # LoginPageSlide.destroy_all
 # AboutU.destroy_all
 # CommunityImpact.destroy_all
