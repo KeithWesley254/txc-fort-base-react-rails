@@ -65,6 +65,5 @@ Rails.application.configure do
   
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  config.hosts << "rails-balancer-1623383035.eu-west-2.elb.amazonaws.com"
+  
 end
