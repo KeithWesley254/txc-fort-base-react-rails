@@ -4,6 +4,19 @@ require_relative '../lib/images_module'
 include HobbiesModule
 include ImagesModule
 
+LoginPageSlide.destroy_all
+AboutU.destroy_all
+CommunityImpact.destroy_all
+MilitarySpecialization.destroy_all
+MajorGeneral.destroy_all
+Platoon.destroy_all
+Memorial.destroy_all
+Technology.destroy_all
+Training.destroy_all
+Soldier.destroy_all
+SoldierProfile.destroy_all
+SoldierTraining.destroy_all
+
 puts "🎖️ Seeding..."
 
 7.times do
