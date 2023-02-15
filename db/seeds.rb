@@ -6,18 +6,18 @@ include ImagesModule
 
 DISABLE_DATABASE_ENVIRONMENT_CHECK=1
 
-LoginPageSlide.destroy_all
-AboutU.destroy_all
-CommunityImpact.destroy_all
-MilitarySpecialization.destroy_all
-MajorGeneral.destroy_all
-Platoon.destroy_all
-Memorial.destroy_all
-Technology.destroy_all
-Training.destroy_all
-Soldier.destroy_all
-SoldierProfile.destroy_all
-SoldierTraining.destroy_all
+# LoginPageSlide.destroy_all
+# AboutU.destroy_all
+# CommunityImpact.destroy_all
+# MilitarySpecialization.destroy_all
+# MajorGeneral.destroy_all
+# Platoon.destroy_all
+# Memorial.destroy_all
+# Technology.destroy_all
+# Training.destroy_all
+# Soldier.destroy_all
+# SoldierProfile.destroy_all
+# SoldierTraining.destroy_all
 
 puts "🎖️ Seeding..."
 
